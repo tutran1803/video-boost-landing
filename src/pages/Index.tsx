@@ -34,6 +34,7 @@ const Index = () => {
                 <p className="text-xl text-muted-foreground font-semibold">
                   CÓ GÌ HẤP DẪN?
                 </p>
+                <div className="w-24 h-1 bg-primary mx-auto mt-2"></div>
               </div>
               
               <div className="grid grid-cols-3 gap-6 py-8 max-w-4xl mx-auto">
