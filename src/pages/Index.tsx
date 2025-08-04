@@ -60,7 +60,7 @@ const Index = () => {
     {
       title: 'Bước 1: Nhấn vào phần ứng tuyển',
       description: "Nhấn vào phần 'Ứng tuyển' trên việc làm",
-      imageUrl: "/lovable-uploads/0bb0c934-c9df-4a0d-875f-074b77bff110.png"
+      imageUrl: "/lovable-uploads/8e136f9c-0212-4170-b001-274812b751b5.png"
     },
     {
       title: "Bước 2: Chọn vào mục quay video",
@@ -371,11 +371,11 @@ const Index = () => {
                       <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                         <Card className="border-0 shadow-md">
                           <CardContent className="p-4 space-y-3">
-                            <div className="w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-3">
+                            <div className="w-full h-28 bg-gray-100 rounded-lg overflow-hidden mb-3">
                               <img 
                                 src={step.imageUrl} 
                                 alt={step.title}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                               />
                             </div>
                             <div className="text-center">
