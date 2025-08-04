@@ -241,7 +241,7 @@ const Index = () => {
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Hàng nghìn người đã thành công, đến lượt bạn!
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Xem các mẫu video thành công để tạo cảm hứng cho video của bạn
             </p>
           </div>
