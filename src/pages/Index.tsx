@@ -338,34 +338,41 @@ const Index = () => {
           <div className="grid md:grid-cols-1 gap-6 mb-12">
             {[
               {
-                title: "Tuyển 01 Nhân viên kinh doanh tại Hà Nội - Cầu Giấy",
-                company: "Công ty TNHH ABC Technology",
-                salary: "Đến 15 triệu/tháng",
-                location: "Quận Cầu Giấy, Hà Nội",
-                timePosted: "2 giờ trước",
-                contacts: "15 Liên Hệ",
-                logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=100&q=80"
+                title: "Tuyển 01 Kế Toán Viên tại Bình Tân - Tân Phú",
+                company: "Công ty P.S",
+                salary: "Đến 13 triệu/tháng",
+                location: "Quận Bình Tân, Tp Hồ Chí Minh",
+                timePosted: "54 phút trước",
+                contacts: "26 Liên Hệ",
+                logo: "https://cdn.chotot.com/XmROlkdlQmJuwTU2bwUNUGmszWPsYXrOhtDJtz25ULs/preset:listing/plain/be35234b64c5f81e81018e7038b363d6-2902200591672197914.jpg",
+                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126378659.htm"
               },
               {
-                title: "Tuyển 02 Chăm sóc khách hàng tại TP.HCM - Quận 1", 
-                company: "Công ty CP Dịch vụ XYZ",
-                salary: "8-12 triệu/tháng",
-                location: "Quận 1, TP Hồ Chí Minh",
-                timePosted: "4 giờ trước",
-                contacts: "8 Liên Hệ",
-                logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=100&q=80"
+                title: "Nhân Viên Tư Vấn - Sales - Thu Nhập Trên 10 Triệu", 
+                company: "CÔNG TY TNHH TRUNG TÂM THỂ DỤC THỂ HÌNH & YOGA CALIFORNIA",
+                salary: "Đến 20 triệu/tháng",
+                location: "Thành phố Thủ Dầu Một, Bình Dương",
+                timePosted: "1 giờ trước",
+                contacts: "17 Liên Hệ",
+                logo: "https://cdn.chotot.com/048jiR1Yakc4uceqPz22tZjhNuWSB0sALGLrqzMImA4/preset:listing/plain/50e7e6c8460ccb5a848eab0ec7a0ea14-2924517665586887902.jpg",
+                link: "https://www.vieclamtot.com/viec-lam-thanh-pho-thu-dau-mot-binh-duong/126207504.htm"
               },
               {
-                title: "Tuyển 03 Telesales bán hàng tại Đà Nẵng - Hải Châu",
-                company: "Công ty TNHH Marketing DEF",
-                salary: "6-10 triệu + hoa hồng",
-                location: "Quận Hải Châu, Đà Nẵng",
-                timePosted: "1 ngày trước",
-                contacts: "12 Liên Hệ",
-                logo: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=100&q=80"
+                title: "NV Kinh Doanh online tại Bình Tân - Tân Phú",
+                company: "Công ty P.S",
+                salary: "Đến 16 triệu/tháng",
+                location: "Quận Bình Tân, Tp Hồ Chí Minh",
+                timePosted: "1 giờ trước",
+                contacts: "32 Liên Hệ",
+                logo: "https://cdn.chotot.com/XmROlkdlQmJuwTU2bwUNUGmszWPsYXrOhtDJtz25ULs/preset:listing/plain/be35234b64c5f81e81018e7038b363d6-2902200591672197914.jpg",
+                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126374988.htm"
               }
             ].map((job, index) => (
-              <Card key={index} className="border border-gray-200 hover:shadow-lg transition-all duration-300 group bg-white">
+              <Card 
+                key={index} 
+                className="border border-gray-200 hover:shadow-lg transition-all duration-300 group bg-white cursor-pointer"
+                onClick={() => window.open(job.link, '_blank')}
+              >
                 <CardContent className="p-4">
                   <div className="flex items-start gap-4">
                     {/* Logo */}
