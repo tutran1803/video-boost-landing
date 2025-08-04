@@ -280,7 +280,7 @@ const Index = () => {
                 </div>
                 <CardContent className="p-6 space-y-3">
                   <div className="space-y-3">
-                    <div className="inline-block border-2 border-primary bg-primary/10 text-primary px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary hover:text-white transition-all duration-300 shadow-md">
+                    <div className="inline-block border-2 border-primary bg-primary/10 text-primary px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-primary hover:text-white transition-all duration-300 shadow-md">
                       {template.title}
                     </div>
                   </div>
