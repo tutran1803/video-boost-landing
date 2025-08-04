@@ -250,20 +250,20 @@ const Index = () => {
             {[
               {
                 image: videoTemplate1,
-                title: "Video giới thiệu chung",
-                description: "Mẫu video giới thiệu bản thân và kinh nghiệm làm việc",
+                title: "Nhân viên kinh doanh",
+                description: "Ứng tuyển vị trí:",
                 link: "#"
               },
               {
                 image: videoTemplate2,
-                title: "Video phỏng vấn mẫu",
-                description: "Cách trả lời câu hỏi phỏng vấn một cách chuyên nghiệp",
+                title: "Chăm sóc khách hàng",
+                description: "Ứng tuyển vị trí:",
                 link: "#"
               },
               {
                 image: videoTemplate3,
-                title: "Video hướng dẫn quay",
-                description: "Hướng dẫn chi tiết cách quay video ấn tượng",
+                title: "Telesales",
+                description: "Ứng tuyển vị trí:",
                 link: "#"
               }
             ].map((template, index) => (
@@ -282,12 +282,12 @@ const Index = () => {
                   </div>
                 </div>
                 <CardContent className="p-6 space-y-3">
-                  <h3 className="text-xl font-semibold text-foreground">
-                    {template.title}
-                  </h3>
                   <p className="text-muted-foreground">
                     {template.description}
                   </p>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {template.title}
+                  </h3>
                 </CardContent>
               </Card>
             ))}
