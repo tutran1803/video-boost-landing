@@ -15,10 +15,6 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                  ĐANG LIVE - 127 người đang tạo video ngay bây giờ
-                </div>
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
                   Hồ sơ có video được{" "}
                   <span className="text-primary">ưu tiên xem đầu tiên</span>
@@ -42,13 +38,6 @@ const Index = () => {
                   <div className="text-sm text-muted-foreground">Nổi bật</div>
                 </div>
               </div>
-
-              <div className="bg-orange-50 border-l-4 border-orange-400 p-4 rounded-lg">
-                <p className="text-orange-800 font-medium">
-                  Tặng ngay 100k voucher cho video đầu tiên!
-                </p>
-              </div>
-
               <div className="space-y-4">
                 <Button variant="hero" size="xl" className="w-full lg:w-auto">
                   <Play className="mr-2 h-5 w-5" />
