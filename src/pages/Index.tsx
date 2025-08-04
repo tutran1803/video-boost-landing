@@ -43,8 +43,9 @@ const Index = () => {
                     <Files className="h-8 w-8 text-primary" />
                   </div>
                   <div className="text-lg font-semibold text-foreground">
-                    Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span> giữa hàng trăm ứng viên khác
+                    Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span>
                   </div>
+                  <p className="text-sm text-muted-foreground">Gây ấn tượng mạnh ngay từ đầu</p>
                 </div>
                 <div className="text-center space-y-4">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
@@ -53,6 +54,7 @@ const Index = () => {
                   <div className="text-lg font-semibold text-foreground">
                     Được <span className="font-bold text-primary text-2xl">ưu tiên</span> xem trước
                   </div>
+                  <p className="text-sm text-muted-foreground">Được xem đầu tiên trong danh sách</p>
                 </div>
                 <div className="text-center space-y-4">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
@@ -61,6 +63,7 @@ const Index = () => {
                   <div className="text-lg font-semibold text-foreground">
                     Nhà tuyển dụng <span className="font-bold text-primary text-2xl whitespace-nowrap">đánh giá cao</span>
                   </div>
+                  <p className="text-sm text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
                 </div>
               </div>
 
