@@ -133,7 +133,7 @@ const Index = () => {
                 ].map((step, index) => (
                   <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-3 space-y-2">
-                      <div className="w-full h-24 bg-gray-100 rounded-lg overflow-hidden mb-2">
+                      <div className="w-full h-16 bg-gray-100 rounded-lg overflow-hidden mb-2">
                         <img 
                           src={step.imageUrl} 
                           alt={step.title}
@@ -141,8 +141,8 @@ const Index = () => {
                         />
                       </div>
                       <div className="text-center">
-                        <h3 className="text-xs font-semibold text-foreground mb-1">{step.title}</h3>
-                        <p className="text-[10px] text-muted-foreground">{step.description}</p>
+                        <h3 className="text-sm font-semibold text-foreground mb-1">{step.title}</h3>
+                        <p className="text-xs text-muted-foreground">{step.description}</p>
                       </div>
                     </CardContent>
                   </Card>
