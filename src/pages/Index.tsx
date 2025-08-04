@@ -13,7 +13,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-2">
             {/* Hero Image */}
             <div className="relative max-w-2xl mx-auto">
               <img 
