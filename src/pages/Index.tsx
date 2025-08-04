@@ -239,7 +239,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Mẫu video tham khảo
+              Hàng nghìn người đã thành công, đến lượt bạn!
             </h2>
             <p className="text-xl text-muted-foreground">
               Xem các mẫu video thành công để tạo cảm hứng cho video của bạn
