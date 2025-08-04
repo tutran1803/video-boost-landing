@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Play, CheckCircle, Upload, Video, Send, Sun, Camera, Zap, Files, TrendingUp, UserCheck } from "lucide-react";
 import { useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import heroImage from "@/assets/hero-image.jpg";
 import videoTemplate1 from "@/assets/video-template-1.jpg";
 import videoTemplate2 from "@/assets/video-template-2.jpg";
@@ -11,6 +12,11 @@ import videoTemplate3 from "@/assets/video-template-3.jpg";
 
 const Index = () => {
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
+  const [emblaRef] = useEmblaCarousel({ 
+    align: 'start',
+    containScroll: 'trimSnaps',
+    dragFree: true
+  });
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -40,7 +46,8 @@ const Index = () => {
                 <div className="w-24 h-1 bg-primary mx-auto mt-2"></div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 py-4 max-w-4xl mx-auto">
+              {/* Desktop version */}
+              <div className="hidden md:grid grid-cols-3 gap-4 md:gap-6 py-4 max-w-4xl mx-auto">
                 <div className="text-center space-y-2 md:space-y-4">
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                     <Files className="h-6 w-6 md:h-8 md:w-8 text-primary" />
@@ -67,6 +74,47 @@ const Index = () => {
                     Được <span className="font-bold text-primary text-lg md:text-2xl">đánh giá cao</span>
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
+                </div>
+              </div>
+
+              {/* Mobile carousel version */}
+              <div className="md:hidden py-4 max-w-4xl mx-auto">
+                <div className="overflow-hidden" ref={emblaRef}>
+                  <div className="flex">
+                    <div className="flex-[0_0_80%] min-w-0 pl-4">
+                      <div className="text-center space-y-2">
+                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                          <Files className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="text-base font-semibold text-foreground">
+                          Hồ sơ <span className="font-bold text-primary text-lg">nổi bật</span>
+                        </div>
+                        <p className="text-xs text-muted-foreground">Gây ấn tượng mạnh ngay từ đầu</p>
+                      </div>
+                    </div>
+                    <div className="flex-[0_0_80%] min-w-0 pl-4">
+                      <div className="text-center space-y-2">
+                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                          <TrendingUp className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="text-base font-semibold text-foreground">
+                          Được <span className="font-bold text-primary text-lg">ưu tiên</span> xem trước
+                        </div>
+                        <p className="text-xs text-muted-foreground">Được xem đầu tiên trong danh sách</p>
+                      </div>
+                    </div>
+                    <div className="flex-[0_0_80%] min-w-0 pl-4">
+                      <div className="text-center space-y-2">
+                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                          <UserCheck className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="text-base font-semibold text-foreground">
+                          Được <span className="font-bold text-primary text-lg">đánh giá cao</span>
+                        </div>
+                        <p className="text-xs text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
