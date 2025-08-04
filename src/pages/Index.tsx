@@ -28,26 +28,32 @@ const Index = () => {
             <div className="max-w-4xl mx-auto space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Hồ sơ có video được{" "}
-                  <span className="text-primary">ưu tiên xem đầu tiên</span>
+                  Tăng cơ hội ứng tuyển{" "}
+                  <span className="text-primary">x2 với video 30s</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Tạo video CV để nổi bật hơn với nhà tuyển dụng
+                  Tăng cơ hội ứng tuyển x2 với video 30s
                 </p>
               </div>
               
               <div className="grid grid-cols-3 gap-6 py-8 max-w-2xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">90%</div>
-                  <div className="text-sm text-muted-foreground">Được xem đầu tiên</div>
+                  <div className="text-sm text-muted-foreground">
+                    Hồ sơ <span className="font-bold text-primary">nổi bật</span> giữa hàng trăm ứng viên khác
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">4h</div>
-                  <div className="text-sm text-muted-foreground">Được đánh giá cao</div>
+                  <div className="text-sm text-muted-foreground">
+                    Được <span className="font-bold text-primary">ưu tiên</span> xem trước
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">100k+</div>
-                  <div className="text-sm text-muted-foreground">Nổi bật</div>
+                  <div className="text-sm text-muted-foreground">
+                    Nhà tuyển dụng <span className="font-bold text-primary">đánh giá cao</span>
+                  </div>
                 </div>
               </div>
 
