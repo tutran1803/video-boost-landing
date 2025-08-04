@@ -241,7 +241,7 @@ const Index = () => {
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
               Cảm hứng từ những video CV xuất sắc
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Xem các mẫu video thành công để tạo cảm hứng cho video của bạn
             </p>
           </div>
