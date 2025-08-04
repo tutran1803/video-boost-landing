@@ -324,18 +324,18 @@ const Index = () => {
       </section>
 
       {/* Jobs Section */}
-      <section className="pt-8 pb-20 bg-secondary/20">
+      <section className="py-6 pb-8 bg-secondary/20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
               Những công việc phù hợp với bạn
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Khám phá các cơ hội việc làm hấp dẫn từ các đối tác của chúng tôi
             </p>
           </div>
 
-          <div className="grid md:grid-cols-1 gap-6 mb-12">
+          <div className="grid md:grid-cols-1 gap-4 mb-8">
             {[
               {
                 title: "Tuyển 01 Kế Toán Viên tại Bình Tân - Tân Phú",
