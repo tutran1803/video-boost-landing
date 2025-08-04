@@ -3,12 +3,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Play, CheckCircle, Upload, Video, Send, Sun, Camera, Zap, Files, TrendingUp, UserCheck } from "lucide-react";
+import { useState } from "react";
 import heroImage from "@/assets/hero-image.jpg";
 import videoTemplate1 from "@/assets/video-template-1.jpg";
 import videoTemplate2 from "@/assets/video-template-2.jpg";
 import videoTemplate3 from "@/assets/video-template-3.jpg";
 
 const Index = () => {
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -267,15 +269,31 @@ const Index = () => {
             ].map((template, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={template.image} 
-                    alt={template.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    {template.videoUrl ? (
-                      <Dialog>
-                        <DialogTrigger asChild>
+                  {playingVideo === index && template.videoUrl ? (
+                    <iframe
+                      src={template.videoUrl}
+                      className="w-full h-48 rounded-lg"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <>
+                      <img 
+                        src={template.image} 
+                        alt={template.title}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        {template.videoUrl ? (
+                          <Button 
+                            variant="hero" 
+                            size="lg"
+                            className="w-16 h-16 rounded-full p-0"
+                            onClick={() => setPlayingVideo(index)}
+                          >
+                            <Play className="h-8 w-8" />
+                          </Button>
+                        ) : (
                           <Button 
                             variant="hero" 
                             size="lg"
@@ -283,26 +301,10 @@ const Index = () => {
                           >
                             <Play className="h-8 w-8" />
                           </Button>
-                        </DialogTrigger>
-                        <DialogContent className="max-w-4xl w-full h-[80vh] p-0">
-                          <iframe
-                            src={template.videoUrl}
-                            className="w-full h-full rounded-lg"
-                            allow="autoplay; encrypted-media"
-                            allowFullScreen
-                          />
-                        </DialogContent>
-                      </Dialog>
-                    ) : (
-                      <Button 
-                        variant="hero" 
-                        size="lg"
-                        className="w-16 h-16 rounded-full p-0"
-                      >
-                        <Play className="h-8 w-8" />
-                      </Button>
-                    )}
-                  </div>
+                        )}
+                      </div>
+                    </>
+                  )}
                 </div>
                 <CardContent className="p-6 space-y-3">
                   <div className="space-y-3">
