@@ -112,33 +112,38 @@ const Index = () => {
               <div className="grid md:grid-cols-4 gap-8">
                 {[
                   {
-                    title: 'Nhấn vào phần "Ứng tuyển"',
+                    title: 'Bước 1: Nhấn vào phần ứng tuyển',
                     description: "Nhấn vào phần 'Ứng tuyển' trên việc làm",
-                    icon: Upload
+                    imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80"
                   },
                   {
-                    title: "Chọn vào mục quay video",
+                    title: "Bước 2: Chọn vào mục quay video",
                     description: "Chọn vào mục quay video trong form ứng tuyển",
-                    icon: Video
+                    imageUrl: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=400&q=80"
                   },
                   {
-                    title: "Quay video theo hướng dẫn",
+                    title: "Bước 3: Quay video theo hướng dẫn",
                     description: "Quay video theo hướng dẫn",
-                    icon: Play
+                    imageUrl: "https://images.unsplash.com/photo-1492552181161-62217fc3076d?auto=format&fit=crop&w=400&q=80"
                   },
                   {
-                    title: "Gửi video ứng tuyển",
+                    title: "Bước 4: Gửi video ứng tuyển",
                     description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
-                    icon: Send
+                    imageUrl: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80"
                   }
                 ].map((step, index) => (
                   <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <CardContent className="p-4 space-y-3">
+                    <CardContent className="p-6 space-y-4">
+                      <div className="w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-4">
+                        <img 
+                          src={step.imageUrl} 
+                          alt={step.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                       <div className="text-center">
-                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <step.icon className="h-8 w-8 text-primary" />
-                        </div>
-                        <h3 className="text-xl font-semibold text-foreground mb-4">{step.title}</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+                        <p className="text-sm text-muted-foreground">{step.description}</p>
                       </div>
                     </CardContent>
                   </Card>
