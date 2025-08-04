@@ -22,12 +22,23 @@ const Index = () => {
     containScroll: 'trimSnaps',
     dragFree: false
   });
+  const [emblaRefTips, emblaApiTips] = useEmblaCarousel({ 
+    align: 'start',
+    containScroll: 'trimSnaps',
+    dragFree: false
+  });
   const [selectedStepIndex, setSelectedStepIndex] = useState(0);
+  const [selectedTipIndex, setSelectedTipIndex] = useState(0);
 
   // Update selected index when embla scrolls
   const onStepSelect = () => {
     if (!emblaApiSteps) return;
     setSelectedStepIndex(emblaApiSteps.selectedScrollSnap());
+  };
+
+  const onTipSelect = () => {
+    if (!emblaApiTips) return;
+    setSelectedTipIndex(emblaApiTips.selectedScrollSnap());
   };
 
   // Set up scroll listener
@@ -37,6 +48,13 @@ const Index = () => {
       onStepSelect(); // Set initial index
     }
   }, [emblaApiSteps]);
+
+  useEffect(() => {
+    if (emblaApiTips) {
+      emblaApiTips.on('select', onTipSelect);
+      onTipSelect(); // Set initial index
+    }
+  }, [emblaApiTips]);
 
   const stepsData = [
     {
@@ -58,6 +76,36 @@ const Index = () => {
       title: "Bước 4: Gửi video ứng tuyển",
       description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
       imageUrl: "/lovable-uploads/2f9654a5-8657-44ef-a085-c25490d1b55e.png"
+    }
+  ];
+
+  const tipsData = [
+    {
+      title: "Ánh sáng",
+      icon: Sun,
+      tips: [
+        "Quay ở nơi có ánh sáng tự nhiên",
+        "Tránh ngược sáng", 
+        "Dùng đèn LED nếu trong nhà tối"
+      ]
+    },
+    {
+      title: "Góc quay",
+      icon: Camera,
+      tips: [
+        "Quay ở tầm mắt hoặc hơi cao",
+        "Giữ máy thẳng, không nghiêng",
+        "Để không gian đằng sau đẹp"
+      ]
+    },
+    {
+      title: "Kỹ thuật", 
+      icon: Zap,
+      tips: [
+        "Nói chậm, rõ ràng",
+        "Mỉm cười tự nhiên",
+        "Thời lượng 30-60 giây"
+      ]
     }
   ];
   return (
@@ -270,84 +318,77 @@ const Index = () => {
             </TabsContent>
 
             <TabsContent value="tips" className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-                {/* Ánh sáng */}
-                <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-4 space-y-3">
-                    <div className="text-center">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Sun className="h-6 w-6 text-primary" />
+              {/* Desktop version */}
+              <div className="hidden md:grid grid-cols-3 gap-3 md:gap-4">
+                {tipsData.map((tip, index) => (
+                  <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <CardContent className="p-4 space-y-3">
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <tip.icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">{tip.title}</h3>
                       </div>
-                      <h3 className="text-lg font-semibold text-foreground mb-3">Ánh sáng</h3>
-                    </div>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">Quay ở nơi có ánh sáng tự nhiên</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">Tránh ngược sáng</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">Dùng đèn LED nếu trong nhà tối</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
+                      <ul className="space-y-2 text-muted-foreground">
+                        {tip.tips.map((tipItem, tipIndex) => (
+                          <li key={tipIndex} className="flex items-start gap-2">
+                            <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
+                            <span className="text-xs">{tipItem}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
 
-                {/* Góc quay */}
-                <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-4 space-y-3">
-                    <div className="text-center">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Camera className="h-6 w-6 text-primary" />
+              {/* Mobile carousel version */}
+              <div className="md:hidden">
+                <div className="overflow-hidden" ref={emblaRefTips}>
+                  <div className="flex">
+                    {tipsData.map((tip, index) => (
+                      <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
+                        <Card className="border-0 shadow-md">
+                          <CardContent className="p-4 space-y-3">
+                            <div className="text-center">
+                              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <tip.icon className="h-6 w-6 text-primary" />
+                              </div>
+                              <h3 className="text-lg font-semibold text-foreground mb-3">{tip.title}</h3>
+                            </div>
+                            <ul className="space-y-2 text-muted-foreground">
+                              {tip.tips.map((tipItem, tipIndex) => (
+                                <li key={tipIndex} className="flex items-start gap-2">
+                                  <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
+                                  <span className="text-xs">{tipItem}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </CardContent>
+                        </Card>
                       </div>
-                      <h3 className="text-lg font-semibold text-foreground mb-3">Góc quay</h3>
-                    </div>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">Quay ở tầm mắt hoặc hơi cao</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">Giữ máy thẳng, không nghiêng</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">Để không gian đằng sau đẹp</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                {/* Kỹ thuật */}
-                <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-4 space-y-3">
-                    <div className="text-center">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Zap className="h-6 w-6 text-primary" />
-                      </div>
-                      <h3 className="text-lg font-semibold text-foreground mb-3">Kỹ thuật</h3>
-                    </div>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">Nói chậm, rõ ràng</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">Mỉm cười tự nhiên</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">Thời lượng 30-60 giây</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Dots indicator */}
+                <div className="flex justify-center mt-4 space-x-2">
+                  {tipsData.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === selectedTipIndex 
+                          ? 'bg-primary w-6' 
+                          : 'bg-gray-300'
+                      }`}
+                      onClick={() => {
+                        if (emblaApiTips) {
+                          emblaApiTips.scrollTo(index);
+                        }
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
             </TabsContent>
           </Tabs>
