@@ -282,12 +282,14 @@ const Index = () => {
                   </div>
                 </div>
                 <CardContent className="p-6 space-y-3">
-                  <p className="text-muted-foreground">
-                    {template.description}
-                  </p>
-                  <h3 className="text-xl font-semibold text-foreground">
-                    {template.title}
-                  </h3>
+                  <div className="space-y-3">
+                    <div className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
+                      {template.title}
+                    </div>
+                    <p className="text-muted-foreground text-sm">
+                      {template.description}
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
