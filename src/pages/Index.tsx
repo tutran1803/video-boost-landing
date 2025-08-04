@@ -139,9 +139,12 @@ const Index = () => {
                           <step.icon className="h-8 w-8 text-primary" />
                         </div>
                         <h3 className="text-xl font-semibold text-foreground mb-4">{step.title}</h3>
-                        <p className="text-muted-foreground text-sm">
-                          {step.description}
-                        </p>
+                        <div className="flex items-start gap-2 justify-center">
+                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-muted-foreground">
+                            {step.description}
+                          </span>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
