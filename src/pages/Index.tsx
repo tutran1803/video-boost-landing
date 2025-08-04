@@ -126,7 +126,7 @@ const Index = () => {
                   {
                     title: "Bước 4: Gửi video ứng tuyển",
                     description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
-                    imageUrl: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80"
+                    imageUrl: "/lovable-uploads/a9edb564-683f-4e4f-a046-9dcf14e024de.png"
                   }
                 ].map((step, index) => (
                   <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
