@@ -12,8 +12,19 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-20">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+          <div className="text-center space-y-12">
+            {/* Hero Image */}
+            <div className="relative max-w-md mx-auto">
+              <img 
+                src={heroImage} 
+                alt="Professional creating video CV" 
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+            </div>
+
+            {/* Hero Content */}
+            <div className="max-w-4xl mx-auto space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
                   Hồ sơ có video được{" "}
@@ -24,7 +35,7 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 py-8">
+              <div className="grid grid-cols-3 gap-6 py-8 max-w-2xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">90%</div>
                   <div className="text-sm text-muted-foreground">Được xem đầu tiên</div>
@@ -38,6 +49,7 @@ const Index = () => {
                   <div className="text-sm text-muted-foreground">Nổi bật</div>
                 </div>
               </div>
+
               <div className="space-y-4">
                 <Button variant="hero" size="xl" className="w-full lg:w-auto">
                   <Play className="mr-2 h-5 w-5" />
@@ -46,7 +58,7 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full lg:w-auto"
+                  className="w-full lg:w-auto ml-0 lg:ml-4"
                   onClick={() => {
                     const videoSection = document.getElementById('video-templates');
                     videoSection?.scrollIntoView({ behavior: 'smooth' });
@@ -56,19 +68,10 @@ const Index = () => {
                 </Button>
               </div>
 
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 Video của bạn được bảo mật 100% - Chỉ nhà tuyển dụng được xác minh mới có thể được xem. 
                 Không chia sẻ công khai dữ liệu của bạn.
               </p>
-            </div>
-
-            <div className="relative">
-              <img 
-                src={heroImage} 
-                alt="Professional creating video CV" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>
