@@ -272,9 +272,6 @@ const Index = () => {
                   <p className="text-muted-foreground">
                     {template.description}
                   </p>
-                  <Button variant="outline" className="w-full">
-                    Xem chi tiết
-                  </Button>
                 </CardContent>
               </Card>
             ))}
