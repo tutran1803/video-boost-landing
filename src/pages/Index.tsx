@@ -58,7 +58,7 @@ const Index = () => {
                 </Button>
                 <Button 
                   variant="outline" 
-                  size="lg" 
+                  size="xl"
                   onClick={() => {
                     const videoSection = document.getElementById('video-templates');
                     videoSection?.scrollIntoView({ behavior: 'smooth' });
