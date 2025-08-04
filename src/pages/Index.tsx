@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Play, CheckCircle, Upload, Video, Send, Sun, Camera, Zap, Files, TrendingUp, UserCheck } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import heroImage from "@/assets/hero-image.jpg";
 import videoTemplate1 from "@/assets/video-template-1.jpg";
@@ -17,11 +17,49 @@ const Index = () => {
     containScroll: 'trimSnaps',
     dragFree: true
   });
-  const [emblaRefSteps] = useEmblaCarousel({ 
+  const [emblaRefSteps, emblaApiSteps] = useEmblaCarousel({ 
     align: 'start',
     containScroll: 'trimSnaps',
-    dragFree: true
+    dragFree: false
   });
+  const [selectedStepIndex, setSelectedStepIndex] = useState(0);
+
+  // Update selected index when embla scrolls
+  const onStepSelect = () => {
+    if (!emblaApiSteps) return;
+    setSelectedStepIndex(emblaApiSteps.selectedScrollSnap());
+  };
+
+  // Set up scroll listener
+  useEffect(() => {
+    if (emblaApiSteps) {
+      emblaApiSteps.on('select', onStepSelect);
+      onStepSelect(); // Set initial index
+    }
+  }, [emblaApiSteps]);
+
+  const stepsData = [
+    {
+      title: 'Bước 1: Nhấn vào phần ứng tuyển',
+      description: "Nhấn vào phần 'Ứng tuyển' trên việc làm",
+      imageUrl: "/lovable-uploads/0bb0c934-c9df-4a0d-875f-074b77bff110.png"
+    },
+    {
+      title: "Bước 2: Chọn vào mục quay video",
+      description: "Chọn vào mục quay video trong form ứng tuyển",
+      imageUrl: "/lovable-uploads/968c0488-03b1-40d9-a75e-05b8ece239a0.png"
+    },
+    {
+      title: "Bước 3: Quay video theo hướng dẫn",
+      description: "Quay video theo hướng dẫn",
+      imageUrl: "/lovable-uploads/39d85a58-7b86-4914-b273-43826acb56e0.png"
+    },
+    {
+      title: "Bước 4: Gửi video ứng tuyển",
+      description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
+      imageUrl: "/lovable-uploads/2f9654a5-8657-44ef-a085-c25490d1b55e.png"
+    }
+  ];
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -165,28 +203,7 @@ const Index = () => {
             <TabsContent value="steps" className="space-y-6">
               {/* Desktop version */}
               <div className="hidden md:grid grid-cols-4 gap-3 md:gap-4">
-                {[
-                  {
-                    title: 'Bước 1: Nhấn vào phần ứng tuyển',
-                    description: "Nhấn vào phần 'Ứng tuyển' trên việc làm",
-                    imageUrl: "/lovable-uploads/0bb0c934-c9df-4a0d-875f-074b77bff110.png"
-                  },
-                  {
-                    title: "Bước 2: Chọn vào mục quay video",
-                    description: "Chọn vào mục quay video trong form ứng tuyển",
-                    imageUrl: "/lovable-uploads/968c0488-03b1-40d9-a75e-05b8ece239a0.png"
-                  },
-                  {
-                    title: "Bước 3: Quay video theo hướng dẫn",
-                    description: "Quay video theo hướng dẫn",
-                    imageUrl: "/lovable-uploads/39d85a58-7b86-4914-b273-43826acb56e0.png"
-                  },
-                  {
-                    title: "Bước 4: Gửi video ứng tuyển",
-                    description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
-                    imageUrl: "/lovable-uploads/2f9654a5-8657-44ef-a085-c25490d1b55e.png"
-                  }
-                ].map((step, index) => (
+                {stepsData.map((step, index) => (
                   <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-3 space-y-2">
                       <div className="w-full h-16 bg-gray-100 rounded-lg overflow-hidden mb-2">
@@ -209,28 +226,7 @@ const Index = () => {
               <div className="md:hidden">
                 <div className="overflow-hidden" ref={emblaRefSteps}>
                   <div className="flex">
-                    {[
-                      {
-                        title: 'Bước 1: Nhấn vào phần ứng tuyển',
-                        description: "Nhấn vào phần 'Ứng tuyển' trên việc làm",
-                        imageUrl: "/lovable-uploads/0bb0c934-c9df-4a0d-875f-074b77bff110.png"
-                      },
-                      {
-                        title: "Bước 2: Chọn vào mục quay video",
-                        description: "Chọn vào mục quay video trong form ứng tuyển",
-                        imageUrl: "/lovable-uploads/968c0488-03b1-40d9-a75e-05b8ece239a0.png"
-                      },
-                      {
-                        title: "Bước 3: Quay video theo hướng dẫn",
-                        description: "Quay video theo hướng dẫn",
-                        imageUrl: "/lovable-uploads/39d85a58-7b86-4914-b273-43826acb56e0.png"
-                      },
-                      {
-                        title: "Bước 4: Gửi video ứng tuyển",
-                        description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
-                        imageUrl: "/lovable-uploads/2f9654a5-8657-44ef-a085-c25490d1b55e.png"
-                      }
-                    ].map((step, index) => (
+                    {stepsData.map((step, index) => (
                       <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                         <Card className="border-0 shadow-md">
                           <CardContent className="p-4 space-y-3">
@@ -250,6 +246,25 @@ const Index = () => {
                       </div>
                     ))}
                   </div>
+                </div>
+                
+                {/* Dots indicator */}
+                <div className="flex justify-center mt-4 space-x-2">
+                  {stepsData.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === selectedStepIndex 
+                          ? 'bg-primary w-6' 
+                          : 'bg-gray-300'
+                      }`}
+                      onClick={() => {
+                        if (emblaApiSteps) {
+                          emblaApiSteps.scrollTo(index);
+                        }
+                      }}
+                    />
+                  ))}
                 </div>
               </div>
             </TabsContent>
