@@ -139,7 +139,7 @@ const Index = () => {
                         />
                       </div>
                       <div className="text-center">
-                        <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+                        <h3 className="text-base font-semibold text-foreground mb-2">{step.title}</h3>
                         <p className="text-sm text-muted-foreground">{step.description}</p>
                       </div>
                     </CardContent>
