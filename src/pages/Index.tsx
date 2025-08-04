@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Play, CheckCircle, Upload, Video, Send, Sun, Camera, Zap, Files, TrendingUp, UserCheck } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import videoTemplate1 from "@/assets/video-template-1.jpg";
@@ -271,18 +272,35 @@ const Index = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button 
-                      variant="hero" 
-                      size="lg"
-                      className="w-16 h-16 rounded-full p-0"
-                      onClick={() => {
-                        if (template.videoUrl) {
-                          window.open(template.videoUrl, '_blank');
-                        }
-                      }}
-                    >
-                      <Play className="h-8 w-8" />
-                    </Button>
+                    {template.videoUrl ? (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button 
+                            variant="hero" 
+                            size="lg"
+                            className="w-16 h-16 rounded-full p-0"
+                          >
+                            <Play className="h-8 w-8" />
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl w-full h-[80vh] p-0">
+                          <iframe
+                            src={template.videoUrl}
+                            className="w-full h-full rounded-lg"
+                            allow="autoplay; encrypted-media"
+                            allowFullScreen
+                          />
+                        </DialogContent>
+                      </Dialog>
+                    ) : (
+                      <Button 
+                        variant="hero" 
+                        size="lg"
+                        className="w-16 h-16 rounded-full p-0"
+                      >
+                        <Play className="h-8 w-8" />
+                      </Button>
+                    )}
                   </div>
                 </div>
                 <CardContent className="p-6 space-y-3">
