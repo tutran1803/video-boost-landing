@@ -271,7 +271,11 @@ const Index = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button variant="hero" size="lg">
+                    <Button 
+                      variant="hero" 
+                      size="lg"
+                      onClick={() => window.open('https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/view', '_blank')}
+                    >
                       <Play className="mr-2 h-5 w-5" />
                       Xem video
                     </Button>
