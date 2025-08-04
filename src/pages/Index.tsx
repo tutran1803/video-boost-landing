@@ -295,6 +295,71 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Jobs Section */}
+      <section className="py-20 bg-secondary/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Những công việc phù hợp với bạn
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Khám phá các cơ hội việc làm hấp dẫn từ các đối tác của chúng tôi
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                title: "Nhân viên kinh doanh",
+                company: "Công ty ABC",
+                salary: "8-15 triệu",
+                location: "Hà Nội"
+              },
+              {
+                title: "Chăm sóc khách hàng",
+                company: "Công ty XYZ", 
+                salary: "7-12 triệu",
+                location: "TP.HCM"
+              },
+              {
+                title: "Telesales",
+                company: "Công ty DEF",
+                salary: "6-10 triệu",
+                location: "Đà Nẵng"
+              }
+            ].map((job, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <CardContent className="p-6 space-y-4">
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {job.title}
+                    </h3>
+                    <div className="space-y-2 text-muted-foreground">
+                      <p className="text-sm">{job.company}</p>
+                      <p className="text-sm font-medium text-primary">{job.salary}</p>
+                      <p className="text-sm">{job.location}</p>
+                    </div>
+                  </div>
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    Xem chi tiết
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button 
+              variant="cta" 
+              size="xl"
+              onClick={() => window.open('https://www.vieclamtot.com/tags/viec-lam-doi-tac', '_blank')}
+            >
+              Xem tất cả việc làm đối tác
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Support Section */}
       <section className="py-12 bg-blue-50">
         <div className="container mx-auto px-4">
