@@ -109,7 +109,7 @@ const Index = () => {
             </TabsList>
             
             <TabsContent value="steps" className="space-y-8">
-              <div className="grid grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
                 {[
                   {
                     title: 'Nhấn vào phần "Ứng tuyển"',
@@ -132,13 +132,13 @@ const Index = () => {
                     icon: Send
                   }
                 ].map((step, index) => (
-                  <Card key={index} className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 bg-white">
-                    <CardContent className="p-6 space-y-4">
+                  <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <CardContent className="p-8 space-y-6">
                       <div className="text-center">
-                        <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <step.icon className="h-6 w-6 text-blue-600" />
+                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <step.icon className="h-8 w-8 text-primary" />
                         </div>
-                        <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+                        <h3 className="text-xl font-semibold text-foreground mb-4">{step.title}</h3>
                         <p className="text-muted-foreground text-sm">
                           {step.description}
                         </p>
