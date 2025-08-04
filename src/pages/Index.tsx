@@ -149,11 +149,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Hướng dẫn quay video BĐS
+              Hướng dẫn quay video CV ứng tuyển
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Thu hút x3 lượt khách xem nhà
-            </p>
           </div>
 
           <Tabs defaultValue="steps" className="w-full">
@@ -166,56 +163,39 @@ const Index = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   {
-                    step: 1,
                     title: 'Nhấn vào phần "Ứng tuyển"',
                     description: "Nhấn vào phần 'Ứng tuyển' trên việc làm",
                     icon: Upload
                   },
                   {
-                    step: 2,
                     title: "Chọn vào mục quay video",
                     description: "Chọn vào mục quay video trong form ứng tuyển",
                     icon: Video
                   },
                   {
-                    step: 3,
                     title: "Quay video theo hướng dẫn",
                     description: "Quay video theo hướng dẫn chi tiết của hệ thống",
                     icon: Play
                   },
                   {
-                    step: 4,
                     title: "Gửi video ứng tuyển",
                     description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
                     icon: Send
                   }
                 ].map((step, index) => (
-                  <div key={index} className="relative">
-                    <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                      <CardContent className="p-8 text-center space-y-4">
-                        <div className="relative">
-                          <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                            <step.icon className="h-10 w-10 text-white" />
-                          </div>
-                          <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
-                            {step.step}
-                          </div>
+                  <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <CardContent className="p-8 space-y-6">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <step.icon className="h-8 w-8 text-primary" />
                         </div>
-                        <h3 className="text-lg font-semibold text-foreground">
-                          Bước {step.step}
-                        </h3>
-                        <h4 className="text-md font-medium text-foreground">
-                          {step.title}
-                        </h4>
-                        <p className="text-muted-foreground text-sm">
-                          {step.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                    {index < 3 && (
-                      <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-primary/30"></div>
-                    )}
-                  </div>
+                        <h3 className="text-xl font-semibold text-foreground mb-4">{step.title}</h3>
+                      </div>
+                      <p className="text-muted-foreground text-sm text-center">
+                        {step.description}
+                      </p>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
             </TabsContent>
