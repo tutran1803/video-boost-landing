@@ -69,8 +69,7 @@ const Index = () => {
               </div>
 
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
-                Video của bạn được bảo mật 100% - Chỉ nhà tuyển dụng được xác minh mới có thể được xem. 
-                Không chia sẻ công khai dữ liệu của bạn.
+                Video của bạn được bảo mật 100% - Chỉ nhà tuyển dụng được xác minh mới có thể được xem. Không chia sẻ công khai dữ liệu của bạn.
               </p>
             </div>
           </div>
