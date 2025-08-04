@@ -118,7 +118,7 @@ const Index = () => {
                   {
                     title: "Bước 2: Chọn vào mục quay video",
                     description: "Chọn vào mục quay video trong form ứng tuyển",
-                    imageUrl: "/lovable-uploads/bab96a0c-b5ff-493d-be02-1e4132881c4a.png"
+                    imageUrl: "/lovable-uploads/968c0488-03b1-40d9-a75e-05b8ece239a0.png"
                   },
                   {
                     title: "Bước 3: Quay video theo hướng dẫn",
