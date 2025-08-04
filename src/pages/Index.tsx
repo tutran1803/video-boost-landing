@@ -39,17 +39,17 @@ const Index = () => {
               <div className="grid grid-cols-3 gap-6 py-8 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-lg font-semibold text-foreground">
-                    Hồ sơ <span className="font-bold text-primary">nổi bật</span> giữa hàng trăm ứng viên khác
+                    Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span> giữa hàng trăm ứng viên khác
                   </div>
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-semibold text-foreground">
-                    Được <span className="font-bold text-primary">ưu tiên</span> xem trước
+                    Được <span className="font-bold text-primary text-2xl">ưu tiên</span> xem trước
                   </div>
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-semibold text-foreground">
-                    Nhà tuyển dụng <span className="font-bold text-primary">đánh giá cao</span>
+                    Nhà tuyển dụng <span className="font-bold text-primary text-2xl">đánh giá cao</span>
                   </div>
                 </div>
               </div>
