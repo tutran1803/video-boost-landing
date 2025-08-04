@@ -15,7 +15,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-12">
             {/* Hero Image */}
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-2xl mx-auto">
               <img 
                 src={heroImage} 
                 alt="Professional creating video CV" 
