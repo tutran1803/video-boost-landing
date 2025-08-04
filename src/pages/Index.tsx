@@ -133,7 +133,7 @@ const Index = () => {
                   }
                 ].map((step, index) => (
                   <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <CardContent className="p-8 space-y-6">
+                    <CardContent className="p-4 space-y-3">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                           <step.icon className="h-8 w-8 text-primary" />
@@ -141,7 +141,7 @@ const Index = () => {
                         <h3 className="text-xl font-semibold text-foreground mb-4">{step.title}</h3>
                         <div className="flex items-start gap-2 justify-center">
                           <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-muted-foreground">
+                          <span className="text-sm text-muted-foreground whitespace-nowrap">
                             {step.description}
                           </span>
                         </div>
