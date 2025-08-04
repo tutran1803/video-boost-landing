@@ -232,7 +232,7 @@ const Index = () => {
       </section>
 
       {/* Video Templates Section */}
-      <section id="video-templates" className="py-20 bg-background">
+      <section id="video-templates" className="pt-20 pb-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
@@ -296,7 +296,7 @@ const Index = () => {
       </section>
 
       {/* Jobs Section */}
-      <section className="py-20 bg-secondary/20">
+      <section className="pt-8 pb-20 bg-secondary/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
