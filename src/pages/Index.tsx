@@ -110,7 +110,7 @@ const Index = () => {
                   },
                   {
                     title: "Quay video theo hướng dẫn",
-                    description: "Quay video theo hướng dẫn chi tiết của hệ thống",
+                    description: "Quay video theo hướng dẫn",
                     icon: Play
                   },
                   {
