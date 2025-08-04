@@ -107,8 +107,8 @@ const Index = () => {
               <TabsTrigger value="tips" className="data-[state=active]:bg-primary/5 data-[state=active]:text-primary data-[state=active]:border-primary text-gray-600 border-transparent">Mẹo quay video</TabsTrigger>
             </TabsList>
             
-            <TabsContent value="steps" className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+            <TabsContent value="steps" className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
                 {[
                   {
                     title: 'Bước 1: Nhấn vào phần ứng tuyển',
@@ -131,9 +131,9 @@ const Index = () => {
                     imageUrl: "/lovable-uploads/2f9654a5-8657-44ef-a085-c25490d1b55e.png"
                   }
                 ].map((step, index) => (
-                  <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <CardContent className="p-6 space-y-4">
-                      <div className="w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-4">
+                  <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <CardContent className="p-3 space-y-2">
+                      <div className="w-full h-24 bg-gray-100 rounded-lg overflow-hidden mb-2">
                         <img 
                           src={step.imageUrl} 
                           alt={step.title}
@@ -141,8 +141,8 @@ const Index = () => {
                         />
                       </div>
                       <div className="text-center">
-                        <h3 className="text-sm font-semibold text-foreground mb-2">{step.title}</h3>
-                        <p className="text-xs text-muted-foreground">{step.description}</p>
+                        <h3 className="text-xs font-semibold text-foreground mb-1">{step.title}</h3>
+                        <p className="text-[10px] text-muted-foreground">{step.description}</p>
                       </div>
                     </CardContent>
                   </Card>
