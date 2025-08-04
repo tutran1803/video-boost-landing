@@ -296,7 +296,7 @@ const Index = () => {
       </section>
 
       {/* Support Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-50 to-orange-100">
+      <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-12 max-w-6xl mx-auto">
             <div className="flex-shrink-0">
@@ -314,7 +314,7 @@ const Index = () => {
                 Nếu bạn có câu hỏi khác hoặc cần hỗ trợ thêm, vui lòng liên hệ đội ngũ hỗ trợ của chúng tôi.
               </p>
               <div className="flex gap-4">
-                <Button variant="default" size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                <Button variant="default" size="lg" className="bg-blue-500 hover:bg-blue-600 text-white">
                   Liên hệ Zalo Việc Làm Tốt
                 </Button>
               </div>
