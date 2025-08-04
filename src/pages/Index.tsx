@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, CheckCircle, Upload, Video, Send } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Play, CheckCircle, Upload, Video, Send, Sun, Camera, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import videoTemplate1 from "@/assets/video-template-1.jpg";
 import videoTemplate2 from "@/assets/video-template-2.jpg";
@@ -148,68 +149,159 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Các bước để quay video
+              Hướng dẫn quay video BĐS
             </h2>
             <p className="text-xl text-muted-foreground">
-              Chỉ cần 4 bước đơn giản để tạo video ứng tuyển chuyên nghiệp
+              Thu hút x3 lượt khách xem nhà
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                step: 1,
-                title: 'Nhấn vào phần "Ứng tuyển"',
-                description: "Nhấn vào phần 'Ứng tuyển' trên việc làm",
-                icon: Upload
-              },
-              {
-                step: 2,
-                title: "Chọn vào mục quay video",
-                description: "Chọn vào mục quay video trong form ứng tuyển",
-                icon: Video
-              },
-              {
-                step: 3,
-                title: "Quay video theo hướng dẫn",
-                description: "Quay video theo hướng dẫn chi tiết của hệ thống",
-                icon: Play
-              },
-              {
-                step: 4,
-                title: "Gửi video ứng tuyển",
-                description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
-                icon: Send
-              }
-            ].map((step, index) => (
-              <div key={index} className="relative">
-                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                  <CardContent className="p-8 text-center space-y-4">
-                    <div className="relative">
-                      <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <step.icon className="h-10 w-10 text-white" />
+          <Tabs defaultValue="steps" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-12">
+              <TabsTrigger value="steps">Các bước thực hiện</TabsTrigger>
+              <TabsTrigger value="tips">Mẹo quay video</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="steps" className="space-y-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {[
+                  {
+                    step: 1,
+                    title: 'Nhấn vào phần "Ứng tuyển"',
+                    description: "Nhấn vào phần 'Ứng tuyển' trên việc làm",
+                    icon: Upload
+                  },
+                  {
+                    step: 2,
+                    title: "Chọn vào mục quay video",
+                    description: "Chọn vào mục quay video trong form ứng tuyển",
+                    icon: Video
+                  },
+                  {
+                    step: 3,
+                    title: "Quay video theo hướng dẫn",
+                    description: "Quay video theo hướng dẫn chi tiết của hệ thống",
+                    icon: Play
+                  },
+                  {
+                    step: 4,
+                    title: "Gửi video ứng tuyển",
+                    description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
+                    icon: Send
+                  }
+                ].map((step, index) => (
+                  <div key={index} className="relative">
+                    <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                      <CardContent className="p-8 text-center space-y-4">
+                        <div className="relative">
+                          <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <step.icon className="h-10 w-10 text-white" />
+                          </div>
+                          <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
+                            {step.step}
+                          </div>
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground">
+                          Bước {step.step}
+                        </h3>
+                        <h4 className="text-md font-medium text-foreground">
+                          {step.title}
+                        </h4>
+                        <p className="text-muted-foreground text-sm">
+                          {step.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                    {index < 3 && (
+                      <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-primary/30"></div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="tips" className="space-y-8">
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Ánh sáng */}
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <CardContent className="p-8 space-y-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Sun className="h-8 w-8 text-primary" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
-                        {step.step}
-                      </div>
+                      <h3 className="text-xl font-semibold text-foreground mb-4">Ánh sáng</h3>
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground">
-                      Bước {step.step}
-                    </h3>
-                    <h4 className="text-md font-medium text-foreground">
-                      {step.title}
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      {step.description}
-                    </p>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Quay ở nơi có ánh sáng tự nhiên</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Tránh ngược sáng</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Dùng đèn LED nếu trong nhà tối</span>
+                      </li>
+                    </ul>
                   </CardContent>
                 </Card>
-                {index < 3 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-primary/30"></div>
-                )}
+
+                {/* Góc quay */}
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <CardContent className="p-8 space-y-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Camera className="h-8 w-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-foreground mb-4">Góc quay</h3>
+                    </div>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Quay ở tầm mắt hoặc hơi cao</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Giữ máy thẳng, không nghiêng</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Để không gian đằng sau đẹp</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                {/* Kỹ thuật */}
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <CardContent className="p-8 space-y-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Zap className="h-8 w-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-foreground mb-4">Kỹ thuật</h3>
+                    </div>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Nói chậm, rõ ràng</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Mỉm cười tự nhiên</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Thời lượng 30-60 giây</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
-            ))}
-          </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
