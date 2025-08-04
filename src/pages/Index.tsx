@@ -95,7 +95,7 @@ const Index = () => {
       <section className="pt-0 pb-2 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
               Hướng dẫn quay video CV ứng tuyển
             </h2>
           </div>
@@ -238,7 +238,7 @@ const Index = () => {
       <section id="video-templates" className="pt-20 pb-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
               Cảm hứng từ những video CV xuất sắc
             </h2>
             <p className="text-lg text-muted-foreground">
