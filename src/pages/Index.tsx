@@ -313,7 +313,7 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-6">
             <Button 
               variant="outline" 
               size="lg"
