@@ -235,7 +235,7 @@ const Index = () => {
       </section>
 
       {/* Video Templates Section */}
-      <section id="video-templates" className="pt-20 pb-12 bg-background">
+      <section id="video-templates" className="pt-20 pb-4 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
