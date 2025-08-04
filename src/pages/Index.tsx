@@ -25,7 +25,7 @@ const Index = () => {
             </div>
 
             {/* Hero Content */}
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-4xl mx-auto space-y-8 border border-gray-200 rounded-2xl p-8 bg-white/50">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
                   Tăng cơ hội ứng tuyển{" "}
