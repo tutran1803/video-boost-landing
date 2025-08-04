@@ -373,14 +373,14 @@ const Index = () => {
                 className="border border-gray-200 hover:shadow-lg transition-all duration-300 group bg-white cursor-pointer"
                 onClick={() => window.open(job.link, '_blank')}
               >
-                <CardContent className="p-4">
-                  <div className="flex items-start gap-4">
+                <CardContent className="p-3">
+                  <div className="flex items-start gap-3">
                     {/* Logo */}
                     <div className="flex-shrink-0">
                       <img 
                         src={job.logo} 
                         alt={job.company}
-                        className="w-16 h-16 rounded-lg object-cover bg-gray-100"
+                        className="w-12 h-12 rounded-lg object-cover bg-gray-100"
                       />
                     </div>
                     
