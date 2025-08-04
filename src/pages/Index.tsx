@@ -41,9 +41,17 @@ const Index = () => {
               <div className="space-y-4">
                 <Button variant="hero" size="xl" className="w-full lg:w-auto">
                   <Play className="mr-2 h-5 w-5" />
-                  THỬ TẠO VIDEO - NHẬN 100K VOUCHER
+                  Thử tạo video nhé
                 </Button>
-                <Button variant="outline" size="lg" className="w-full lg:w-auto">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="w-full lg:w-auto"
+                  onClick={() => {
+                    const videoSection = document.getElementById('video-templates');
+                    videoSection?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Xem video mẫu
                 </Button>
               </div>
@@ -203,7 +211,7 @@ const Index = () => {
       </section>
 
       {/* Video Templates Section */}
-      <section className="py-20 bg-background">
+      <section id="video-templates" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
