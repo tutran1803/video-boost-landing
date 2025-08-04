@@ -44,7 +44,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">4h</div>
+                  <div className="text-3xl font-bold text-primary">24H</div>
                   <div className="text-sm text-muted-foreground">
                     Được <span className="font-bold text-primary">ưu tiên</span> xem trước
                   </div>
