@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-12">
+      <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-6 md:py-12">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-2">
             {/* Hero Image */}
@@ -26,63 +26,64 @@ const Index = () => {
             </div>
 
             {/* Hero Content */}
-            <div className="max-w-4xl mx-auto space-y-4 border border-gray-200 rounded-2xl p-8 bg-white/50">
+            <div className="max-w-4xl mx-auto space-y-4 border border-gray-200 rounded-2xl p-4 md:p-8 bg-white/50">
               <div className="space-y-4">
-                <h1 className="text-3xl lg:text-4xl font-extrabold text-foreground leading-tight whitespace-nowrap">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground leading-tight">
                   Tăng cơ hội ứng tuyển{" "}
                   <span className="text-primary font-black">x2 với video 30s</span>
                 </h1>
-                <p className="text-xl text-muted-foreground font-semibold">
+                <p className="text-lg md:text-xl text-muted-foreground font-semibold">
                   CÓ GÌ HẤP DẪN?
                 </p>
                 <div className="w-24 h-1 bg-primary mx-auto mt-2"></div>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 py-4 max-w-4xl mx-auto">
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                    <Files className="h-8 w-8 text-primary" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 py-4 max-w-4xl mx-auto">
+                <div className="text-center space-y-2 md:space-y-4">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Files className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                   </div>
-                  <div className="text-lg font-semibold text-foreground">
-                    Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span>
+                  <div className="text-base md:text-lg font-semibold text-foreground">
+                    Hồ sơ <span className="font-bold text-primary text-lg md:text-2xl">nổi bật</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">Gây ấn tượng mạnh ngay từ đầu</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">Gây ấn tượng mạnh ngay từ đầu</p>
                 </div>
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                    <TrendingUp className="h-8 w-8 text-primary" />
+                <div className="text-center space-y-2 md:space-y-4">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                   </div>
-                  <div className="text-lg font-semibold text-foreground">
-                    Được <span className="font-bold text-primary text-2xl">ưu tiên</span> xem trước
+                  <div className="text-base md:text-lg font-semibold text-foreground">
+                    Được <span className="font-bold text-primary text-lg md:text-2xl">ưu tiên</span> xem trước
                   </div>
-                  <p className="text-sm text-muted-foreground">Được xem đầu tiên trong danh sách</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">Được xem đầu tiên trong danh sách</p>
                 </div>
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                    <UserCheck className="h-8 w-8 text-primary" />
+                <div className="text-center space-y-2 md:space-y-4">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <UserCheck className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                   </div>
-                  <div className="text-lg font-semibold text-foreground whitespace-nowrap">
-                    Được <span className="font-bold text-primary text-2xl">đánh giá cao</span> bởi NTD
+                  <div className="text-base md:text-lg font-semibold text-foreground">
+                    Được <span className="font-bold text-primary text-lg md:text-2xl">đánh giá cao</span> bởi NTD
                   </div>
-                  <p className="text-sm text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
                 </div>
               </div>
 
-              <div className="flex flex-row gap-4 justify-center items-center">
-                <Button variant="hero" size="xl">
-                  <Play className="mr-2 h-5 w-5" />
+              <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
+                <Button variant="hero" size="lg" className="w-full md:w-auto">
+                  <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   Thử tạo video nhé
                 </Button>
                 <Button 
                   variant="outline" 
-                  size="xl"
+                  size="lg"
+                  className="w-full md:w-auto"
                   onClick={() => window.open('https://www.vieclamtot.com/tags/viec-lam-doi-tac', '_blank')}
                 >
                   Ứng tuyển ngay
                 </Button>
               </div>
 
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto italic text-center whitespace-nowrap">
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto italic text-center px-4">
                 <span className="font-bold">Video của bạn được bảo mật 100%</span> - Chỉ nhà tuyển dụng được xác minh mới có thể được xem. Không chia sẻ công khai dữ liệu của bạn.
               </p>
             </div>
@@ -107,7 +108,7 @@ const Index = () => {
             </TabsList>
             
             <TabsContent value="steps" className="space-y-8">
-              <div className="grid md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
                 {[
                   {
                     title: 'Bước 1: Nhấn vào phần ứng tuyển',
@@ -150,7 +151,7 @@ const Index = () => {
             </TabsContent>
 
             <TabsContent value="tips" className="space-y-8">
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                 {/* Ánh sáng */}
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="p-8 space-y-6">
@@ -246,7 +247,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
@@ -434,25 +435,25 @@ const Index = () => {
       </section>
 
       {/* Support Section */}
-      <section className="py-12 bg-blue-50">
+      <section className="py-8 md:py-12 bg-blue-50">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-8 max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 max-w-4xl mx-auto">
             <div className="flex-shrink-0">
               <img 
                 src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=400&q=80"
                 alt="Professional job seeker in business attire"
-                className="w-48 h-48 object-cover rounded-lg"
+                className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg"
               />
             </div>
-            <div className="flex-1 space-y-4">
-              <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+            <div className="flex-1 space-y-3 md:space-y-4 text-center md:text-left">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
                 Bạn có thắc mắc?
               </h2>
-              <p className="text-base text-muted-foreground">
+              <p className="text-sm md:text-base text-muted-foreground">
                 Nếu bạn có câu hỏi khác hoặc cần hỗ trợ thêm, vui lòng liên hệ đội ngũ hỗ trợ của chúng tôi.
               </p>
-              <div className="flex gap-4">
-                <Button variant="default" size="lg" className="bg-blue-500 hover:bg-blue-600 text-white">
+              <div className="flex justify-center md:justify-start">
+                <Button variant="default" size="lg" className="bg-blue-500 hover:bg-blue-600 text-white w-full md:w-auto">
                   Liên hệ Zalo Việc Làm Tốt
                 </Button>
               </div>
