@@ -19,7 +19,7 @@ const Index = () => {
               <img 
                 src={heroImage} 
                 alt="Professional creating video CV" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                className="rounded-2xl shadow-2xl w-full h-48 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
