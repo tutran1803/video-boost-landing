@@ -27,9 +27,9 @@ const Index = () => {
             {/* Hero Content */}
             <div className="max-w-4xl mx-auto space-y-4 border border-gray-200 rounded-2xl p-8 bg-white/50">
               <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-foreground leading-tight">
                   Tăng cơ hội ứng tuyển{" "}
-                  <span className="text-primary">x2 với video 30s</span>
+                  <span className="text-primary font-black">x2 với video 30s</span>
                 </h1>
                 <p className="text-xl text-muted-foreground font-semibold">
                   CÓ GÌ HẤP DẪN?
