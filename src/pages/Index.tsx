@@ -62,7 +62,7 @@ const Index = () => {
                     <UserCheck className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
-                    Được <span className="font-bold text-primary text-lg md:text-2xl">đánh giá cao</span> bởi NTD
+                    Được <span className="font-bold text-primary text-lg md:text-2xl">đánh giá cao</span>
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
                 </div>
