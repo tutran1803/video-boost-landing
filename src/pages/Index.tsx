@@ -75,12 +75,9 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="xl"
-                  onClick={() => {
-                    const videoSection = document.getElementById('video-templates');
-                    videoSection?.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                  onClick={() => window.open('https://www.vieclamtot.com/tags/viec-lam-doi-tac', '_blank')}
                 >
-                  Xem video mẫu
+                  Ứng tuyển ngay
                 </Button>
               </div>
 
