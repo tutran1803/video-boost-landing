@@ -31,6 +31,9 @@ const Index = () => {
                   Tăng cơ hội ứng tuyển{" "}
                   <span className="text-primary">x2 với video 30s</span>
                 </h1>
+                <p className="text-xl text-muted-foreground font-semibold">
+                  CÓ GÌ HẤP DẪN?
+                </p>
               </div>
               
               <div className="grid grid-cols-3 gap-6 py-8 max-w-4xl mx-auto">
