@@ -96,19 +96,10 @@ const Index = () => {
       {/* Steps Section */}
       <section className="pt-0 pb-2 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-8 mb-8 max-w-4xl mx-auto">
-            <div className="flex-shrink-0">
-              <img 
-                src="/lovable-uploads/7c12d1da-8b75-403e-87b8-d28fc8995b9b.png"
-                alt="Professional woman holding phone"
-                className="w-48 h-48 object-cover rounded-lg shadow-md"
-              />
-            </div>
-            <div className="text-center flex-1">
-              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Hướng dẫn quay video CV ứng tuyển
-              </h2>
-            </div>
+          <div className="text-center mb-8">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Hướng dẫn quay video CV ứng tuyển
+            </h2>
           </div>
 
           <Tabs defaultValue="steps" className="w-full">
