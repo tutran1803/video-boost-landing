@@ -335,42 +335,75 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-1 gap-6 mb-12">
             {[
               {
-                title: "Nhân viên kinh doanh",
-                company: "Công ty ABC",
-                salary: "8-15 triệu",
-                location: "Hà Nội"
+                title: "Tuyển 01 Nhân viên kinh doanh tại Hà Nội - Cầu Giấy",
+                company: "Công ty TNHH ABC Technology",
+                salary: "Đến 15 triệu/tháng",
+                location: "Quận Cầu Giấy, Hà Nội",
+                timePosted: "2 giờ trước",
+                contacts: "15 Liên Hệ",
+                logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=100&q=80"
               },
               {
-                title: "Chăm sóc khách hàng",
-                company: "Công ty XYZ", 
-                salary: "7-12 triệu",
-                location: "TP.HCM"
+                title: "Tuyển 02 Chăm sóc khách hàng tại TP.HCM - Quận 1", 
+                company: "Công ty CP Dịch vụ XYZ",
+                salary: "8-12 triệu/tháng",
+                location: "Quận 1, TP Hồ Chí Minh",
+                timePosted: "4 giờ trước",
+                contacts: "8 Liên Hệ",
+                logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=100&q=80"
               },
               {
-                title: "Telesales",
-                company: "Công ty DEF",
-                salary: "6-10 triệu",
-                location: "Đà Nẵng"
+                title: "Tuyển 03 Telesales bán hàng tại Đà Nẵng - Hải Châu",
+                company: "Công ty TNHH Marketing DEF",
+                salary: "6-10 triệu + hoa hồng",
+                location: "Quận Hải Châu, Đà Nẵng",
+                timePosted: "1 ngày trước",
+                contacts: "12 Liên Hệ",
+                logo: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=100&q=80"
               }
             ].map((job, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <CardContent className="p-6 space-y-4">
-                  <div className="space-y-3">
-                    <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                      {job.title}
-                    </h3>
-                    <div className="space-y-2 text-muted-foreground">
-                      <p className="text-sm">{job.company}</p>
-                      <p className="text-sm font-medium text-primary">{job.salary}</p>
-                      <p className="text-sm">{job.location}</p>
+              <Card key={index} className="border border-gray-200 hover:shadow-lg transition-all duration-300 group bg-white">
+                <CardContent className="p-4">
+                  <div className="flex items-start gap-4">
+                    {/* Logo */}
+                    <div className="flex-shrink-0">
+                      <img 
+                        src={job.logo} 
+                        alt={job.company}
+                        className="w-16 h-16 rounded-lg object-cover bg-gray-100"
+                      />
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between mb-2">
+                        <span className="inline-flex items-center px-2 py-1 text-xs font-medium bg-orange-100 text-orange-800 rounded">
+                          🔥 Đối Tác
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-base font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                        {job.title}
+                      </h3>
+                      
+                      <p className="text-sm text-gray-600 mb-2">{job.company}</p>
+                      
+                      <p className="text-sm font-semibold text-red-600 mb-2">{job.salary}</p>
+                      
+                      <div className="flex items-center text-sm text-gray-500 mb-3">
+                        <span className="mr-4">📍 {job.location}</span>
+                      </div>
+                      
+                      <div className="flex items-center text-xs text-gray-400 space-x-4">
+                        <span>{job.timePosted}</span>
+                        <span>•</span>
+                        <span>{job.contacts}</span>
+                      </div>
                     </div>
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    Xem chi tiết
-                  </Button>
                 </CardContent>
               </Card>
             ))}
