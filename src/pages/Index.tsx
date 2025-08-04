@@ -102,11 +102,10 @@ const Index = () => {
           </div>
 
           <Tabs defaultValue="steps" className="w-full">
-            <div className="text-center mb-8">
-              <h3 className="text-lg font-semibold text-primary bg-primary/5 inline-block px-6 py-2 rounded-full border border-primary/20">
-                Các bước thực hiện
-              </h3>
-            </div>
+            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8 bg-transparent border border-gray-200 p-1">
+              <TabsTrigger value="steps" className="data-[state=active]:bg-primary/5 data-[state=active]:text-primary data-[state=active]:border-primary text-gray-600 border-transparent">Các bước thực hiện</TabsTrigger>
+              <TabsTrigger value="tips" className="data-[state=active]:bg-primary/5 data-[state=active]:text-primary data-[state=active]:border-primary text-gray-600 border-transparent">Mẹo quay video</TabsTrigger>
+            </TabsList>
             
             <TabsContent value="steps" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
@@ -150,98 +149,89 @@ const Index = () => {
                 ))}
               </div>
             </TabsContent>
+
+            <TabsContent value="tips" className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+                {/* Ánh sáng */}
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <CardContent className="p-8 space-y-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Sun className="h-8 w-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-foreground mb-4">Ánh sáng</h3>
+                    </div>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Quay ở nơi có ánh sáng tự nhiên</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Tránh ngược sáng</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Dùng đèn LED nếu trong nhà tối</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                {/* Góc quay */}
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <CardContent className="p-8 space-y-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Camera className="h-8 w-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-foreground mb-4">Góc quay</h3>
+                    </div>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Quay ở tầm mắt hoặc hơi cao</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Giữ máy thẳng, không nghiêng</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Để không gian đằng sau đẹp</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                {/* Kỹ thuật */}
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <CardContent className="p-8 space-y-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Zap className="h-8 w-8 text-primary" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground mb-4">Kỹ thuật</h3>
+                    </div>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Nói chậm, rõ ràng</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Mỉm cười tự nhiên</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">Thời lượng 30-60 giây</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
           </Tabs>
-        </div>
-      </section>
-
-      {/* Tips Section */}
-      <section className="py-8 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-              Mẹo quay video
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-            {/* Ánh sáng */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-8 space-y-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Sun className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Ánh sáng</h3>
-                </div>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Quay ở nơi có ánh sáng tự nhiên</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Tránh ngược sáng</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Dùng đèn LED nếu trong nhà tối</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Góc quay */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-8 space-y-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Camera className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Góc quay</h3>
-                </div>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Quay ở tầm mắt hoặc hơi cao</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Giữ máy thẳng, không nghiêng</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Để không gian đằng sau đẹp</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Kỹ thuật */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-8 space-y-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-4">Kỹ thuật</h3>
-                </div>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Nói chậm, rõ ràng</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Mỉm cười tự nhiên</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Thời lượng 30-60 giây</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
