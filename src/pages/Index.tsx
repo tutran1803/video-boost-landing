@@ -274,14 +274,14 @@ const Index = () => {
                     <Button 
                       variant="hero" 
                       size="lg"
+                      className="w-16 h-16 rounded-full p-0"
                       onClick={() => {
                         if (template.videoUrl) {
                           window.open(template.videoUrl, '_blank');
                         }
                       }}
                     >
-                      <Play className="mr-2 h-5 w-5" />
-                      Xem video
+                      <Play className="h-8 w-8" />
                     </Button>
                   </div>
                 </div>
