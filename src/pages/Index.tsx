@@ -418,11 +418,12 @@ const Index = () => {
 
           <div className="text-center">
             <Button 
-              variant="cta" 
-              size="xl"
+              variant="outline" 
+              size="lg"
+              className="text-primary border-primary hover:bg-primary/5"
               onClick={() => window.open('https://www.vieclamtot.com/tags/viec-lam-doi-tac', '_blank')}
             >
-              Xem tất cả việc làm đối tác
+              Xem tất cả việc làm đối tác →
             </Button>
           </div>
         </div>
