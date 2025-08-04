@@ -96,14 +96,21 @@ const Index = () => {
       {/* Steps Section */}
       <section className="pt-0 pb-2 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
               Hướng dẫn quay video CV ứng tuyển
             </h2>
+            <div className="max-w-md mx-auto mb-6">
+              <img 
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80" 
+                alt="Video recording guidance illustration"
+                className="w-full h-32 object-cover rounded-lg shadow-md"
+              />
+            </div>
           </div>
 
           <Tabs defaultValue="steps" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-12">
+            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8">
               <TabsTrigger value="steps">Các bước thực hiện</TabsTrigger>
               <TabsTrigger value="tips">Mẹo quay video</TabsTrigger>
             </TabsList>
