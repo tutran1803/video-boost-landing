@@ -296,21 +296,21 @@ const Index = () => {
       </section>
 
       {/* Support Section */}
-      <section className="py-20 bg-blue-50">
+      <section className="py-12 bg-blue-50">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-12 max-w-6xl mx-auto">
+          <div className="flex items-center gap-8 max-w-4xl mx-auto">
             <div className="flex-shrink-0">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
                 alt="Professional support representative"
-                className="w-80 h-80 object-cover rounded-lg"
+                className="w-48 h-48 object-cover rounded-lg"
               />
             </div>
-            <div className="flex-1 space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+            <div className="flex-1 space-y-4">
+              <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
                 Bạn có thắc mắc?
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Nếu bạn có câu hỏi khác hoặc cần hỗ trợ thêm, vui lòng liên hệ đội ngũ hỗ trợ của chúng tôi.
               </p>
               <div className="flex gap-4">
