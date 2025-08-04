@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Play, CheckCircle, Upload, Video, Send, Sun, Camera, Zap } from "lucide-react";
+import { Play, CheckCircle, Upload, Video, Send, Sun, Camera, Zap, Files, TrendingUp, UserCheck } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import videoTemplate1 from "@/assets/video-template-1.jpg";
 import videoTemplate2 from "@/assets/video-template-2.jpg";
@@ -38,17 +38,26 @@ const Index = () => {
               </div>
               
               <div className="grid grid-cols-3 gap-6 py-8 max-w-4xl mx-auto">
-                <div className="text-center">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Files className="h-8 w-8 text-primary" />
+                  </div>
                   <div className="text-lg font-semibold text-foreground">
                     Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span> giữa hàng trăm ứng viên khác
                   </div>
                 </div>
-                <div className="text-center">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
                   <div className="text-lg font-semibold text-foreground">
                     Được <span className="font-bold text-primary text-2xl">ưu tiên</span> xem trước
                   </div>
                 </div>
-                <div className="text-center">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <UserCheck className="h-8 w-8 text-primary" />
+                  </div>
                   <div className="text-lg font-semibold text-foreground">
                     Nhà tuyển dụng <span className="font-bold text-primary text-2xl whitespace-nowrap">đánh giá cao</span>
                   </div>
