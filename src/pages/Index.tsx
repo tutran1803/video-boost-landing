@@ -248,9 +248,9 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                image: videoTemplate1,
+                image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
                 title: "Nhân viên kinh doanh",
-                link: "#"
+                videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview"
               },
               {
                 image: videoTemplate2,
@@ -274,7 +274,11 @@ const Index = () => {
                     <Button 
                       variant="hero" 
                       size="lg"
-                      onClick={() => window.open('https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/view', '_blank')}
+                      onClick={() => {
+                        if (template.videoUrl) {
+                          window.open(template.videoUrl, '_blank');
+                        }
+                      }}
                     >
                       <Play className="mr-2 h-5 w-5" />
                       Xem video
