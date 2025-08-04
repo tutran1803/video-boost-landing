@@ -250,17 +250,32 @@ const Index = () => {
               {
                 image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
                 title: "Nhân viên kinh doanh",
-                videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview"
+                videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview",
+                stats: [
+                  "✅ Được 6 NTD liên hệ",
+                  "⚡ Làm việc ngay sau 24H đăng tải",
+                  "🎯 Lương 15-18 triệu/tháng"
+                ]
               },
               {
                 image: videoTemplate2,
                 title: "Chăm sóc khách hàng",
-                link: "#"
+                link: "#",
+                stats: [
+                  "✅ Được 8 NTD quan tâm", 
+                  "⚡ Có việc làm sau 3 ngày",
+                  "🎯 Mức lương 12-16 triệu"
+                ]
               },
               {
                 image: videoTemplate3,
                 title: "Telesales",
-                link: "#"
+                link: "#",
+                stats: [
+                  "✅ Được 12 NTD liên hệ",
+                  "⚡ Nhận offer sau 1 tuần", 
+                  "🎯 Thu nhập 20-25 triệu"
+                ]
               }
             ].map((template, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
@@ -302,11 +317,18 @@ const Index = () => {
                     </>
                   )}
                 </div>
-                <CardContent className="p-6 space-y-3">
+                <CardContent className="p-6 space-y-4">
                   <div className="space-y-3">
                     <h3 className="text-lg font-semibold text-foreground">
                       {template.title}
                     </h3>
+                    <div className="space-y-2">
+                      {template.stats.map((stat, statIndex) => (
+                        <div key={statIndex} className="flex items-center text-sm text-muted-foreground">
+                          <span className="text-xs">{stat}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
