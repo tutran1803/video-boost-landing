@@ -315,9 +315,13 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="cta" size="xl">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="text-primary border-primary hover:bg-primary/5"
+            >
               <Play className="mr-2 h-5 w-5" />
-              Bắt đầu tạo video ngay
+              Bắt đầu tạo video ngay →
             </Button>
           </div>
         </div>
