@@ -36,36 +36,32 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 py-8 max-w-2xl mx-auto">
+              <div className="grid grid-cols-3 gap-6 py-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">90%</div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-lg font-semibold text-foreground">
                     Hồ sơ <span className="font-bold text-primary">nổi bật</span> giữa hàng trăm ứng viên khác
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">24H</div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-lg font-semibold text-foreground">
                     Được <span className="font-bold text-primary">ưu tiên</span> xem trước
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">100k+</div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-lg font-semibold text-foreground">
                     Nhà tuyển dụng <span className="font-bold text-primary">đánh giá cao</span>
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <Button variant="hero" size="xl" className="w-full lg:w-auto">
+              <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
+                <Button variant="hero" size="xl">
                   <Play className="mr-2 h-5 w-5" />
                   Thử tạo video nhé
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full lg:w-auto ml-0 lg:ml-4"
                   onClick={() => {
                     const videoSection = document.getElementById('video-templates');
                     videoSection?.scrollIntoView({ behavior: 'smooth' });
