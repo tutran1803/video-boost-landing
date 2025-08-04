@@ -61,7 +61,7 @@ const Index = () => {
                     <UserCheck className="h-8 w-8 text-primary" />
                   </div>
                   <div className="text-lg font-semibold text-foreground">
-                    <span className="font-bold text-primary text-2xl whitespace-nowrap">Đánh giá cao</span> bởi NTD
+                    Được <span className="font-bold text-primary text-2xl whitespace-nowrap">đánh giá cao</span> bởi NTD
                   </div>
                   <p className="text-sm text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
                 </div>
