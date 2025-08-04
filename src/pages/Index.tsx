@@ -294,6 +294,34 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Support Section */}
+      <section className="py-20 bg-gradient-to-r from-orange-50 to-orange-100">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-12 max-w-6xl mx-auto">
+            <div className="flex-shrink-0">
+              <img 
+                src="/lovable-uploads/70f7c526-4ae8-4a96-97ef-909f3aa632a9.png"
+                alt="Professional support representative"
+                className="w-80 h-80 object-cover rounded-lg"
+              />
+            </div>
+            <div className="flex-1 space-y-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+                Bạn có thắc mắc?
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Nếu bạn có câu hỏi khác hoặc cần hỗ trợ thêm, vui lòng liên hệ đội ngũ hỗ trợ của chúng tôi.
+              </p>
+              <div className="flex gap-4">
+                <Button variant="default" size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Liên hệ Zalo Việc Làm Tốt
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
