@@ -49,7 +49,7 @@ const Index = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-semibold text-foreground">
-                    Nhà tuyển dụng <span className="font-bold text-primary text-2xl">đánh giá cao</span>
+                    Nhà tuyển dụng <span className="font-bold text-primary text-2xl whitespace-nowrap">đánh giá cao</span>
                   </div>
                 </div>
               </div>
