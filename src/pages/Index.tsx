@@ -111,7 +111,7 @@ const Index = () => {
                   {
                     title: 'Bước 1: Nhấn vào phần ứng tuyển',
                     description: "Nhấn vào phần 'Ứng tuyển' trên việc làm",
-                    imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80"
+                    imageUrl: "/lovable-uploads/c3e93334-7a89-41f2-b7ba-148f700559ae.png"
                   },
                   {
                     title: "Bước 2: Chọn vào mục quay video",
