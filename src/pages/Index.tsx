@@ -109,7 +109,7 @@ const Index = () => {
             </TabsList>
             
             <TabsContent value="steps" className="space-y-8">
-              <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-4 gap-8">
                 {[
                   {
                     title: 'Nhấn vào phần "Ứng tuyển"',
