@@ -101,9 +101,9 @@ const Index = () => {
           </div>
 
           <Tabs defaultValue="steps" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8">
-              <TabsTrigger value="steps">Các bước thực hiện</TabsTrigger>
-              <TabsTrigger value="tips">Mẹo quay video</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8 bg-transparent border border-gray-200 p-1">
+              <TabsTrigger value="steps" className="data-[state=active]:bg-primary/5 data-[state=active]:text-primary data-[state=active]:border-primary text-gray-600 border-transparent">Các bước thực hiện</TabsTrigger>
+              <TabsTrigger value="tips" className="data-[state=active]:bg-primary/5 data-[state=active]:text-primary data-[state=active]:border-primary text-gray-600 border-transparent">Mẹo quay video</TabsTrigger>
             </TabsList>
             
             <TabsContent value="steps" className="space-y-8">
