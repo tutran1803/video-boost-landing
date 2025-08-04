@@ -301,8 +301,8 @@ const Index = () => {
           <div className="flex items-center gap-8 max-w-4xl mx-auto">
             <div className="flex-shrink-0">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
-                alt="Professional support representative"
+                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=400&q=80"
+                alt="Professional job seeker in business attire"
                 className="w-48 h-48 object-cover rounded-lg"
               />
             </div>
