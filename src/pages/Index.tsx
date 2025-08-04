@@ -251,19 +251,16 @@ const Index = () => {
               {
                 image: videoTemplate1,
                 title: "Nhân viên kinh doanh",
-                description: "Ứng tuyển vị trí:",
                 link: "#"
               },
               {
                 image: videoTemplate2,
                 title: "Chăm sóc khách hàng",
-                description: "Ứng tuyển vị trí:",
                 link: "#"
               },
               {
                 image: videoTemplate3,
                 title: "Telesales",
-                description: "Ứng tuyển vị trí:",
                 link: "#"
               }
             ].map((template, index) => (
@@ -286,9 +283,6 @@ const Index = () => {
                     <div className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
                       {template.title}
                     </div>
-                    <p className="text-muted-foreground text-sm">
-                      {template.description}
-                    </p>
                   </div>
                 </CardContent>
               </Card>
