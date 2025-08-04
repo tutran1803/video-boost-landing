@@ -37,7 +37,7 @@ const Index = () => {
                 <div className="w-24 h-1 bg-primary mx-auto mt-2"></div>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 py-8 max-w-4xl mx-auto">
+              <div className="grid grid-cols-3 gap-6 py-4 max-w-4xl mx-auto">
                 <div className="text-center space-y-4">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                     <Files className="h-8 w-8 text-primary" />
