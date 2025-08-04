@@ -54,7 +54,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-row gap-4 justify-center items-center">
                 <Button variant="hero" size="xl">
                   <Play className="mr-2 h-5 w-5" />
                   Thử tạo video nhé
