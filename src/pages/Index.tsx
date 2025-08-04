@@ -121,7 +121,7 @@ const Index = () => {
                   {
                     title: "Bước 3: Quay video theo hướng dẫn",
                     description: "Quay video theo hướng dẫn",
-                    imageUrl: "https://images.unsplash.com/photo-1492552181161-62217fc3076d?auto=format&fit=crop&w=400&q=80"
+                    imageUrl: "/lovable-uploads/39d85a58-7b86-4914-b273-43826acb56e0.png"
                   },
                   {
                     title: "Bước 4: Gửi video ứng tuyển",
