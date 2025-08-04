@@ -11,9 +11,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-12">
+          <div className="text-center space-y-8">
             {/* Hero Image */}
             <div className="relative max-w-2xl mx-auto">
               <img 
@@ -25,7 +25,7 @@ const Index = () => {
             </div>
 
             {/* Hero Content */}
-            <div className="max-w-4xl mx-auto space-y-8 border border-gray-200 rounded-2xl p-8 bg-white/50">
+            <div className="max-w-4xl mx-auto space-y-4 border border-gray-200 rounded-2xl p-8 bg-white/50">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
                   Tăng cơ hội ứng tuyển{" "}
