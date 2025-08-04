@@ -233,6 +233,99 @@ const Index = () => {
       </section>
 
 
+      {/* Video Templates Section */}
+      <section id="video-templates" className="pt-8 pb-4 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+              Cảm hứng từ những video CV xuất sắc
+            </h2>
+            <p className="text-base text-muted-foreground">
+              Xem các mẫu video thành công để tạo cảm hứng cho video của bạn
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+            {[
+              {
+                image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
+                title: "Nhân viên kinh doanh",
+                videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview"
+              },
+              {
+                image: videoTemplate2,
+                title: "Chăm sóc khách hàng",
+                link: "#"
+              },
+              {
+                image: videoTemplate3,
+                title: "Telesales",
+                link: "#"
+              }
+            ].map((template, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
+                <div className="relative overflow-hidden">
+                  {playingVideo === index && template.videoUrl ? (
+                    <iframe
+                      src={template.videoUrl}
+                      className="w-full h-48 rounded-lg"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <>
+                      <img 
+                        src={template.image} 
+                        alt={template.title}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        {template.videoUrl ? (
+                          <Button 
+                            variant="hero" 
+                            size="lg"
+                            className="w-16 h-16 rounded-full p-0"
+                            onClick={() => setPlayingVideo(index)}
+                          >
+                            <Play className="h-8 w-8" />
+                          </Button>
+                        ) : (
+                          <Button 
+                            variant="hero" 
+                            size="lg"
+                            className="w-16 h-16 rounded-full p-0"
+                          >
+                            <Play className="h-8 w-8" />
+                          </Button>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </div>
+                <CardContent className="p-6 space-y-3">
+                  <div className="space-y-3">
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {template.title}
+                    </h3>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="text-primary border-primary hover:bg-primary/5"
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Bắt đầu tạo video ngay →
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Steps Section */}
       <section className="pt-0 pb-2 bg-secondary/30">
         <div className="container mx-auto px-4">
@@ -392,99 +485,6 @@ const Index = () => {
               </div>
             </TabsContent>
           </Tabs>
-        </div>
-      </section>
-
-      {/* Video Templates Section */}
-      <section id="video-templates" className="pt-8 pb-4 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-              Cảm hứng từ những video CV xuất sắc
-            </h2>
-            <p className="text-base text-muted-foreground">
-              Xem các mẫu video thành công để tạo cảm hứng cho video của bạn
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-            {[
-              {
-                image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
-                title: "Nhân viên kinh doanh",
-                videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview"
-              },
-              {
-                image: videoTemplate2,
-                title: "Chăm sóc khách hàng",
-                link: "#"
-              },
-              {
-                image: videoTemplate3,
-                title: "Telesales",
-                link: "#"
-              }
-            ].map((template, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
-                <div className="relative overflow-hidden">
-                  {playingVideo === index && template.videoUrl ? (
-                    <iframe
-                      src={template.videoUrl}
-                      className="w-full h-48 rounded-lg"
-                      allow="autoplay; encrypted-media"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <>
-                      <img 
-                        src={template.image} 
-                        alt={template.title}
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        {template.videoUrl ? (
-                          <Button 
-                            variant="hero" 
-                            size="lg"
-                            className="w-16 h-16 rounded-full p-0"
-                            onClick={() => setPlayingVideo(index)}
-                          >
-                            <Play className="h-8 w-8" />
-                          </Button>
-                        ) : (
-                          <Button 
-                            variant="hero" 
-                            size="lg"
-                            className="w-16 h-16 rounded-full p-0"
-                          >
-                            <Play className="h-8 w-8" />
-                          </Button>
-                        )}
-                      </div>
-                    </>
-                  )}
-                </div>
-                <CardContent className="p-6 space-y-3">
-                  <div className="space-y-3">
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {template.title}
-                    </h3>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="text-primary border-primary hover:bg-primary/5"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Bắt đầu tạo video ngay →
-            </Button>
-          </div>
         </div>
       </section>
 
