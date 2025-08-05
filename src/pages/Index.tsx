@@ -150,7 +150,7 @@ const Index = () => {
                   <span className="text-primary font-black">x2 với video 30s</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground font-semibold">
-                  CÓ GÌ HẤP DẪN?
+                  Tăng cơ hội ứng tuyển x2 với video 30s
                 </p>
                 <div className="w-24 h-1 bg-primary mx-auto mt-2"></div>
               </div>
