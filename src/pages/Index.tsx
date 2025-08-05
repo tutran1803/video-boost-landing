@@ -390,23 +390,23 @@ const Index = () => {
                 <div className="overflow-hidden" ref={emblaRefSteps}>
                   <div className="flex">
                     {stepsData.map((step, index) => (
-                      <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
-                        <Card className="border-0 shadow-md">
-                          <CardContent className="p-4 space-y-3">
-                            <div className="w-full h-28 bg-gray-100 rounded-lg overflow-hidden mb-3">
-                              <img 
-                                src={step.imageUrl} 
-                                alt={step.title}
-                                className="w-full h-full object-contain"
-                              />
-                            </div>
-                            <div className="text-center">
-                              <h3 className="text-base font-semibold text-foreground mb-2">{step.title}</h3>
-                              <p className="text-sm text-muted-foreground">{step.description}</p>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </div>
+                       <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
+                         <Card className="border-0 shadow-md">
+                           <CardContent className="p-3 space-y-2">
+                             <div className="w-full h-20 bg-gray-100 rounded-lg overflow-hidden mb-2">
+                               <img 
+                                 src={step.imageUrl} 
+                                 alt={step.title}
+                                 className="w-full h-full object-contain"
+                               />
+                             </div>
+                             <div className="text-center">
+                               <h3 className="text-xs font-semibold text-foreground">{step.title}</h3>
+                               <p className="text-xs text-muted-foreground leading-tight">{step.description}</p>
+                             </div>
+                           </CardContent>
+                         </Card>
+                       </div>
                     ))}
                   </div>
                 </div>
