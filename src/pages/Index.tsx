@@ -146,8 +146,8 @@ const Index = () => {
             <div className="max-w-4xl mx-auto space-y-4 border border-gray-200 rounded-2xl p-4 md:p-8 bg-white/50">
               <div className="space-y-4">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground leading-tight">
-                  Tăng cơ hội ứng tuyển{" "}
-                  <span className="text-primary font-black">x2 với video 30s</span>
+                  Hồ sơ có video được{" "}
+                  <span className="text-primary font-black">ưu tiên xem đầu tiên</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground font-semibold">
                   Tăng cơ hội ứng tuyển x2 với video 30s
