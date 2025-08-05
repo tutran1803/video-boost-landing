@@ -135,7 +135,7 @@ const Index = () => {
             {/* Hero Image */}
             <div className="relative max-w-2xl mx-auto">
               <img 
-                src={heroImage} 
+                src="/lovable-uploads/8131a1c7-f429-4991-80f2-4cf9ea391e0b.png" 
                 alt="Professional creating video CV" 
                 className="rounded-2xl shadow-2xl w-full h-48 object-cover"
               />
