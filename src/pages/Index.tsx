@@ -27,8 +27,14 @@ const Index = () => {
     containScroll: 'trimSnaps',
     dragFree: false
   });
+  const [emblaRefVideos, emblaApiVideos] = useEmblaCarousel({ 
+    align: 'start',
+    containScroll: 'trimSnaps',
+    dragFree: false
+  });
   const [selectedStepIndex, setSelectedStepIndex] = useState(0);
   const [selectedTipIndex, setSelectedTipIndex] = useState(0);
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState(0);
 
   // Update selected index when embla scrolls
   const onStepSelect = () => {
@@ -39,6 +45,11 @@ const Index = () => {
   const onTipSelect = () => {
     if (!emblaApiTips) return;
     setSelectedTipIndex(emblaApiTips.selectedScrollSnap());
+  };
+
+  const onVideoSelect = () => {
+    if (!emblaApiVideos) return;
+    setSelectedVideoIndex(emblaApiVideos.selectedScrollSnap());
   };
 
   // Set up scroll listener
@@ -55,6 +66,13 @@ const Index = () => {
       onTipSelect(); // Set initial index
     }
   }, [emblaApiTips]);
+
+  useEffect(() => {
+    if (emblaApiVideos) {
+      emblaApiVideos.on('select', onVideoSelect);
+      onVideoSelect(); // Set initial index
+    }
+  }, [emblaApiVideos]);
 
   const stepsData = [
     {
@@ -237,7 +255,8 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+          {/* Desktop version */}
+          <div className="hidden md:grid md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
@@ -325,6 +344,122 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Mobile carousel version */}
+          <div className="md:hidden">
+            <div className="overflow-hidden" ref={emblaRefVideos}>
+              <div className="flex">
+                {[
+                  {
+                    image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
+                    title: "Nhân viên kinh doanh",
+                    videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview",
+                    stats: [
+                      "✅ Được 6 NTD liên hệ",
+                      "⚡ Làm việc ngay sau 24H đăng tải",
+                      "🎯 Lương 15-18 triệu/tháng"
+                    ]
+                  },
+                  {
+                    image: videoTemplate2,
+                    title: "Chăm sóc khách hàng",
+                    link: "#",
+                    stats: [
+                      "✅ Được 8 NTD quan tâm", 
+                      "⚡ Có việc làm sau 3 ngày",
+                      "🎯 Mức lương 12-16 triệu"
+                    ]
+                  },
+                  {
+                    image: videoTemplate3,
+                    title: "Telesales",
+                    link: "#",
+                    stats: [
+                      "✅ Được 12 NTD liên hệ",
+                      "⚡ Nhận offer sau 1 tuần", 
+                      "🎯 Thu nhập 20-25 triệu"
+                    ]
+                  }
+                ].map((template, index) => (
+                  <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
+                    <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
+                      <div className="relative overflow-hidden">
+                        {playingVideo === index && template.videoUrl ? (
+                          <iframe
+                            src={template.videoUrl}
+                            className="w-full h-48 rounded-lg"
+                            allow="autoplay; encrypted-media"
+                            allowFullScreen
+                          />
+                        ) : (
+                          <>
+                            <img 
+                              src={template.image} 
+                              alt={template.title}
+                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                              {template.videoUrl ? (
+                                <Button 
+                                  variant="hero" 
+                                  size="lg"
+                                  className="w-16 h-16 rounded-full p-0"
+                                  onClick={() => setPlayingVideo(index)}
+                                >
+                                  <Play className="h-8 w-8" />
+                                </Button>
+                              ) : (
+                                <Button 
+                                  variant="hero" 
+                                  size="lg"
+                                  className="w-16 h-16 rounded-full p-0"
+                                >
+                                  <Play className="h-8 w-8" />
+                                </Button>
+                              )}
+                            </div>
+                          </>
+                        )}
+                      </div>
+                      <CardContent className="p-6 space-y-4">
+                        <div className="space-y-3">
+                          <h3 className="text-lg font-semibold text-foreground">
+                            {template.title}
+                          </h3>
+                          <div className="space-y-2">
+                            {template.stats.map((stat, statIndex) => (
+                              <div key={statIndex} className="flex items-center text-sm text-muted-foreground">
+                                <span className="text-xs">{stat}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Dots indicator */}
+            <div className="flex justify-center mt-4 space-x-2">
+              {[0, 1, 2].map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === selectedVideoIndex 
+                      ? 'bg-primary w-6' 
+                      : 'bg-gray-300'
+                  }`}
+                  onClick={() => {
+                    if (emblaApiVideos) {
+                      emblaApiVideos.scrollTo(index);
+                    }
+                  }}
+                />
+              ))}
+            </div>
           </div>
 
           <div className="text-center mt-6">
