@@ -173,7 +173,7 @@ const Index = () => {
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Được <span className="font-bold text-primary text-lg md:text-2xl">ưu tiên</span> xem trước
                   </div>
-                  <p className="text-xs md:text-sm text-muted-foreground">Được xem đầu tiên trong danh sách</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">90% hồ sơ có video được xem đầu tiên</p>
                 </div>
                 <div className="text-center space-y-2 md:space-y-4">
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
@@ -205,7 +205,7 @@ const Index = () => {
                     <div className="text-sm font-semibold text-foreground">
                       Được <span className="font-bold text-primary">ưu tiên</span> xem trước
                     </div>
-                    <p className="text-xs text-muted-foreground">Được xem đầu tiên trong danh sách</p>
+                    <p className="text-xs text-muted-foreground">90% hồ sơ có video được xem đầu tiên</p>
                   </div>
                   <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20">
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
