@@ -234,54 +234,27 @@ const Index = () => {
                 </Button>
               </div>
 
-              {/* Statistics Section */}
-              <div className="mt-8 pt-8 border-t border-white/20">
-                <div className="text-center space-y-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground">
-                    Hồ sơ có video được{" "}
-                    <span className="text-primary font-black">ưu tiên xem đầu tiên</span>
-                  </h3>
-                  <p className="text-sm md:text-base text-muted-foreground">
-                    Tạo video CV để nổi bật hơn với nhà tuyển dụng
-                  </p>
-                  
-                  {/* Desktop Stats */}
-                  <div className="hidden md:grid grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <div className="text-center space-y-3 p-6 bg-white/10 rounded-2xl border border-white/20">
-                      <div className="text-4xl font-black text-primary">90%</div>
-                      <div className="text-sm text-muted-foreground font-medium">Được xem đầu tiên</div>
-                    </div>
-                    <div className="text-center space-y-3 p-6 bg-white/10 rounded-2xl border border-white/20">
-                      <div className="text-4xl font-black text-primary">4h</div>
-                      <div className="text-sm text-muted-foreground font-medium">Được đánh giá cao</div>
-                    </div>
-                    <div className="text-center space-y-3 p-6 bg-white/10 rounded-2xl border border-white/20">
-                      <div className="text-4xl font-black text-primary">100k+</div>
-                      <div className="text-sm text-muted-foreground font-medium">Nổi bật</div>
-                    </div>
-                  </div>
-
-                  {/* Mobile Stats */}
-                  <div className="md:hidden grid grid-cols-3 gap-4 max-w-sm mx-auto">
-                    <div className="text-center space-y-2 p-4 bg-white/10 rounded-xl border border-white/20">
-                      <div className="text-2xl font-black text-primary">90%</div>
-                      <div className="text-xs text-muted-foreground font-medium">Được xem đầu tiên</div>
-                    </div>
-                    <div className="text-center space-y-2 p-4 bg-white/10 rounded-xl border border-white/20">
-                      <div className="text-2xl font-black text-primary">4h</div>
-                      <div className="text-xs text-muted-foreground font-medium">Được đánh giá cao</div>
-                    </div>
-                    <div className="text-center space-y-2 p-4 bg-white/10 rounded-xl border border-white/20">
-                      <div className="text-2xl font-black text-primary">100k+</div>
-                      <div className="text-xs text-muted-foreground font-medium">Nổi bật</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto italic text-center px-4">
                 <span className="font-bold">Video của bạn được bảo mật 100%</span> - Chỉ nhà tuyển dụng được xác minh mới có thể được xem. Không chia sẻ công khai dữ liệu của bạn.
               </p>
+
+              {/* Statistics Section */}
+              <div className="mt-12 pt-8 border-t border-white/20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
+                  <div className="text-center space-y-2">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">90%</div>
+                    <div className="text-sm md:text-base text-foreground">Được xem đầu tiên</div>
+                  </div>
+                  <div className="text-center space-y-2">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">4h</div>
+                    <div className="text-sm md:text-base text-foreground">Được đánh giá cao</div>
+                  </div>
+                  <div className="text-center space-y-2">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">100k+</div>
+                    <div className="text-sm md:text-base text-foreground">Nổi bật</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
