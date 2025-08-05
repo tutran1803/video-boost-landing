@@ -301,7 +301,7 @@ const Index = () => {
                   ) : (
                     <>
                       <div 
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer relative"
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
                         onClick={() => template.videoUrl && setPlayingVideo(index)}
                       >
                         <img 
@@ -309,13 +309,6 @@ const Index = () => {
                           alt={template.title}
                           className="w-full h-full object-cover"
                         />
-                        {template.videoUrl && (
-                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                              <Play className="h-8 w-8 text-white ml-1" />
-                            </div>
-                          </div>
-                        )}
                       </div>
                     </>
                   )}
@@ -387,7 +380,7 @@ const Index = () => {
                         ) : (
                           <>
                             <div 
-                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer relative"
+                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
                               onClick={() => template.videoUrl && setPlayingVideo(index)}
                             >
                               <img 
@@ -395,13 +388,6 @@ const Index = () => {
                                 alt={template.title}
                                 className="w-full h-full object-cover"
                               />
-                              {template.videoUrl && (
-                                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                                    <Play className="h-8 w-8 text-white ml-1" />
-                                  </div>
-                                </div>
-                              )}
                             </div>
                           </>
                         )}
