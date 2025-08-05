@@ -293,7 +293,7 @@ const Index = () => {
                 <div className="relative overflow-hidden">
                   {playingVideo === index && template.videoUrl ? (
                     <iframe
-                      src={template.videoUrl}
+                      src={`${template.videoUrl}&autoplay=1`}
                       className="w-full h-48 rounded-lg"
                       allow="autoplay; encrypted-media"
                       allowFullScreen
@@ -372,7 +372,7 @@ const Index = () => {
                       <div className="relative overflow-hidden">
                         {playingVideo === index && template.videoUrl ? (
                           <iframe
-                            src={template.videoUrl}
+                            src={`${template.videoUrl}&autoplay=1`}
                             className="w-full h-48 rounded-lg"
                             allow="autoplay; encrypted-media"
                             allowFullScreen
