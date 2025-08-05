@@ -261,7 +261,7 @@ const Index = () => {
               {
                 image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
                 title: "Nhân viên kinh doanh",
-                videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview?autoplay=1&mute=1",
+                videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview",
                 stats: [
                   "✅ Được 6 NTD liên hệ",
                   "⚡ Làm việc ngay sau 24H đăng tải",
@@ -292,23 +292,21 @@ const Index = () => {
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
                   {playingVideo === index && template.videoUrl ? (
-                    <iframe
-                      src={`${template.videoUrl}?autoplay=1&mute=1`}
-                      className="w-full h-48 rounded-lg"
-                      allow="autoplay; encrypted-media; fullscreen"
-                      allowFullScreen
-                      loading="lazy"
-                    />
+                    <div className="w-full h-48 rounded-lg bg-gray-100 flex items-center justify-center">
+                      <iframe
+                        src={template.videoUrl}
+                        className="w-full h-full rounded-lg"
+                        allow="autoplay; encrypted-media; fullscreen"
+                        allowFullScreen
+                        frameBorder="0"
+                        title={template.title}
+                      />
+                    </div>
                   ) : (
                     <>
                       <div 
                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
-                        onClick={() => {
-                          console.log('Video clicked:', index, template.videoUrl);
-                          if (template.videoUrl) {
-                            setPlayingVideo(index);
-                          }
-                        }}
+                        onClick={() => template.videoUrl && setPlayingVideo(index)}
                       >
                         <img 
                           src={template.image} 
