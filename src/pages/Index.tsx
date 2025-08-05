@@ -369,7 +369,7 @@ const Index = () => {
                 {stepsData.map((step, index) => (
                   <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-3 space-y-2">
-                      <div className="w-full h-16 bg-gray-100 rounded-lg overflow-hidden mb-2">
+                      <div className="w-full h-28 bg-gray-100 rounded-lg overflow-hidden mb-2">
                         <img 
                           src={step.imageUrl} 
                           alt={step.title}
