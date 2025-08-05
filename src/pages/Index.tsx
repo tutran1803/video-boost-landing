@@ -182,7 +182,7 @@ const Index = () => {
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Được <span className="font-bold text-primary text-lg md:text-2xl">đánh giá cao</span>
                   </div>
-                  <p className="text-xs md:text-sm text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">Hồ sơ có video được gọi ngay trong vòng 24H</p>
                 </div>
               </div>
 
@@ -214,7 +214,7 @@ const Index = () => {
                     <div className="text-sm font-semibold text-foreground">
                       Được <span className="font-bold text-primary">đánh giá cao</span>
                     </div>
-                    <p className="text-xs text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
+                    <p className="text-xs text-muted-foreground">Hồ sơ có video được gọi ngay trong vòng 24H</p>
                   </div>
                 </div>
               </div>
