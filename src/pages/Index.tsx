@@ -237,6 +237,24 @@ const Index = () => {
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto italic text-center px-4">
                 <span className="font-bold">Video của bạn được bảo mật 100%</span> - Chỉ nhà tuyển dụng được xác minh mới có thể được xem. Không chia sẻ công khai dữ liệu của bạn.
               </p>
+
+              {/* Statistics Section */}
+              <div className="mt-12 pt-8 border-t border-white/20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
+                  <div className="text-center space-y-2">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">90%</div>
+                    <div className="text-sm md:text-base text-foreground">Được xem đầu tiên</div>
+                  </div>
+                  <div className="text-center space-y-2">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">4h</div>
+                    <div className="text-sm md:text-base text-foreground">Được đánh giá cao</div>
+                  </div>
+                  <div className="text-center space-y-2">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">100k+</div>
+                    <div className="text-sm md:text-base text-foreground">Nổi bật</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
