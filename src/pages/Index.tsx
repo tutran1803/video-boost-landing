@@ -168,43 +168,35 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Mobile carousel version */}
+              {/* Mobile version - show all 3 in grid */}
               <div className="md:hidden py-4 max-w-4xl mx-auto">
-                <div className="overflow-hidden" ref={emblaRef}>
-                  <div className="flex">
-                    <div className="flex-[0_0_80%] min-w-0 pl-4">
-                      <div className="text-center space-y-2">
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                          <Files className="h-6 w-6 text-primary" />
-                        </div>
-                        <div className="text-base font-semibold text-foreground">
-                          Hồ sơ <span className="font-bold text-primary text-lg">nổi bật</span>
-                        </div>
-                        <p className="text-xs text-muted-foreground">Gây ấn tượng mạnh ngay từ đầu</p>
-                      </div>
+                <div className="grid grid-cols-1 gap-3">
+                  <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                      <Files className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="flex-[0_0_80%] min-w-0 pl-4">
-                      <div className="text-center space-y-2">
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                          <TrendingUp className="h-6 w-6 text-primary" />
-                        </div>
-                        <div className="text-base font-semibold text-foreground">
-                          Được <span className="font-bold text-primary text-lg">ưu tiên</span> xem trước
-                        </div>
-                        <p className="text-xs text-muted-foreground">Được xem đầu tiên trong danh sách</p>
-                      </div>
+                    <div className="text-sm font-semibold text-foreground">
+                      Hồ sơ <span className="font-bold text-primary">nổi bật</span>
                     </div>
-                    <div className="flex-[0_0_80%] min-w-0 pl-4">
-                      <div className="text-center space-y-2">
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                          <UserCheck className="h-6 w-6 text-primary" />
-                        </div>
-                        <div className="text-base font-semibold text-foreground">
-                          Được <span className="font-bold text-primary text-lg">đánh giá cao</span>
-                        </div>
-                        <p className="text-xs text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
-                      </div>
+                    <p className="text-xs text-muted-foreground">Gây ấn tượng mạnh ngay từ đầu</p>
+                  </div>
+                  <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                      <TrendingUp className="h-5 w-5 text-primary" />
                     </div>
+                    <div className="text-sm font-semibold text-foreground">
+                      Được <span className="font-bold text-primary">ưu tiên</span> xem trước
+                    </div>
+                    <p className="text-xs text-muted-foreground">Được xem đầu tiên trong danh sách</p>
+                  </div>
+                  <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                      <UserCheck className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="text-sm font-semibold text-foreground">
+                      Được <span className="font-bold text-primary">đánh giá cao</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">Tạo niềm tin với nhà tuyển dụng</p>
                   </div>
                 </div>
               </div>
