@@ -300,29 +300,21 @@ const Index = () => {
                     />
                   ) : (
                     <>
-                      <img 
-                        src={template.image} 
-                        alt={template.title}
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        {template.videoUrl ? (
-                          <Button 
-                            variant="hero" 
-                            size="lg"
-                            className="w-16 h-16 rounded-full p-0"
-                            onClick={() => setPlayingVideo(index)}
-                          >
-                            <Play className="h-8 w-8" />
-                          </Button>
-                        ) : (
-                          <Button 
-                            variant="hero" 
-                            size="lg"
-                            className="w-16 h-16 rounded-full p-0"
-                          >
-                            <Play className="h-8 w-8" />
-                          </Button>
+                      <div 
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer relative"
+                        onClick={() => template.videoUrl && setPlayingVideo(index)}
+                      >
+                        <img 
+                          src={template.image} 
+                          alt={template.title}
+                          className="w-full h-full object-cover"
+                        />
+                        {template.videoUrl && (
+                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                              <Play className="h-8 w-8 text-white ml-1" />
+                            </div>
+                          </div>
                         )}
                       </div>
                     </>
@@ -394,29 +386,21 @@ const Index = () => {
                           />
                         ) : (
                           <>
-                            <img 
-                              src={template.image} 
-                              alt={template.title}
-                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                            />
-                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                              {template.videoUrl ? (
-                                <Button 
-                                  variant="hero" 
-                                  size="lg"
-                                  className="w-16 h-16 rounded-full p-0"
-                                  onClick={() => setPlayingVideo(index)}
-                                >
-                                  <Play className="h-8 w-8" />
-                                </Button>
-                              ) : (
-                                <Button 
-                                  variant="hero" 
-                                  size="lg"
-                                  className="w-16 h-16 rounded-full p-0"
-                                >
-                                  <Play className="h-8 w-8" />
-                                </Button>
+                            <div 
+                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer relative"
+                              onClick={() => template.videoUrl && setPlayingVideo(index)}
+                            >
+                              <img 
+                                src={template.image} 
+                                alt={template.title}
+                                className="w-full h-full object-cover"
+                              />
+                              {template.videoUrl && (
+                                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                                    <Play className="h-8 w-8 text-white ml-1" />
+                                  </div>
+                                </div>
                               )}
                             </div>
                           </>
