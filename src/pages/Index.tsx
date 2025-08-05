@@ -137,7 +137,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/3134aade-f13c-4349-97d5-026f147f0bb9.png" 
                 alt="Professional creating video CV" 
-                className="rounded-2xl w-full h-64 md:h-80 object-cover bg-white"
+                className="rounded-2xl w-full h-48 object-cover bg-white"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
