@@ -261,7 +261,7 @@ const Index = () => {
               {
                 image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
                 title: "Nhân viên kinh doanh",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1",
+                videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview?autoplay=1&mute=1",
                 stats: [
                   "✅ Được 6 NTD liên hệ",
                   "⚡ Làm việc ngay sau 24H đăng tải",
@@ -345,7 +345,7 @@ const Index = () => {
                   {
                     image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
                     title: "Nhân viên kinh doanh",
-                    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1",
+                    videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview?autoplay=1&mute=1",
                     stats: [
                       "✅ Được 6 NTD liên hệ",
                       "⚡ Làm việc ngay sau 24H đăng tải",
