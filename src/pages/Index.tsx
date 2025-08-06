@@ -724,9 +724,9 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 max-w-4xl mx-auto">
             <div className="flex-shrink-0">
               <img 
-                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=400&q=80"
-                alt="Professional job seeker in business attire"
-                className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg"
+                src="/lovable-uploads/1e6cd793-b002-4379-bd44-8ea941ae139f.png"
+                alt="Việc Làm Tốt Logo"
+                className="w-32 h-32 md:w-48 md:h-48 object-contain rounded-lg bg-white p-4"
               />
             </div>
             <div className="flex-1 space-y-3 md:space-y-4 text-center md:text-left">
