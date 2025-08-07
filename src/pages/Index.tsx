@@ -220,7 +220,7 @@ const Index = () => {
               </div>
 
               <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
-                <Button variant="hero" size="lg" className="w-full md:w-auto">
+                <Button variant="ctaBlue" size="lg" className="w-full md:w-auto">
                   <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   Thử tạo video nhé
                 </Button>
@@ -439,9 +439,9 @@ const Index = () => {
 
           <div className="text-center mt-6">
             <Button 
-              variant="outline" 
+              variant="ctaBlue" 
               size="lg"
-              className="text-primary border-primary hover:bg-primary/5"
+              className=""
             >
               <Play className="mr-2 h-5 w-5" />
               Bắt đầu tạo video ngay →
@@ -461,8 +461,8 @@ const Index = () => {
 
           <Tabs defaultValue="steps" className="w-full">
             <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8 bg-transparent border border-gray-200 p-1">
-              <TabsTrigger value="steps" className="data-[state=active]:bg-primary/5 data-[state=active]:text-primary data-[state=active]:border-primary text-gray-600 border-transparent">Các bước thực hiện</TabsTrigger>
-              <TabsTrigger value="tips" className="data-[state=active]:bg-primary/5 data-[state=active]:text-primary data-[state=active]:border-primary text-gray-600 border-transparent">Mẹo quay video</TabsTrigger>
+              <TabsTrigger value="steps" className="data-[state=active]:bg-[#306BD9]/10 data-[state=active]:text-[#306BD9] data-[state=active]:border-[#306BD9] text-gray-600 border-transparent">Các bước thực hiện</TabsTrigger>
+              <TabsTrigger value="tips" className="data-[state=active]:bg-[#306BD9]/10 data-[state=active]:text-[#306BD9] data-[state=active]:border-[#306BD9] text-gray-600 border-transparent">Mẹo quay video</TabsTrigger>
             </TabsList>
             
             <TabsContent value="steps" className="space-y-6">
@@ -707,9 +707,9 @@ const Index = () => {
 
           <div className="text-center">
             <Button 
-              variant="outline" 
+              variant="ctaBlue" 
               size="lg"
-              className="text-primary border-primary hover:bg-primary/5"
+              className=""
               onClick={() => window.open('https://www.vieclamtot.com/tags/viec-lam-doi-tac', '_blank')}
             >
               Xem tất cả việc làm đối tác →
