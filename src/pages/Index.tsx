@@ -13,6 +13,18 @@ import videoTemplate3 from "@/assets/video-template-3.jpg";
 const Index = () => {
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
   const [playingVideoMobile, setPlayingVideoMobile] = useState<number | null>(null);
+  
+  const handlePlayVideo = (index: number) => {
+    console.log('Playing video index:', index);
+    setPlayingVideo(index);
+    setPlayingVideoMobile(null); // Stop mobile video if playing
+  };
+  
+  const handlePlayVideoMobile = (index: number) => {
+    console.log('Playing mobile video index:', index);
+    setPlayingVideoMobile(index);
+    setPlayingVideo(null); // Stop desktop video if playing
+  };
   const [emblaRef] = useEmblaCarousel({ 
     align: 'start',
     containScroll: 'trimSnaps',
@@ -308,7 +320,7 @@ const Index = () => {
                       {template.videoUrl && (
                         <div className="absolute inset-0 flex items-center justify-center">
                           <button
-                            onClick={() => setPlayingVideo(index)}
+                            onClick={() => handlePlayVideo(index)}
                             className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
                           >
                             <Play className="h-6 w-6 fill-current" />
@@ -394,7 +406,7 @@ const Index = () => {
                             {template.videoUrl && (
                               <div className="absolute inset-0 flex items-center justify-center">
                                 <button
-                                  onClick={() => setPlayingVideoMobile(index)}
+                                  onClick={() => handlePlayVideoMobile(index)}
                                   className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
                                 >
                                   <Play className="h-6 w-6 fill-current" />
