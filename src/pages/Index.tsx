@@ -292,14 +292,17 @@ const Index = () => {
               <Card key={`desktop-${index}`} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
                   {playingVideo && index === 0 && template.videoUrl ? (
-                    <iframe
-                      src={template.videoUrl}
-                      className="w-full h-48 rounded-lg"
-                      allow="encrypted-media; fullscreen"
-                      allowFullScreen
-                      frameBorder="0"
-                      title={template.title}
-                    />
+                    <div className="w-full h-48 rounded-lg bg-black flex items-center justify-center">
+                      <iframe
+                        key="unique-video-player"
+                        src={template.videoUrl}
+                        className="w-full h-full rounded-lg"
+                        allow="encrypted-media; fullscreen"
+                        allowFullScreen
+                        frameBorder="0"
+                        title="Video nhân viên kinh doanh"
+                      />
+                    </div>
                   ) : (
                     <div className="relative">
                       <img 
