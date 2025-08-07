@@ -11,19 +11,11 @@ import videoTemplate2 from "@/assets/video-template-2.jpg";
 import videoTemplate3 from "@/assets/video-template-3.jpg";
 
 const Index = () => {
-  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
-  const [playingVideoMobile, setPlayingVideoMobile] = useState<number | null>(null);
+  const [playingVideo, setPlayingVideo] = useState<{section: 'desktop' | 'mobile', index: number} | null>(null);
   
-  const handlePlayVideo = (index: number) => {
-    console.log('Playing video index:', index);
-    setPlayingVideo(index);
-    setPlayingVideoMobile(null); // Stop mobile video if playing
-  };
-  
-  const handlePlayVideoMobile = (index: number) => {
-    console.log('Playing mobile video index:', index);
-    setPlayingVideoMobile(index);
-    setPlayingVideo(null); // Stop desktop video if playing
+  const handlePlayVideo = (index: number, section: 'desktop' | 'mobile') => {
+    console.log('Playing video index:', index, 'section:', section);
+    setPlayingVideo({section, index});
   };
   const [emblaRef] = useEmblaCarousel({ 
     align: 'start',
@@ -299,7 +291,7 @@ const Index = () => {
             ].map((template, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
-                  {playingVideo === index && template.videoUrl ? (
+                  {playingVideo?.section === 'desktop' && playingVideo?.index === index && template.videoUrl ? (
                     <div className="w-full h-48 rounded-lg bg-white flex items-center justify-center">
                       <iframe
                         src={template.videoUrl}
@@ -320,7 +312,7 @@ const Index = () => {
                       {template.videoUrl && (
                         <div className="absolute inset-0 flex items-center justify-center">
                           <button
-                            onClick={() => handlePlayVideo(index)}
+                            onClick={() => handlePlayVideo(index, 'desktop')}
                             className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
                           >
                             <Play className="h-6 w-6 fill-current" />
@@ -387,7 +379,7 @@ const Index = () => {
                   <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                     <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                       <div className="relative overflow-hidden">
-                        {playingVideoMobile === index && template.videoUrl ? (
+                        {playingVideo?.section === 'mobile' && playingVideo?.index === index && template.videoUrl ? (
                           <iframe
                             src={template.videoUrl}
                             className="w-full h-48 rounded-lg"
@@ -406,7 +398,7 @@ const Index = () => {
                             {template.videoUrl && (
                               <div className="absolute inset-0 flex items-center justify-center">
                                 <button
-                                  onClick={() => handlePlayVideoMobile(index)}
+                                  onClick={() => handlePlayVideo(index, 'mobile')}
                                   className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
                                 >
                                   <Play className="h-6 w-6 fill-current" />
