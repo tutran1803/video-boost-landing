@@ -159,7 +159,7 @@ const Index = () => {
               <div className="hidden md:grid grid-cols-3 gap-4 md:gap-6 py-4 max-w-4xl mx-auto">
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in">
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30">
-                    <Files className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110" />
+                    <Files className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Hồ sơ <span className="font-bold text-primary text-lg md:text-2xl">nổi bật</span>
@@ -168,7 +168,7 @@ const Index = () => {
                 </div>
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in" style={{animationDelay: '0.2s'}}>
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30">
-                    <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110" />
+                    <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Được <span className="font-bold text-primary text-lg md:text-2xl">ưu tiên</span> xem trước
@@ -177,7 +177,7 @@ const Index = () => {
                 </div>
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in" style={{animationDelay: '0.4s'}}>
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30">
-                    <UserCheck className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110" />
+                    <UserCheck className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Được <span className="font-bold text-primary text-lg md:text-2xl">đánh giá cao</span>
@@ -191,7 +191,7 @@ const Index = () => {
                 <div className="grid grid-cols-1 gap-3">
                   <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30">
-                      <Files className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110" />
+                      <Files className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
                       Hồ sơ <span className="font-bold text-primary">nổi bật</span>
@@ -200,7 +200,7 @@ const Index = () => {
                   </div>
                   <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30">
-                      <TrendingUp className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110" />
+                      <TrendingUp className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
                       Được <span className="font-bold text-primary">ưu tiên</span> xem trước
@@ -209,7 +209,7 @@ const Index = () => {
                   </div>
                   <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30">
-                      <UserCheck className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110" />
+                      <UserCheck className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
                       Được <span className="font-bold text-primary">đánh giá cao</span>
