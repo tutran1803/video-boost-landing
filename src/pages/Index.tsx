@@ -287,7 +287,7 @@ const Index = () => {
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
                   {playingVideo === index && template.videoUrl ? (
-                    <div className="w-full h-48 rounded-lg bg-gray-100 flex items-center justify-center">
+                    <div className="w-full h-48 rounded-lg bg-white flex items-center justify-center">
                       <iframe
                         src={`${template.videoUrl}?autoplay=1&mute=1`}
                         className="w-full h-full rounded-lg"
@@ -456,7 +456,7 @@ const Index = () => {
       </section>
 
       {/* Steps Section */}
-      <section className="pt-0 pb-2 bg-secondary/30">
+      <section className="pt-0 pb-2 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
@@ -476,7 +476,7 @@ const Index = () => {
                 {stepsData.map((step, index) => (
                   <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-3 space-y-2">
-                      <div className="w-full h-40 bg-gray-100 rounded-lg overflow-hidden mb-2">
+                      <div className="w-full h-40 bg-white rounded-lg overflow-hidden mb-2 border">
                         <img 
                           src={step.imageUrl} 
                           alt={step.title}
@@ -500,7 +500,7 @@ const Index = () => {
                       <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                         <Card className="border-0 shadow-md">
                           <CardContent className="p-4 space-y-3">
-                            <div className="w-full h-40 bg-gray-100 rounded-lg overflow-hidden mb-3">
+                            <div className="w-full h-40 bg-white rounded-lg overflow-hidden mb-3 border">
                               <img 
                                 src={step.imageUrl} 
                                 alt={step.title}
@@ -618,7 +618,7 @@ const Index = () => {
       </section>
 
       {/* Jobs Section */}
-      <section className="py-6 pb-8 bg-secondary/20">
+      <section className="py-6 pb-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
@@ -677,7 +677,7 @@ const Index = () => {
                       <img 
                         src={job.logo} 
                         alt={job.company}
-                        className="w-12 h-12 rounded-lg object-cover bg-gray-100"
+                        className="w-12 h-12 rounded-lg object-cover bg-white border"
                       />
                     </div>
                     
