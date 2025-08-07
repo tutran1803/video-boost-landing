@@ -298,18 +298,23 @@ const Index = () => {
                       />
                     </div>
                   ) : (
-                    <>
-                      <div 
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
-                        onClick={() => template.videoUrl && setPlayingVideo(index)}
-                      >
-                        <img 
-                          src={template.image} 
-                          alt={template.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </>
+                    <div className="relative">
+                      <img 
+                        src={template.image} 
+                        alt={template.title}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      {template.videoUrl && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <button
+                            onClick={() => setPlayingVideo(index)}
+                            className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+                          >
+                            <Play className="h-6 w-6 fill-current" />
+                          </button>
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
                 <CardContent className="p-6 space-y-4">
@@ -378,18 +383,23 @@ const Index = () => {
                             loading="lazy"
                           />
                         ) : (
-                          <>
-                            <div 
-                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
-                              onClick={() => template.videoUrl && setPlayingVideo(index)}
-                            >
-                              <img 
-                                src={template.image} 
-                                alt={template.title}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </>
+                          <div className="relative">
+                            <img 
+                              src={template.image} 
+                              alt={template.title}
+                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            {template.videoUrl && (
+                              <div className="absolute inset-0 flex items-center justify-center">
+                                <button
+                                  onClick={() => setPlayingVideo(index)}
+                                  className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+                                >
+                                  <Play className="h-6 w-6 fill-current" />
+                                </button>
+                              </div>
+                            )}
+                          </div>
                         )}
                       </div>
                       <CardContent className="p-6 space-y-4">
