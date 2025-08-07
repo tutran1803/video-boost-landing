@@ -747,9 +747,9 @@ const Index = () => {
               </p>
               <div className="flex justify-center md:justify-start">
                 <Button 
-                  variant="default" 
+                  variant="ctaBlue" 
                   size="lg" 
-                  className="bg-blue-500 hover:bg-blue-600 text-white w-full md:w-auto"
+                  className="w-full md:w-auto"
                   onClick={() => window.open('https://zalo.me/2147477147078814414', '_blank')}
                 >
                   Liên hệ Zalo Việc Làm Tốt
