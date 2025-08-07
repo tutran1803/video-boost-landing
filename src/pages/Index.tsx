@@ -14,7 +14,8 @@ const Index = () => {
   const [playingVideo, setPlayingVideo] = useState<boolean>(false);
 
   const handlePlayVideo = () => {
-    console.log('Playing video');
+    alert('Video clicked! Check console for details');
+    console.log('Playing video - this should only show once');
     setPlayingVideo(true);
   };
   const [emblaRef] = useEmblaCarousel({ 
