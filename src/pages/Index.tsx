@@ -13,13 +13,12 @@ import videoTemplate3 from "@/assets/video-template-3.jpg";
 const Index = () => {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
   
-  const handlePlayVideo = (videoId: string, videoUrl: string) => {
+  const handlePlayVideo = (videoUrl: string) => {
     return (e: React.MouseEvent) => {
       e.preventDefault();
       e.stopPropagation();
-      console.log('Playing video:', videoId);
-      // If same video is clicked, stop it, otherwise play the new one
-      setPlayingVideo(playingVideo === videoId ? null : videoId);
+      console.log('Opening video in new tab');
+      window.open(videoUrl, '_blank');
     };
   };
   const [emblaRef] = useEmblaCarousel({ 
@@ -296,36 +295,23 @@ const Index = () => {
             ].map((template, index) => (
               <Card key={`desktop-${index}`} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
-                  {playingVideo === `desktop-0` && template.videoUrl ? (
-                    <div className="w-full h-48 rounded-lg bg-white flex items-center justify-center">
-                      <iframe
-                        src={template.videoUrl}
-                        className="w-full h-full rounded-lg"
-                        allow="encrypted-media; fullscreen"
-                        allowFullScreen
-                        frameBorder="0"
-                        title={template.title}
-                      />
-                    </div>
-                  ) : (
-                    <div className="relative">
-                      <img 
-                        src={template.image} 
-                        alt={template.title}
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      {template.videoUrl && (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <button
-                            onClick={handlePlayVideo(`desktop-0`, template.videoUrl)}
-                            className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-                          >
-                            <Play className="h-6 w-6 fill-current" />
-                          </button>
-                        </div>
-                      )}
-                    </div>
-                  )}
+                  <div className="relative">
+                    <img 
+                      src={template.image} 
+                      alt={template.title}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    {template.videoUrl && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <button
+                          onClick={handlePlayVideo(template.videoUrl)}
+                          className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+                        >
+                          <Play className="h-6 w-6 fill-current" />
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
                 <CardContent className="p-6 space-y-4">
                   <div className="space-y-3">
@@ -384,34 +370,23 @@ const Index = () => {
                   <div key={`mobile-${index}`} className="flex-[0_0_85%] min-w-0 pl-4">
                     <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                       <div className="relative overflow-hidden">
-                        {playingVideo === `mobile-0` && template.videoUrl ? (
-                          <iframe
-                            src={template.videoUrl}
-                            className="w-full h-48 rounded-lg"
-                            allow="encrypted-media; fullscreen"
-                            allowFullScreen
-                            frameBorder="0"
-                            title={template.title}
+                        <div className="relative">
+                          <img 
+                            src={template.image} 
+                            alt={template.title}
+                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                           />
-                        ) : (
-                          <div className="relative">
-                            <img 
-                              src={template.image} 
-                              alt={template.title}
-                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                            />
-                            {template.videoUrl && (
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <button
-                                  onClick={handlePlayVideo(`mobile-0`, template.videoUrl)}
-                                  className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-                                >
-                                  <Play className="h-6 w-6 fill-current" />
-                                </button>
-                              </div>
-                            )}
-                          </div>
-                        )}
+                          {template.videoUrl && (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <button
+                                onClick={handlePlayVideo(template.videoUrl)}
+                                className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+                              >
+                                <Play className="h-6 w-6 fill-current" />
+                              </button>
+                            </div>
+                          )}
+                        </div>
                       </div>
                       <CardContent className="p-6 space-y-4">
                         <div className="space-y-3">
