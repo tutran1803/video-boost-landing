@@ -157,7 +157,7 @@ const Index = () => {
                     <Files className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
-                    Hồ sơ <span className="font-bold text-primary text-lg md:text-2xl">nổi bật</span>
+                    Hồ sơ <span className="font-bold text-primary text-xl md:text-3xl">nổi bật</span>
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Gây ấn tượng mạnh ngay từ đầu</p>
                 </div>
@@ -166,7 +166,7 @@ const Index = () => {
                     <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
-                    Được <span className="font-bold text-primary text-lg md:text-2xl">ưu tiên</span> xem trước
+                    Được <span className="font-bold text-primary text-xl md:text-3xl">ưu tiên</span> xem trước
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">90% hồ sơ có video được xem đầu tiên</p>
                 </div>
@@ -175,7 +175,7 @@ const Index = () => {
                     <UserCheck className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
-                    Được <span className="font-bold text-primary text-lg md:text-2xl">đánh giá cao</span>
+                    Được <span className="font-bold text-primary text-xl md:text-3xl">đánh giá cao</span>
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Hồ sơ có video được gọi ngay trong vòng 24H</p>
                 </div>
@@ -189,7 +189,7 @@ const Index = () => {
                       <Files className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
-                      Hồ sơ <span className="font-bold text-primary">nổi bật</span>
+                      Hồ sơ <span className="font-bold text-primary text-lg">nổi bật</span>
                     </div>
                     <p className="text-xs text-muted-foreground">Gây ấn tượng mạnh ngay từ đầu</p>
                   </div>
@@ -198,7 +198,7 @@ const Index = () => {
                       <TrendingUp className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
-                      Được <span className="font-bold text-primary">ưu tiên</span> xem trước
+                      Được <span className="font-bold text-primary text-lg">ưu tiên</span> xem trước
                     </div>
                     <p className="text-xs text-muted-foreground">90% hồ sơ có video được xem đầu tiên</p>
                   </div>
@@ -207,7 +207,7 @@ const Index = () => {
                       <UserCheck className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
-                      Được <span className="font-bold text-primary">đánh giá cao</span>
+                      Được <span className="font-bold text-primary text-lg">đánh giá cao</span>
                     </div>
                     <p className="text-xs text-muted-foreground">Hồ sơ có video được gọi ngay trong vòng 24H</p>
                   </div>
