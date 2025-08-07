@@ -446,7 +446,7 @@ const Index = () => {
       </section>
 
       {/* Steps Section */}
-      <section className="pt-0 pb-2 bg-secondary/30">
+      <section className="pt-0 pb-2 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
@@ -466,7 +466,7 @@ const Index = () => {
                 {stepsData.map((step, index) => (
                   <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-3 space-y-2">
-                      <div className="w-full h-40 bg-gray-100 rounded-lg overflow-hidden mb-2">
+                      <div className="w-full h-40 bg-white rounded-lg overflow-hidden mb-2 border border-gray-200">
                         <img 
                           src={step.imageUrl} 
                           alt={step.title}
@@ -490,7 +490,7 @@ const Index = () => {
                       <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                         <Card className="border-0 shadow-md">
                           <CardContent className="p-4 space-y-3">
-                            <div className="w-full h-40 bg-gray-100 rounded-lg overflow-hidden mb-3">
+                            <div className="w-full h-40 bg-white rounded-lg overflow-hidden mb-3 border border-gray-200">
                               <img 
                                 src={step.imageUrl} 
                                 alt={step.title}
