@@ -267,7 +267,7 @@ const Index = () => {
               {
                 image: videoTemplate2,
                 title: "Chăm sóc khách hàng",
-                link: "#",
+                videoUrl: null,
                 stats: [
                   "✅ Được 8 NTD quan tâm", 
                   "⚡ Có việc làm sau 3 ngày",
@@ -277,7 +277,7 @@ const Index = () => {
               {
                 image: videoTemplate3,
                 title: "Telesales",
-                link: "#",
+                videoUrl: null,
                 stats: [
                   "✅ Được 12 NTD liên hệ",
                   "⚡ Nhận offer sau 1 tuần", 
@@ -354,7 +354,7 @@ const Index = () => {
                   {
                     image: videoTemplate2,
                     title: "Chăm sóc khách hàng",
-                    link: "#",
+                    videoUrl: null,
                     stats: [
                       "✅ Được 8 NTD quan tâm", 
                       "⚡ Có việc làm sau 3 ngày",
@@ -364,7 +364,7 @@ const Index = () => {
                   {
                     image: videoTemplate3,
                     title: "Telesales",
-                    link: "#",
+                    videoUrl: null,
                     stats: [
                       "✅ Được 12 NTD liên hệ",
                       "⚡ Nhận offer sau 1 tuần", 
