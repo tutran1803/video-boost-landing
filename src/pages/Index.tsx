@@ -9,6 +9,7 @@ import heroImage from "@/assets/hero-image.jpg";
 import videoTemplate1 from "@/assets/video-template-1.jpg";
 import videoTemplate2 from "@/assets/video-template-2.jpg";
 import videoTemplate3 from "@/assets/video-template-3.jpg";
+import { LatestJobs } from "@/components/LatestJobs";
 
 const Index = () => {
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
@@ -697,21 +698,37 @@ const Index = () => {
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+             ))}
+           </div>
 
-          <div className="text-center">
-            <Button 
-              variant="ctaBlue" 
-              size="lg"
-              className=""
-              onClick={() => window.open('https://www.vieclamtot.com/tags/viec-lam-doi-tac', '_blank')}
-            >
-              Xem tất cả việc làm đối tác →
-            </Button>
-          </div>
-        </div>
-      </section>
+           <div className="text-center">
+             <Button 
+               variant="ctaBlue" 
+               size="lg"
+               className=""
+               onClick={() => window.open('https://www.vieclamtot.com/tags/viec-lam-doi-tac', '_blank')}
+             >
+               Xem tất cả việc làm đối tác →
+             </Button>
+           </div>
+         </div>
+       </section>
+
+       {/* Latest Jobs Section */}
+       <section className="py-8 md:py-12 bg-background">
+         <div className="container mx-auto px-4">
+           <div className="text-center mb-8">
+             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+               3 việc làm đối tác mới nhất
+             </h2>
+             <p className="text-base text-muted-foreground">
+               Cập nhật liên tục từ vieclamtot.com
+             </p>
+           </div>
+           
+           <LatestJobs />
+         </div>
+       </section>
 
       {/* Support Section */}
       <section className="py-8 md:py-12 bg-blue-50">
