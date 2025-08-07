@@ -86,15 +86,10 @@ const Index = () => {
       imageUrl: "/lovable-uploads/92cc15d1-816a-41ad-8404-cf6775f288f5.png"
     },
     {
-      title: "Bước 3: Quay video theo hướng dẫn",
-      description: "Quay video theo hướng dẫn",
-      imageUrl: "/lovable-uploads/39d85a58-7b86-4914-b273-43826acb56e0.png"
-    },
-    {
-      title: "Bước 4: Gửi video ứng tuyển",
+      title: "Bước 3: Gửi video ứng tuyển",
       description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
       imageUrl: "/lovable-uploads/2f9654a5-8657-44ef-a085-c25490d1b55e.png"
-    }
+    },
   ];
 
   const tipsData = [
@@ -467,7 +462,7 @@ const Index = () => {
             
             <TabsContent value="steps" className="space-y-6">
               {/* Desktop version */}
-              <div className="hidden md:grid grid-cols-4 gap-3 md:gap-4">
+              <div className="hidden md:grid grid-cols-3 gap-3 md:gap-4">
                 {stepsData.map((step, index) => (
                   <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-3 space-y-2">
