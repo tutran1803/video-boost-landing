@@ -11,12 +11,7 @@ import videoTemplate2 from "@/assets/video-template-2.jpg";
 import videoTemplate3 from "@/assets/video-template-3.jpg";
 
 const Index = () => {
-  const [playingVideo, setPlayingVideo] = useState<boolean>(false);
-
-  const handlePlayVideo = () => {
-    console.log('Playing video - this should only show once');
-    setPlayingVideo(true);
-  };
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
   const [emblaRef] = useEmblaCarousel({ 
     align: 'start',
     containScroll: 'trimSnaps',
@@ -256,7 +251,7 @@ const Index = () => {
           </div>
 
           {/* Desktop version */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+          <div className="hidden md:grid md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
@@ -271,7 +266,7 @@ const Index = () => {
               {
                 image: videoTemplate2,
                 title: "Chăm sóc khách hàng",
-                videoUrl: null,
+                link: "#",
                 stats: [
                   "✅ Được 8 NTD quan tâm", 
                   "⚡ Có việc làm sau 3 ngày",
@@ -281,7 +276,7 @@ const Index = () => {
               {
                 image: videoTemplate3,
                 title: "Telesales",
-                videoUrl: null,
+                link: "#",
                 stats: [
                   "✅ Được 12 NTD liên hệ",
                   "⚡ Nhận offer sau 1 tuần", 
@@ -289,38 +284,32 @@ const Index = () => {
                 ]
               }
             ].map((template, index) => (
-              <Card key={`desktop-${index}`} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
-                  {playingVideo && index === 0 && template.videoUrl ? (
-                    <div className="w-full h-48 rounded-lg bg-black flex items-center justify-center">
+                  {playingVideo === index && template.videoUrl ? (
+                    <div className="w-full h-48 rounded-lg bg-gray-100 flex items-center justify-center">
                       <iframe
-                        key="unique-video-player"
                         src={template.videoUrl}
                         className="w-full h-full rounded-lg"
-                        allow="encrypted-media; fullscreen"
+                        allow="autoplay; encrypted-media; fullscreen"
                         allowFullScreen
                         frameBorder="0"
-                        title="Video nhân viên kinh doanh"
+                        title={template.title}
                       />
                     </div>
                   ) : (
-                    <div className="relative">
-                      <img 
-                        src={template.image} 
-                        alt={template.title}
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      {template.videoUrl && index === 0 && (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <button
-                            onClick={handlePlayVideo}
-                            className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-                          >
-                            <Play className="h-6 w-6 fill-current" />
-                          </button>
-                        </div>
-                      )}
-                    </div>
+                    <>
+                      <div 
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
+                        onClick={() => template.videoUrl && setPlayingVideo(index)}
+                      >
+                        <img 
+                          src={template.image} 
+                          alt={template.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </>
                   )}
                 </div>
                 <CardContent className="p-6 space-y-4">
@@ -341,6 +330,107 @@ const Index = () => {
             ))}
           </div>
 
+          {/* Mobile carousel version */}
+          <div className="md:hidden">
+            <div className="overflow-hidden" ref={emblaRefVideos}>
+              <div className="flex">
+                {[
+                  {
+                    image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
+                    title: "Nhân viên kinh doanh",
+                    videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview?autoplay=1&mute=1",
+                    stats: [
+                      "✅ Được 6 NTD liên hệ",
+                      "⚡ Làm việc ngay sau 24H đăng tải",
+                      "🎯 Lương 15-18 triệu/tháng"
+                    ]
+                  },
+                  {
+                    image: videoTemplate2,
+                    title: "Chăm sóc khách hàng",
+                    link: "#",
+                    stats: [
+                      "✅ Được 8 NTD quan tâm", 
+                      "⚡ Có việc làm sau 3 ngày",
+                      "🎯 Mức lương 12-16 triệu"
+                    ]
+                  },
+                  {
+                    image: videoTemplate3,
+                    title: "Telesales",
+                    link: "#",
+                    stats: [
+                      "✅ Được 12 NTD liên hệ",
+                      "⚡ Nhận offer sau 1 tuần", 
+                      "🎯 Thu nhập 20-25 triệu"
+                    ]
+                  }
+                ].map((template, index) => (
+                  <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
+                    <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
+                      <div className="relative overflow-hidden">
+                        {playingVideo === index && template.videoUrl ? (
+                          <iframe
+                            src={`${template.videoUrl}?autoplay=1&mute=1`}
+                            className="w-full h-48 rounded-lg"
+                            allow="autoplay; encrypted-media; fullscreen"
+                            allowFullScreen
+                            loading="lazy"
+                          />
+                        ) : (
+                          <>
+                            <div 
+                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
+                              onClick={() => template.videoUrl && setPlayingVideo(index)}
+                            >
+                              <img 
+                                src={template.image} 
+                                alt={template.title}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </>
+                        )}
+                      </div>
+                      <CardContent className="p-6 space-y-4">
+                        <div className="space-y-3">
+                          <h3 className="text-lg font-semibold text-foreground">
+                            {template.title}
+                          </h3>
+                          <div className="space-y-2">
+                            {template.stats.map((stat, statIndex) => (
+                              <div key={statIndex} className="flex items-center text-sm text-muted-foreground">
+                                <span className="text-xs">{stat}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Dots indicator */}
+            <div className="flex justify-center mt-4 space-x-2">
+              {[0, 1, 2].map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === selectedVideoIndex 
+                      ? 'bg-primary w-6' 
+                      : 'bg-gray-300'
+                  }`}
+                  onClick={() => {
+                    if (emblaApiVideos) {
+                      emblaApiVideos.scrollTo(index);
+                    }
+                  }}
+                />
+              ))}
+            </div>
+          </div>
 
           <div className="text-center mt-6">
             <Button 
@@ -356,7 +446,7 @@ const Index = () => {
       </section>
 
       {/* Steps Section */}
-      <section className="pt-0 pb-2 bg-white">
+      <section className="pt-0 pb-2 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
@@ -376,7 +466,7 @@ const Index = () => {
                 {stepsData.map((step, index) => (
                   <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-3 space-y-2">
-                      <div className="w-full h-40 bg-white rounded-lg overflow-hidden mb-2 border">
+                      <div className="w-full h-40 bg-gray-100 rounded-lg overflow-hidden mb-2">
                         <img 
                           src={step.imageUrl} 
                           alt={step.title}
@@ -400,7 +490,7 @@ const Index = () => {
                       <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                         <Card className="border-0 shadow-md">
                           <CardContent className="p-4 space-y-3">
-                            <div className="w-full h-40 bg-white rounded-lg overflow-hidden mb-3 border">
+                            <div className="w-full h-40 bg-gray-100 rounded-lg overflow-hidden mb-3">
                               <img 
                                 src={step.imageUrl} 
                                 alt={step.title}
@@ -518,7 +608,7 @@ const Index = () => {
       </section>
 
       {/* Jobs Section */}
-      <section className="py-6 pb-8 bg-white">
+      <section className="py-6 pb-8 bg-secondary/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
@@ -532,37 +622,34 @@ const Index = () => {
           <div className="grid md:grid-cols-1 gap-4 mb-8">
             {[
               {
-                title: "TÂN BÌNH-NHÂN VIÊN NHẮC PHÍ KHÔNG Y/C KINH NGHIỆM",
-                company: "CÔNG TY TÀI CHÍNH TNHH NGÂN HÀNG VIỆT NAM THỊNH VƯỢNG SMBC",
-                salary: "Đến 25 triệu/tháng",
-                location: "Quận Bình Tân, Tp Hồ Chí Minh",
-                timePosted: "1 giờ trước",
-                contacts: "90 Liên Hệ",
-                logo: "https://cdn.chotot.com/fT90uMZtlZS51c47eKC35e9_BcRSwnGzaDpZ43Fs-yI/preset:listing/plain/496f5cd47c0cbd4f129bb295fe20b166-2925833250166481805.jpg",
-                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126511680.htm",
-                benefits: ["💰 Lương tốt", "🛡️ Bảo hiểm", "🎁 Thưởng lễ/tết"]
-              },
-              {
-                title: "Tuyển 01 Kế Toán Viên tại Bình Tân - Tân Phú", 
+                title: "Tuyển 01 Kế Toán Viên tại Bình Tân - Tân Phú",
                 company: "Công ty P.S",
-                salary: "Đến 14 triệu/tháng",
+                salary: "Đến 13 triệu/tháng",
                 location: "Quận Bình Tân, Tp Hồ Chí Minh",
-                timePosted: "1 giờ trước",
-                contacts: "31 Liên Hệ",
+                timePosted: "54 phút trước",
+                contacts: "26 Liên Hệ",
                 logo: "https://cdn.chotot.com/XmROlkdlQmJuwTU2bwUNUGmszWPsYXrOhtDJtz25ULs/preset:listing/plain/be35234b64c5f81e81018e7038b363d6-2902200591672197914.jpg",
-                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126378659.htm",
-                benefits: []
+                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126378659.htm"
               },
               {
-                title: "Nhân Viên Tư Vấn - Sales - Thu Nhập Trên 10 Triệu",
+                title: "Nhân Viên Tư Vấn - Sales - Thu Nhập Trên 10 Triệu", 
                 company: "CÔNG TY TNHH TRUNG TÂM THỂ DỤC THỂ HÌNH & YOGA CALIFORNIA",
                 salary: "Đến 20 triệu/tháng",
                 location: "Thành phố Thủ Dầu Một, Bình Dương",
-                timePosted: "2 giờ trước",
-                contacts: "18 Liên Hệ",
+                timePosted: "1 giờ trước",
+                contacts: "17 Liên Hệ",
+                logo: "https://cdn.chotot.com/048jiR1Yakc4uceqPz22tZjhNuWSB0sALGLrqzMImA4/preset:listing/plain/50e7e6c8460ccb5a848eab0ec7a0ea14-2924517665586887902.jpg",
+                link: "https://www.vieclamtot.com/viec-lam-thanh-pho-thu-dau-mot-binh-duong/126207504.htm"
+              },
+              {
+                title: "NV Kinh Doanh online tại Bình Tân - Tân Phú",
+                company: "Công ty P.S",
+                salary: "Đến 16 triệu/tháng",
+                location: "Quận Bình Tân, Tp Hồ Chí Minh",
+                timePosted: "1 giờ trước",
+                contacts: "32 Liên Hệ",
                 logo: "https://cdn.chotot.com/XmROlkdlQmJuwTU2bwUNUGmszWPsYXrOhtDJtz25ULs/preset:listing/plain/be35234b64c5f81e81018e7038b363d6-2902200591672197914.jpg",
-                link: "https://www.vieclamtot.com/viec-lam-thanh-pho-thu-dau-mot-binh-duong/126207504.htm",
-                benefits: []
+                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126374988.htm"
               }
             ].map((job, index) => (
               <Card 
@@ -577,7 +664,7 @@ const Index = () => {
                       <img 
                         src={job.logo} 
                         alt={job.company}
-                        className="w-12 h-12 rounded-lg object-cover bg-white border"
+                        className="w-12 h-12 rounded-lg object-cover bg-gray-100"
                       />
                     </div>
                     
@@ -592,17 +679,6 @@ const Index = () => {
                       <h3 className="text-base font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                         {job.title}
                       </h3>
-                      
-                      {/* Benefits */}
-                      {job.benefits && job.benefits.length > 0 && (
-                        <div className="flex flex-wrap gap-1 mb-2">
-                          {job.benefits.map((benefit, idx) => (
-                            <span key={idx} className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
-                              {benefit}
-                            </span>
-                          ))}
-                        </div>
-                      )}
                       
                       <p className="text-sm text-gray-600 mb-2">{job.company}</p>
                       
@@ -657,9 +733,9 @@ const Index = () => {
               </p>
               <div className="flex justify-center md:justify-start">
                 <Button 
-                  variant="ctaBlue" 
+                  variant="default" 
                   size="lg" 
-                  className="w-full md:w-auto"
+                  className="bg-blue-500 hover:bg-blue-600 text-white w-full md:w-auto"
                   onClick={() => window.open('https://zalo.me/2147477147078814414', '_blank')}
                 >
                   Liên hệ Zalo Việc Làm Tốt
