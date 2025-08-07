@@ -12,6 +12,7 @@ import videoTemplate3 from "@/assets/video-template-3.jpg";
 
 const Index = () => {
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
+  const [playingVideoMobile, setPlayingVideoMobile] = useState<number | null>(null);
   const [emblaRef] = useEmblaCarousel({ 
     align: 'start',
     containScroll: 'trimSnaps',
@@ -374,13 +375,14 @@ const Index = () => {
                   <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                     <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                       <div className="relative overflow-hidden">
-                        {playingVideo === index && template.videoUrl ? (
+                        {playingVideoMobile === index && template.videoUrl ? (
                           <iframe
-                            src={`${template.videoUrl}?autoplay=1&mute=1`}
+                            src={template.videoUrl}
                             className="w-full h-48 rounded-lg"
-                            allow="autoplay; encrypted-media; fullscreen"
+                            allow="encrypted-media; fullscreen"
                             allowFullScreen
-                            loading="lazy"
+                            frameBorder="0"
+                            title={template.title}
                           />
                         ) : (
                           <div className="relative">
@@ -392,7 +394,7 @@ const Index = () => {
                             {template.videoUrl && (
                               <div className="absolute inset-0 flex items-center justify-center">
                                 <button
-                                  onClick={() => setPlayingVideo(index)}
+                                  onClick={() => setPlayingVideoMobile(index)}
                                   className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
                                 >
                                   <Play className="h-6 w-6 fill-current" />
