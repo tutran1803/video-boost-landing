@@ -622,34 +622,37 @@ const Index = () => {
           <div className="grid md:grid-cols-1 gap-4 mb-8">
             {[
               {
-                title: "Tuyển 01 Kế Toán Viên tại Bình Tân - Tân Phú",
-                company: "Công ty P.S",
-                salary: "Đến 13 triệu/tháng",
+                title: "TÂN BÌNH-NHÂN VIÊN NHẮC PHÍ KHÔNG Y/C KINH NGHIỆM",
+                company: "CÔNG TY TÀI CHÍNH TNHH NGÂN HÀNG VIỆT NAM THỊNH VƯỢNG SMBC",
+                salary: "Đến 25 triệu/tháng",
                 location: "Quận Bình Tân, Tp Hồ Chí Minh",
-                timePosted: "54 phút trước",
-                contacts: "26 Liên Hệ",
-                logo: "https://cdn.chotot.com/XmROlkdlQmJuwTU2bwUNUGmszWPsYXrOhtDJtz25ULs/preset:listing/plain/be35234b64c5f81e81018e7038b363d6-2902200591672197914.jpg",
-                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126378659.htm"
+                timePosted: "1 giờ trước",
+                contacts: "90 Liên Hệ",
+                logo: "https://cdn.chotot.com/fT90uMZtlZS51c47eKC35e9_BcRSwnGzaDpZ43Fs-yI/preset:listing/plain/496f5cd47c0cbd4f129bb295fe20b166-2925833250166481805.jpg",
+                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126511680.htm",
+                benefits: ["💰 Lương tốt", "🛡️ Bảo hiểm", "🎁 Thưởng lễ/tết"]
               },
               {
-                title: "Nhân Viên Tư Vấn - Sales - Thu Nhập Trên 10 Triệu", 
+                title: "Tuyển 01 Kế Toán Viên tại Bình Tân - Tân Phú", 
+                company: "Công ty P.S",
+                salary: "Đến 14 triệu/tháng",
+                location: "Quận Bình Tân, Tp Hồ Chí Minh",
+                timePosted: "1 giờ trước",
+                contacts: "31 Liên Hệ",
+                logo: "https://cdn.chotot.com/XmROlkdlQmJuwTU2bwUNUGmszWPsYXrOhtDJtz25ULs/preset:listing/plain/be35234b64c5f81e81018e7038b363d6-2902200591672197914.jpg",
+                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126378659.htm",
+                benefits: []
+              },
+              {
+                title: "Nhân Viên Tư Vấn - Sales - Thu Nhập Trên 10 Triệu",
                 company: "CÔNG TY TNHH TRUNG TÂM THỂ DỤC THỂ HÌNH & YOGA CALIFORNIA",
                 salary: "Đến 20 triệu/tháng",
                 location: "Thành phố Thủ Dầu Một, Bình Dương",
-                timePosted: "1 giờ trước",
-                contacts: "17 Liên Hệ",
-                logo: "https://cdn.chotot.com/048jiR1Yakc4uceqPz22tZjhNuWSB0sALGLrqzMImA4/preset:listing/plain/50e7e6c8460ccb5a848eab0ec7a0ea14-2924517665586887902.jpg",
-                link: "https://www.vieclamtot.com/viec-lam-thanh-pho-thu-dau-mot-binh-duong/126207504.htm"
-              },
-              {
-                title: "NV Kinh Doanh online tại Bình Tân - Tân Phú",
-                company: "Công ty P.S",
-                salary: "Đến 16 triệu/tháng",
-                location: "Quận Bình Tân, Tp Hồ Chí Minh",
-                timePosted: "1 giờ trước",
-                contacts: "32 Liên Hệ",
+                timePosted: "2 giờ trước",
+                contacts: "18 Liên Hệ",
                 logo: "https://cdn.chotot.com/XmROlkdlQmJuwTU2bwUNUGmszWPsYXrOhtDJtz25ULs/preset:listing/plain/be35234b64c5f81e81018e7038b363d6-2902200591672197914.jpg",
-                link: "https://www.vieclamtot.com/viec-lam-quan-binh-tan-tp-ho-chi-minh/126374988.htm"
+                link: "https://www.vieclamtot.com/viec-lam-thanh-pho-thu-dau-mot-binh-duong/126207504.htm",
+                benefits: []
               }
             ].map((job, index) => (
               <Card 
@@ -679,6 +682,17 @@ const Index = () => {
                       <h3 className="text-base font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                         {job.title}
                       </h3>
+                      
+                      {/* Benefits */}
+                      {job.benefits && job.benefits.length > 0 && (
+                        <div className="flex flex-wrap gap-1 mb-2">
+                          {job.benefits.map((benefit, idx) => (
+                            <span key={idx} className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                              {benefit}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                       
                       <p className="text-sm text-gray-600 mb-2">{job.company}</p>
                       
