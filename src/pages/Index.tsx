@@ -286,17 +286,33 @@ const Index = () => {
             ].map((template, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
-                  {playingVideo === index && template.videoUrl ? (
-                    <div className="w-full h-48 rounded-lg bg-white flex items-center justify-center">
-                      <iframe
-                        src={`${template.videoUrl}?autoplay=1&mute=1`}
-                        className="w-full h-full rounded-lg"
-                        allow="autoplay; encrypted-media; fullscreen"
-                        allowFullScreen
-                        frameBorder="0"
-                        title={template.title}
-                      />
-                    </div>
+                  {template.videoUrl ? (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="relative cursor-pointer">
+                          <img 
+                            src={template.image} 
+                            alt={template.title}
+                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <button className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                              <Play className="h-6 w-6 fill-current" />
+                            </button>
+                          </div>
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl w-full h-[80vh]">
+                        <iframe
+                          src={template.videoUrl}
+                          className="w-full h-full rounded-lg"
+                          allow="autoplay; encrypted-media; fullscreen"
+                          allowFullScreen
+                          frameBorder="0"
+                          title={template.title}
+                        />
+                      </DialogContent>
+                    </Dialog>
                   ) : (
                     <div className="relative">
                       <img 
@@ -304,16 +320,6 @@ const Index = () => {
                         alt={template.title}
                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                       />
-                      {template.videoUrl && (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <button
-                            onClick={() => setPlayingVideo(index)}
-                            className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-                          >
-                            <Play className="h-6 w-6 fill-current" />
-                          </button>
-                        </div>
-                      )}
                     </div>
                   )}
                 </div>
@@ -374,14 +380,33 @@ const Index = () => {
                   <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                     <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                       <div className="relative overflow-hidden">
-                        {playingVideo === index && template.videoUrl ? (
-                          <iframe
-                            src={`${template.videoUrl}?autoplay=1&mute=1`}
-                            className="w-full h-48 rounded-lg"
-                            allow="autoplay; encrypted-media; fullscreen"
-                            allowFullScreen
-                            loading="lazy"
-                          />
+                        {template.videoUrl ? (
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <div className="relative cursor-pointer">
+                                <img 
+                                  src={template.image} 
+                                  alt={template.title}
+                                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                  <button className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                                    <Play className="h-6 w-6 fill-current" />
+                                  </button>
+                                </div>
+                              </div>
+                            </DialogTrigger>
+                            <DialogContent className="max-w-4xl w-full h-[80vh]">
+                              <iframe
+                                src={template.videoUrl}
+                                className="w-full h-full rounded-lg"
+                                allow="autoplay; encrypted-media; fullscreen"
+                                allowFullScreen
+                                frameBorder="0"
+                                title={template.title}
+                              />
+                            </DialogContent>
+                          </Dialog>
                         ) : (
                           <div className="relative">
                             <img 
@@ -389,16 +414,6 @@ const Index = () => {
                               alt={template.title}
                               className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                             />
-                            {template.videoUrl && (
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <button
-                                  onClick={() => setPlayingVideo(index)}
-                                  className="bg-white/90 hover:bg-white text-primary rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-                                >
-                                  <Play className="h-6 w-6 fill-current" />
-                                </button>
-                              </div>
-                            )}
                           </div>
                         )}
                       </div>
