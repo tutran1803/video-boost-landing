@@ -289,7 +289,7 @@ const Index = () => {
                   {playingVideo === index && template.videoUrl ? (
                     <div className="w-full h-48 rounded-lg bg-gray-100 flex items-center justify-center">
                       <iframe
-                        src={template.videoUrl}
+                        src={`${template.videoUrl}?autoplay=1&mute=1`}
                         className="w-full h-full rounded-lg"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowFullScreen
