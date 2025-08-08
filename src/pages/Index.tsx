@@ -128,16 +128,6 @@ const Index = () => {
       <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-6 md:py-12">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-2">
-            {/* Hero Image */}
-            <div className="relative max-w-2xl mx-auto">
-              <img 
-                src="/lovable-uploads/3134aade-f13c-4349-97d5-026f147f0bb9.png" 
-                alt="Professional creating video CV" 
-                className="rounded-2xl w-full h-40 md:h-48 object-contain bg-white"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-            </div>
-
             {/* Hero Content */}
             <div className="max-w-4xl mx-auto space-y-4 border border-white/20 rounded-2xl p-4 md:p-8 bg-white/50">
               <div className="space-y-4">
