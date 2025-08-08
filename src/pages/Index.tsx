@@ -139,7 +139,7 @@ const Index = () => {
             </div>
 
             {/* Hero Content */}
-            <div className="max-w-4xl mx-auto space-y-4 border border-gray-200 rounded-2xl p-4 md:p-8 bg-white/50">
+            <div className="max-w-4xl mx-auto space-y-4 border border-white/20 rounded-2xl p-4 md:p-8 bg-white/50">
               <div className="space-y-4">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground leading-tight">
                   Hồ sơ có video được{" "}
