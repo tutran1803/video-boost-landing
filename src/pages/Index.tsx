@@ -124,6 +124,19 @@ const Index = () => {
   ];
   return (
     <div className="min-h-screen bg-background">
+      {/* Banner Section */}
+      <section className="relative bg-background py-4 md:py-6">
+        <div className="container mx-auto px-4">
+          <div className="relative max-w-5xl mx-auto">
+            <img 
+              src="/lovable-uploads/1f16fa52-8a68-48f1-bcce-6b6ed6e1ccc5.png" 
+              alt="Hồ sơ video nổi bật - Ưu tiên phỏng vấn ngay" 
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-6 md:py-12">
         <div className="container mx-auto px-4">
