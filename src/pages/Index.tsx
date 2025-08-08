@@ -131,9 +131,9 @@ const Index = () => {
             {/* Hero Image */}
             <div className="relative max-w-2xl mx-auto">
               <img 
-                src="/lovable-uploads/fbd9ea12-cb44-4daf-9936-99bf035202f7.png" 
+                src="/lovable-uploads/4f121521-7c47-4a5c-8e53-483fbe0800a4.png" 
                 alt="Professional creating video CV" 
-                className="rounded-2xl w-full h-60 md:h-80 object-contain"
+                className="rounded-2xl w-full h-auto object-contain bg-white"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
