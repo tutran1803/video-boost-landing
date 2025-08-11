@@ -278,9 +278,9 @@ const Index = () => {
                 ]
               },
               {
-                image: videoTemplate3,
+                image: null,
                 title: "Telesales",
-                link: "#",
+                videoUrl: "https://drive.google.com/file/d/1X-y21yv_u2zUkPA3L9pyKDORmXpMnLRh/preview",
                 stats: [
                   "✅ Được 12 NTD liên hệ",
                   "⚡ Nhận offer sau 1 tuần", 
@@ -360,9 +360,9 @@ const Index = () => {
                     ]
                   },
                   {
-                    image: videoTemplate3,
+                    image: null,
                     title: "Telesales",
-                    link: "#",
+                    videoUrl: "https://drive.google.com/file/d/1X-y21yv_u2zUkPA3L9pyKDORmXpMnLRh/preview",
                     stats: [
                       "✅ Được 12 NTD liên hệ",
                       "⚡ Nhận offer sau 1 tuần", 
