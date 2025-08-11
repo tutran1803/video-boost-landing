@@ -144,7 +144,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-6 md:py-12">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-4">
           <div className="text-center space-y-2">
             {/* Hero Content */}
             <div className="max-w-4xl mx-auto space-y-4 border border-white/20 rounded-2xl p-4 md:p-8 bg-white/50">
