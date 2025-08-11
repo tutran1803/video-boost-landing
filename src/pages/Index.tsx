@@ -402,7 +402,7 @@ const Index = () => {
                   }
                 ].map((template, index) => (
                   <div key={index} className="flex-[0_0_90%] min-w-0 pl-4">
-                    <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
+                    <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden h-full">
                       <div className="relative overflow-hidden">
                         <iframe
                           src={template.videoUrl}
@@ -412,15 +412,15 @@ const Index = () => {
                           loading="lazy"
                         />
                       </div>
-                      <CardContent className="p-6 space-y-4">
-                        <div className="space-y-3">
-                          <h3 className="text-lg font-semibold text-foreground">
+                      <CardContent className="p-4 space-y-3 flex-1">
+                        <div className="space-y-2">
+                          <h3 className="text-base font-semibold text-foreground line-clamp-1">
                             {template.title}
                           </h3>
-                          <div className="space-y-2">
+                          <div className="space-y-1">
                             {template.stats.map((stat, statIndex) => (
-                              <div key={statIndex} className="flex items-center text-sm text-muted-foreground">
-                                <span className="text-xs">{stat}</span>
+                              <div key={statIndex} className="flex items-start text-sm text-muted-foreground">
+                                <span className="text-xs leading-relaxed">{stat}</span>
                               </div>
                             ))}
                           </div>
