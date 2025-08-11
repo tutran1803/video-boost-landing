@@ -228,9 +228,28 @@ const Index = () => {
                         Nhận <span className="font-bold text-primary text-2xl">gợi ý công việc</span>
                       </div>
                       <p className="text-sm text-muted-foreground">Dễ dàng tìm các công việc phù hợp</p>
-                    </div>
                   </div>
                 </div>
+                
+                {/* Dots indicator */}
+                <div className="flex justify-center mt-4 space-x-2">
+                  {[0, 1, 2].map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === 0 
+                          ? 'bg-primary w-6' 
+                          : 'bg-gray-300'
+                      }`}
+                    />
+                  ))}
+                </div>
+                
+                {/* Swipe indicator */}
+                <div className="flex justify-center items-center mt-2 text-xs text-muted-foreground">
+                  <span>← Vuốt để xem thêm →</span>
+                </div>
+              </div>
               </div>
 
               <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
