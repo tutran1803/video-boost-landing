@@ -214,8 +214,8 @@ const Index = () => {
                       <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                         <img src="/lovable-uploads/7c7c4076-afc7-4379-9f39-ba4dd6be22ef.png" alt="Được đánh giá cao" className="w-full h-full object-contain rounded-lg" />
                       </div>
-                      <div className="text-base font-semibold text-foreground">
-                        Được <span className="font-bold text-primary text-xl">đánh giá cao</span>
+                      <div className="text-lg font-semibold text-foreground">
+                        Được <span className="font-bold text-primary text-2xl">đánh giá cao</span>
                       </div>
                       <p className="text-xs text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
                     </div>
@@ -223,8 +223,8 @@ const Index = () => {
                       <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                         <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-contain rounded-lg" />
                       </div>
-                      <div className="text-base font-semibold text-foreground whitespace-nowrap">
-                        Nhận <span className="font-bold text-primary text-xl">gợi ý công việc</span>
+                      <div className="text-lg font-semibold text-foreground whitespace-nowrap">
+                        Nhận <span className="font-bold text-primary text-2xl">gợi ý công việc</span>
                       </div>
                       <p className="text-xs text-muted-foreground">Dễ dàng tìm các công việc phù hợp</p>
                     </div>
