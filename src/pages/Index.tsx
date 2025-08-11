@@ -290,7 +290,7 @@ const Index = () => {
           </div>
 
           {/* Desktop version */}
-          <div className="hidden md:grid md:grid-cols-3 gap-4 md:gap-8">
+          <div className="hidden md:grid md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
             {[
                {
                 image: null,
