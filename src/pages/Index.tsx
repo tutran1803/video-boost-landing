@@ -170,7 +170,7 @@ const Index = () => {
               <div className="hidden md:grid grid-cols-3 gap-4 md:gap-6 py-4 max-w-4xl mx-auto">
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 bg-white/30 rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/f19aa8f5-d93d-4ae0-8923-9142eeef1eee.png" alt="Hồ sơ nổi bật" className="w-full h-full object-cover rounded-lg" />
+                    <img src="/lovable-uploads/dd4ee458-39b0-476b-997a-5f9dd01f5f01.png" alt="Hồ sơ nổi bật" className="w-full h-full object-cover rounded-lg" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Hồ sơ <span className="font-bold text-primary text-xl md:text-3xl">nổi bật</span>
@@ -202,7 +202,7 @@ const Index = () => {
                 <div className="grid grid-cols-1 gap-3">
                   <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
                     <div className="w-28 h-18 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                      <img src="/lovable-uploads/f19aa8f5-d93d-4ae0-8923-9142eeef1eee.png" alt="Hồ sơ nổi bật" className="w-full h-full object-cover rounded-lg" />
+                      <img src="/lovable-uploads/dd4ee458-39b0-476b-997a-5f9dd01f5f01.png" alt="Hồ sơ nổi bật" className="w-full h-full object-cover rounded-lg" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
                       Hồ sơ <span className="font-bold text-primary text-lg">nổi bật</span>
