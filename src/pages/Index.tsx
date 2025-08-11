@@ -257,8 +257,8 @@ const Index = () => {
           {/* Desktop version */}
           <div className="hidden md:grid md:grid-cols-3 gap-4 md:gap-8">
             {[
-              {
-                image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
+               {
+                image: null,
                 title: "Nhân viên kinh doanh",
                 videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview",
                 stats: [
@@ -340,7 +340,7 @@ const Index = () => {
               <div className="flex">
                 {[
                   {
-                    image: "https://drive.google.com/thumbnail?id=1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu",
+                    image: null,
                     title: "Nhân viên kinh doanh",
                     videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview?autoplay=1&mute=1",
                     stats: [
