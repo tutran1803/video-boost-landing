@@ -168,66 +168,12 @@ const Index = () => {
               
               {/* Desktop version */}
               <div className="hidden md:grid grid-cols-3 gap-4 md:gap-6 py-4 max-w-4xl mx-auto">
-                <div className="text-center space-y-2 md:space-y-4 group animate-fade-in">
-                  <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/f19aa8f5-d93d-4ae0-8923-9142eeef1eee.png" alt="Hồ sơ nổi bật" className="w-full h-full object-cover rounded-lg" />
-                  </div>
-                  <div className="text-base md:text-lg font-semibold text-foreground">
-                    Hồ sơ <span className="font-bold text-primary text-xl md:text-3xl">nổi bật</span>
-                  </div>
-                  <p className="text-xs md:text-sm text-muted-foreground">Gây ấn tượng mạnh và được ưu tiên xem đầu tiên</p>
-                </div>
-                <div className="text-center space-y-2 md:space-y-4 group animate-fade-in" style={{animationDelay: '0.2s'}}>
-                  <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/7c7c4076-afc7-4379-9f39-ba4dd6be22ef.png" alt="Được đánh giá cao" className="w-full h-full object-contain rounded-lg" />
-                  </div>
-                  <div className="text-base md:text-lg font-semibold text-foreground">
-                    Được <span className="font-bold text-primary text-xl md:text-3xl">đánh giá cao</span>
-                  </div>
-                  <p className="text-xs md:text-sm text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
-                </div>
-                <div className="text-center space-y-2 md:space-y-4 group animate-fade-in" style={{animationDelay: '0.4s'}}>
-                  <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-contain rounded-lg" />
-                  </div>
-                  <div className="text-base md:text-lg font-semibold text-foreground">
-                    Nhận <span className="font-bold text-primary text-xl md:text-3xl">gợi ý công việc</span>
-                  </div>
-                  <p className="text-xs md:text-sm text-muted-foreground">Dễ dàng tìm các công việc phù hợp</p>
-                </div>
+...
               </div>
 
               {/* Mobile version - show all 3 in grid */}
               <div className="md:hidden py-4 max-w-4xl mx-auto">
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
-                    <div className="w-28 h-18 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                      <img src="/lovable-uploads/f19aa8f5-d93d-4ae0-8923-9142eeef1eee.png" alt="Hồ sơ nổi bật" className="w-full h-full object-cover rounded-lg" />
-                    </div>
-                    <div className="text-sm font-semibold text-foreground">
-                      Hồ sơ <span className="font-bold text-primary text-lg">nổi bật</span>
-                    </div>
-                    <p className="text-xs text-muted-foreground">Gây ấn tượng mạnh và được ưu tiên xem đầu tiên</p>
-                  </div>
-                  <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
-                    <div className="w-28 h-18 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                      <img src="/lovable-uploads/7c7c4076-afc7-4379-9f39-ba4dd6be22ef.png" alt="Được đánh giá cao" className="w-full h-full object-contain rounded-lg" />
-                    </div>
-                    <div className="text-sm font-semibold text-foreground">
-                      Được <span className="font-bold text-primary text-lg">đánh giá cao</span>
-                    </div>
-                    <p className="text-xs text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
-                  </div>
-                  <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
-                    <div className="w-28 h-18 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                      <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-contain rounded-lg" />
-                    </div>
-                    <div className="text-sm font-semibold text-foreground">
-                      Nhận <span className="font-bold text-primary text-lg">gợi ý công việc</span>
-                    </div>
-                    <p className="text-xs text-muted-foreground">Dễ dàng tìm các công việc phù hợp</p>
-                  </div>
-                </div>
+...
               </div>
 
               <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
@@ -258,9 +204,8 @@ const Index = () => {
         </div>
       </section>
 
-
       {/* Video Templates Section */}
-      <section id="video-templates" className="pt-8 pb-8 bg-background">
+      <section id="video-templates" className="bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
