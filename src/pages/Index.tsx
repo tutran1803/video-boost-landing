@@ -279,9 +279,9 @@ const Index = () => {
                 title: "Nhân viên kinh doanh",
                 videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview",
                 stats: [
-                  "✅ Được 6 NTD liên hệ",
-                  "⚡ Làm việc ngay sau 24H đăng tải",
-                  "🎯 Lương 15-18 triệu/tháng"
+                  "✅ Nhận 8/10 đánh giá phù hợp từ nhà tuyển dụng",
+                  "⚡ 100% các công việc ứng tuyển được liên hệ",
+                  "🎯 Tìm việc thành công sau 3 ngày"
                 ]
               },
               {
@@ -361,9 +361,9 @@ const Index = () => {
                     title: "Nhân viên kinh doanh",
                     videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview?autoplay=1&mute=1",
                     stats: [
-                      "✅ Được 6 NTD liên hệ",
-                      "⚡ Làm việc ngay sau 24H đăng tải",
-                      "🎯 Lương 15-18 triệu/tháng"
+                      "✅ Nhận 8/10 đánh giá phù hợp từ nhà tuyển dụng",
+                      "⚡ 100% các công việc ứng tuyển được liên hệ",
+                      "🎯 Tìm việc thành công sau 3 ngày"
                     ]
                   },
                   {
