@@ -179,7 +179,7 @@ const Index = () => {
                 </div>
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in" style={{animationDelay: '0.2s'}}>
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/10f27253-3a43-4642-8e1b-6fc4eae51bc3.png" alt="Được đánh giá cao" className="w-full h-full object-cover rounded-lg" />
+                    <img src="/lovable-uploads/7c7c4076-afc7-4379-9f39-ba4dd6be22ef.png" alt="Được đánh giá cao" className="w-full h-full object-contain rounded-lg" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Được <span className="font-bold text-primary text-xl md:text-3xl">đánh giá cao</span>
@@ -211,7 +211,7 @@ const Index = () => {
                   </div>
                   <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
                     <div className="w-28 h-18 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                      <img src="/lovable-uploads/10f27253-3a43-4642-8e1b-6fc4eae51bc3.png" alt="Được đánh giá cao" className="w-full h-full object-cover rounded-lg" />
+                      <img src="/lovable-uploads/7c7c4076-afc7-4379-9f39-ba4dd6be22ef.png" alt="Được đánh giá cao" className="w-full h-full object-contain rounded-lg" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
                       Được <span className="font-bold text-primary text-lg">đánh giá cao</span>
