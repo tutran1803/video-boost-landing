@@ -298,9 +298,8 @@ const Index = () => {
                 title: "Telesales",
                 videoUrl: "https://drive.google.com/file/d/1X-y21yv_u2zUkPA3L9pyKDORmXpMnLRh/preview",
                 stats: [
-                  "✅ Được 12 NTD liên hệ",
-                  "⚡ Nhận offer sau 1 tuần", 
-                  "🎯 Thu nhập 20-25 triệu"
+                  "✅ Được 4 nhà tuyển dụng quan tâm",
+                  "⚡ Phỏng vấn và có việc sau 1 tuần"
                 ]
               }
             ].map((template, index) => (
@@ -379,9 +378,8 @@ const Index = () => {
                     title: "Telesales",
                     videoUrl: "https://drive.google.com/file/d/1X-y21yv_u2zUkPA3L9pyKDORmXpMnLRh/preview",
                     stats: [
-                      "✅ Được 12 NTD liên hệ",
-                      "⚡ Nhận offer sau 1 tuần", 
-                      "🎯 Thu nhập 20-25 triệu"
+                      "✅ Được 4 nhà tuyển dụng quan tâm",
+                      "⚡ Phỏng vấn và có việc sau 1 tuần"
                     ]
                   }
                 ].map((template, index) => (
