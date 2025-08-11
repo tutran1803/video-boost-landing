@@ -295,7 +295,7 @@ const Index = () => {
                {
                 image: null,
                 title: "Nhân viên kinh doanh",
-                videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview",
+                videoUrl: "https://drive.google.com/file/d/1PfIxgHsms_N6qJgzH7YQPPmfCYQMDw6a/preview",
                 stats: [
                   "✅ Nhận 8/10 đánh giá phù hợp từ nhà tuyển dụng",
                   "⚡ 100% các công việc ứng tuyển được liên hệ",
