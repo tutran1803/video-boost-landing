@@ -83,7 +83,7 @@ const Index = () => {
     },
     {
       title: "Bước 2: Quay video theo hướng dẫn",
-      description: "Quay video theo hướng dẫn",
+      description: "Đọc kỹ những chỉ dẫn hỗ trợ từ AI và tự tin thể hiện thông tin về bản thân",
       imageUrl: "/lovable-uploads/92cc15d1-816a-41ad-8404-cf6775f288f5.png"
     },
     {
