@@ -260,7 +260,7 @@ const Index = () => {
 
 
       {/* Video Templates Section */}
-      <section id="video-templates" className="pt-0 pb-4 bg-background">
+      <section id="video-templates" className="pt-8 pb-8 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
