@@ -150,7 +150,7 @@ const Index = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-2 md:py-4 -mt-2 -mb-2">
+      <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-2 md:py-4 -mt-2">
         <div className="w-full">
           <div className="text-center space-y-2">
             {/* Hero Content */}
@@ -260,7 +260,7 @@ const Index = () => {
 
 
       {/* Video Templates Section */}
-      <section id="video-templates" className="pt-0 pb-4 bg-gradient-to-br from-background to-secondary">
+      <section id="video-templates" className="pt-0 pb-4 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
