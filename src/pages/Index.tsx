@@ -14,9 +14,10 @@ import videoTemplate3 from "@/assets/video-template-3.jpg";
 const Index = () => {
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
   const [emblaRef] = useEmblaCarousel({ 
-    align: 'start',
+    align: 'center',
     containScroll: 'trimSnaps',
-    dragFree: true
+    dragFree: false,
+    loop: false
   });
   const [emblaRefSteps, emblaApiSteps] = useEmblaCarousel({ 
     align: 'start',
@@ -201,7 +202,7 @@ const Index = () => {
               <div className="md:hidden py-4 max-w-4xl mx-auto">
                 <div className="overflow-hidden" ref={emblaRef}>
                   <div className="flex gap-4">
-                    <div className="flex-[0_0_85%] text-center space-y-3 p-4 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
+                    <div className="flex-[0_0_90%] text-center space-y-3 p-4 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
                       <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                         <img src="/lovable-uploads/dd4ee458-39b0-476b-997a-5f9dd01f5f01.png" alt="Hồ sơ nổi bật" className="w-full h-full object-contain rounded-lg" />
                       </div>
@@ -210,7 +211,7 @@ const Index = () => {
                       </div>
                       <p className="text-sm text-muted-foreground">Gây ấn tượng mạnh và được ưu tiên xem đầu tiên</p>
                     </div>
-                    <div className="flex-[0_0_85%] text-center space-y-3 p-4 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
+                    <div className="flex-[0_0_90%] text-center space-y-3 p-4 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
                       <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                         <img src="/lovable-uploads/7c7c4076-afc7-4379-9f39-ba4dd6be22ef.png" alt="Được đánh giá cao" className="w-full h-full object-contain rounded-lg" />
                       </div>
@@ -219,7 +220,7 @@ const Index = () => {
                       </div>
                       <p className="text-sm text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
                     </div>
-                    <div className="flex-[0_0_85%] text-center space-y-3 p-4 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
+                    <div className="flex-[0_0_90%] text-center space-y-3 p-4 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
                       <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                         <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-contain rounded-lg" />
                       </div>
