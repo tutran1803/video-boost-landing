@@ -205,8 +205,8 @@ const Index = () => {
                       <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                         <img src="/lovable-uploads/dd4ee458-39b0-476b-997a-5f9dd01f5f01.png" alt="Hồ sơ nổi bật" className="w-full h-full object-contain rounded-lg" />
                       </div>
-                      <div className="text-base font-semibold text-foreground">
-                        Hồ sơ <span className="font-bold text-primary text-xl">nổi bật</span>
+                      <div className="text-lg font-semibold text-foreground">
+                        Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span>
                       </div>
                       <p className="text-xs text-muted-foreground">Gây ấn tượng mạnh và được ưu tiên xem đầu tiên</p>
                     </div>
