@@ -88,7 +88,7 @@ const Index = () => {
     },
     {
       title: "Bước 3: Gửi video ứng tuyển",
-      description: "Gửi video ứng tuyển và chờ phản hồi từ nhà tuyển dụng",
+      description: "Gửi video ứng tuyển cho những công việc phù hợp chỉ với vài lần bấm nút",
       imageUrl: "/lovable-uploads/2f9654a5-8657-44ef-a085-c25490d1b55e.png"
     },
   ];
