@@ -270,7 +270,7 @@ const Index = () => {
               {
                 image: videoTemplate2,
                 title: "Chăm sóc khách hàng",
-                link: "#",
+                videoUrl: "https://drive.google.com/file/d/17mxKDkHyoLEds0RsdodqF9rqR1WoMWPB/preview",
                 stats: [
                   "✅ Được 8 NTD quan tâm", 
                   "⚡ Có việc làm sau 3 ngày",
@@ -352,7 +352,7 @@ const Index = () => {
                   {
                     image: videoTemplate2,
                     title: "Chăm sóc khách hàng",
-                    link: "#",
+                    videoUrl: "https://drive.google.com/file/d/17mxKDkHyoLEds0RsdodqF9rqR1WoMWPB/preview",
                     stats: [
                       "✅ Được 8 NTD quan tâm", 
                       "⚡ Có việc làm sau 3 ngày",
