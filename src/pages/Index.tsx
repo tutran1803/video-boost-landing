@@ -133,11 +133,18 @@ const Index = () => {
       <section className="relative bg-background py-4 md:py-6">
         <div className="container mx-auto px-4">
           <div className="relative max-w-5xl mx-auto">
-            <img 
-              src="/lovable-uploads/1f16fa52-8a68-48f1-bcce-6b6ed6e1ccc5.png" 
-              alt="Hồ sơ video nổi bật - Ưu tiên phỏng vấn ngay" 
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
+            <a 
+              href="https://www.vieclamtot.com/tro-ly-viec-lam-tot" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block hover:opacity-90 transition-opacity"
+            >
+              <img 
+                src="/lovable-uploads/1f16fa52-8a68-48f1-bcce-6b6ed6e1ccc5.png" 
+                alt="Hồ sơ video nổi bật - Ưu tiên phỏng vấn ngay" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -224,10 +231,15 @@ const Index = () => {
               </div>
 
               <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
-                <Button variant="ctaBlue" size="lg" className="w-full md:w-auto">
-                  <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-                  Thử tạo video nhé
-                </Button>
+              <Button 
+                variant="ctaBlue" 
+                size="lg" 
+                className="w-full md:w-auto"
+                onClick={() => window.open('https://www.vieclamtot.com/tro-ly-viec-lam-tot', '_blank')}
+              >
+                <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                Thử tạo video nhé
+              </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
@@ -446,6 +458,7 @@ const Index = () => {
               variant="ctaBlue" 
               size="lg"
               className=""
+              onClick={() => window.open('https://www.vieclamtot.com/tro-ly-viec-lam-tot', '_blank')}
             >
               <Play className="mr-2 h-5 w-5" />
               Bắt đầu tạo video ngay →
