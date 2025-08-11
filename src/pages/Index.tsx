@@ -372,9 +372,9 @@ const Index = () => {
               <div className="flex">
                 {[
                   {
-                    image: null,
+                    image: videoTemplate1,
                     title: "Nhân viên kinh doanh",
-                    videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview?autoplay=1&mute=1",
+                    videoUrl: "https://drive.google.com/file/d/1cv3B-DmfnaAulF5J3rx7RyUxi4oPngVu/preview",
                     stats: [
                       "✅ Nhận 8/10 đánh giá phù hợp từ nhà tuyển dụng",
                       "⚡ 100% các công việc ứng tuyển được liên hệ",
@@ -382,7 +382,7 @@ const Index = () => {
                     ]
                   },
                   {
-                    image: null,
+                    image: videoTemplate2,
                     title: "Chăm sóc khách hàng",
                     videoUrl: "https://drive.google.com/file/d/17mxKDkHyoLEds0RsdodqF9rqR1WoMWPB/preview",
                     stats: [
@@ -391,7 +391,7 @@ const Index = () => {
                     ]
                   },
                   {
-                    image: null,
+                    image: videoTemplate3,
                     title: "Telesales",
                     videoUrl: "https://drive.google.com/file/d/1X-y21yv_u2zUkPA3L9pyKDORmXpMnLRh/preview",
                     stats: [
@@ -403,16 +403,16 @@ const Index = () => {
                   <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                     <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                       <div className="relative overflow-hidden">
-                        {(playingVideo === index || !template.image) && template.videoUrl ? (
+                        {playingVideo === index && template.videoUrl ? (
                           <iframe
-                            src={`${template.videoUrl}?autoplay=1&mute=1`}
+                            src={template.videoUrl}
                             className="w-full h-48 rounded-lg"
                             allow="autoplay; encrypted-media; fullscreen"
                             allowFullScreen
                             loading="lazy"
                           />
                         ) : template.image ? (
-                          <>
+                          <div className="relative">
                             <div 
                               className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
                               onClick={() => template.videoUrl && setPlayingVideo(index)}
@@ -420,10 +420,19 @@ const Index = () => {
                               <img 
                                 src={template.image} 
                                 alt={template.title}
-                                className="w-full h-full object-cover"
+                                className="w-full h-48 object-cover rounded-lg"
                               />
                             </div>
-                          </>
+                            {/* Play button overlay */}
+                            <div 
+                              className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors cursor-pointer rounded-lg"
+                              onClick={() => template.videoUrl && setPlayingVideo(index)}
+                            >
+                              <div className="bg-primary/90 hover:bg-primary text-white rounded-full p-3 transition-colors">
+                                <Play className="h-6 w-6 ml-1" />
+                              </div>
+                            </div>
+                          </div>
                         ) : null}
                       </div>
                       <CardContent className="p-6 space-y-4">
