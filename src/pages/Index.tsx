@@ -250,8 +250,8 @@ const Index = () => {
       {/* Video Templates Section */}
       <section id="video-templates" className="pt-0 pb-4 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
               Cảm hứng từ những video CV xuất sắc
             </h2>
             <p className="text-base text-muted-foreground">
