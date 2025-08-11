@@ -736,7 +736,7 @@ const Index = () => {
 
 
       {/* Support Section */}
-      <section className="py-8 md:py-12 bg-blue-50">
+      <section className="py-8 md:py-12 bg-blue-50 relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/lovable-uploads/0d1b04a7-da8f-478f-9faa-2cecfe2674c2.png)'}}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 max-w-4xl mx-auto">
             <div className="flex-shrink-0">
