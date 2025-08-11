@@ -404,37 +404,13 @@ const Index = () => {
                   <div key={index} className="flex-[0_0_90%] min-w-0 pl-4">
                     <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                       <div className="relative overflow-hidden">
-                        {playingVideo === index && template.videoUrl ? (
-                          <iframe
-                            src={template.videoUrl}
-                            className="w-full h-48 rounded-lg"
-                            allow="autoplay; encrypted-media; fullscreen"
-                            allowFullScreen
-                            loading="lazy"
-                          />
-                        ) : template.image ? (
-                          <div className="relative">
-                            <div 
-                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
-                              onClick={() => template.videoUrl && setPlayingVideo(index)}
-                            >
-                              <img 
-                                src={template.image} 
-                                alt={template.title}
-                                className="w-full h-48 object-cover rounded-lg"
-                              />
-                            </div>
-                            {/* Play button overlay */}
-                            <div 
-                              className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors cursor-pointer rounded-lg"
-                              onClick={() => template.videoUrl && setPlayingVideo(index)}
-                            >
-                              <div className="bg-primary/90 hover:bg-primary text-white rounded-full p-3 transition-colors">
-                                <Play className="h-6 w-6 ml-1" />
-                              </div>
-                            </div>
-                          </div>
-                        ) : null}
+                        <iframe
+                          src={template.videoUrl}
+                          className="w-full h-48 rounded-lg"
+                          allow="autoplay; encrypted-media; fullscreen"
+                          allowFullScreen
+                          loading="lazy"
+                        />
                       </div>
                       <CardContent className="p-6 space-y-4">
                         <div className="space-y-3">
