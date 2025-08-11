@@ -130,7 +130,7 @@ const Index = () => {
       backgroundRepeat: 'no-repeat'
     }}>
       {/* Banner Section */}
-      <section className="relative bg-background py-4 md:py-6 mb-0">
+      <section className="relative bg-background py-4 md:py-6">
         <div className="container mx-auto px-4">
           <div className="relative max-w-5xl mx-auto">
             <img 
@@ -143,7 +143,7 @@ const Index = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-16 md:py-24 m-0">
+      <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-6 md:py-12">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-2">
             {/* Hero Content */}
@@ -248,7 +248,7 @@ const Index = () => {
 
 
       {/* Video Templates Section */}
-      <section id="video-templates" className="pt-0 pb-4 bg-background mt-0">
+      <section id="video-templates" className="pt-8 pb-4 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
