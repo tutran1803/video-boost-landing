@@ -178,7 +178,7 @@ const Index = () => {
                   <p className="text-xs md:text-sm text-muted-foreground">Gây ấn tượng mạnh và được ưu tiên xem đầu tiên</p>
                 </div>
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in" style={{animationDelay: '0.2s'}}>
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                     <img src="/lovable-uploads/891138ca-b458-4550-9424-1e5dc7f77f51.png" alt="Được đánh giá cao" className="w-full h-full object-cover rounded-lg" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
@@ -210,7 +210,7 @@ const Index = () => {
                     <p className="text-xs text-muted-foreground">Gây ấn tượng mạnh và được ưu tiên xem đầu tiên</p>
                   </div>
                   <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
+                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                       <img src="/lovable-uploads/891138ca-b458-4550-9424-1e5dc7f77f51.png" alt="Được đánh giá cao" className="w-full h-full object-cover rounded-lg" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
