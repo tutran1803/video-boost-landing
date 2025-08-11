@@ -324,7 +324,7 @@ const Index = () => {
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
                   {(playingVideo === index || !template.image) && template.videoUrl ? (
-                    <div className="w-full h-40 rounded-lg bg-gray-100 flex items-center justify-center">
+                    <div className="w-full h-36 rounded-lg bg-gray-100 flex items-center justify-center">
                       <iframe
                         src={template.videoUrl}
                         className="w-full h-full rounded-lg"
