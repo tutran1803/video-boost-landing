@@ -132,9 +132,9 @@ const Index = () => {
       backgroundRepeat: 'no-repeat'
     }}>
       {/* Banner Section */}
-      <section className="relative bg-background py-4 md:py-6">
+      <section className="relative bg-background py-2 md:py-4">
         <div className="container mx-auto px-4">
-          <div className="relative max-w-5xl mx-auto">
+          <div className="relative max-w-7xl mx-auto">
             <a 
               href="https://www.vieclamtot.com/tro-ly-viec-lam-tot" 
               target="_blank" 
