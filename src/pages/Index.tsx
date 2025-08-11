@@ -30,9 +30,10 @@ const Index = () => {
     dragFree: false
   });
   const [emblaRefVideos, emblaApiVideos] = useEmblaCarousel({ 
-    align: 'start',
+    align: 'center',
     containScroll: 'trimSnaps',
-    dragFree: false
+    dragFree: false,
+    loop: false
   });
   const [selectedStepIndex, setSelectedStepIndex] = useState(0);
   const [selectedTipIndex, setSelectedTipIndex] = useState(0);
@@ -400,7 +401,7 @@ const Index = () => {
                     ]
                   }
                 ].map((template, index) => (
-                  <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
+                  <div key={index} className="flex-[0_0_90%] min-w-0 pl-4">
                     <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                       <div className="relative overflow-hidden">
                         {playingVideo === index && template.videoUrl ? (
