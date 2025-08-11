@@ -289,9 +289,8 @@ const Index = () => {
                 title: "Chăm sóc khách hàng",
                 videoUrl: "https://drive.google.com/file/d/17mxKDkHyoLEds0RsdodqF9rqR1WoMWPB/preview",
                 stats: [
-                  "✅ Được 8 NTD quan tâm", 
-                  "⚡ Có việc làm sau 3 ngày",
-                  "🎯 Mức lương 12-16 triệu"
+                  "✅ Nhận lịch phỏng vấn sau 1 ngày",
+                  "🎯 Tìm được công việc với mức lương 10 triệu"
                 ]
               },
               {
@@ -371,9 +370,8 @@ const Index = () => {
                     title: "Chăm sóc khách hàng",
                     videoUrl: "https://drive.google.com/file/d/17mxKDkHyoLEds0RsdodqF9rqR1WoMWPB/preview",
                     stats: [
-                      "✅ Được 8 NTD quan tâm", 
-                      "⚡ Có việc làm sau 3 ngày",
-                      "🎯 Mức lương 12-16 triệu"
+                      "✅ Nhận lịch phỏng vấn sau 1 ngày",
+                      "🎯 Tìm được công việc với mức lương 10 triệu"
                     ]
                   },
                   {
