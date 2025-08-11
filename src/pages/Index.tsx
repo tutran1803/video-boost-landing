@@ -268,7 +268,7 @@ const Index = () => {
                 ]
               },
               {
-                image: videoTemplate2,
+                image: null,
                 title: "Chăm sóc khách hàng",
                 videoUrl: "https://drive.google.com/file/d/17mxKDkHyoLEds0RsdodqF9rqR1WoMWPB/preview",
                 stats: [
@@ -290,7 +290,7 @@ const Index = () => {
             ].map((template, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
-                  {playingVideo === index && template.videoUrl ? (
+                  {(playingVideo === index || !template.image) && template.videoUrl ? (
                     <div className="w-full h-48 rounded-lg bg-gray-100 flex items-center justify-center">
                       <iframe
                         src={template.videoUrl}
@@ -301,7 +301,7 @@ const Index = () => {
                         title={template.title}
                       />
                     </div>
-                  ) : (
+                  ) : template.image ? (
                     <>
                       <div 
                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
@@ -314,7 +314,7 @@ const Index = () => {
                         />
                       </div>
                     </>
-                  )}
+                  ) : null}
                 </div>
                 <CardContent className="p-6 space-y-4">
                   <div className="space-y-3">
@@ -350,7 +350,7 @@ const Index = () => {
                     ]
                   },
                   {
-                    image: videoTemplate2,
+                    image: null,
                     title: "Chăm sóc khách hàng",
                     videoUrl: "https://drive.google.com/file/d/17mxKDkHyoLEds0RsdodqF9rqR1WoMWPB/preview",
                     stats: [
@@ -373,7 +373,7 @@ const Index = () => {
                   <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                     <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                       <div className="relative overflow-hidden">
-                        {playingVideo === index && template.videoUrl ? (
+                        {(playingVideo === index || !template.image) && template.videoUrl ? (
                           <iframe
                             src={`${template.videoUrl}?autoplay=1&mute=1`}
                             className="w-full h-48 rounded-lg"
@@ -381,7 +381,7 @@ const Index = () => {
                             allowFullScreen
                             loading="lazy"
                           />
-                        ) : (
+                        ) : template.image ? (
                           <>
                             <div 
                               className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
@@ -394,7 +394,7 @@ const Index = () => {
                               />
                             </div>
                           </>
-                        )}
+                        ) : null}
                       </div>
                       <CardContent className="p-6 space-y-4">
                         <div className="space-y-3">
