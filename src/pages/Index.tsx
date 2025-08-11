@@ -124,7 +124,7 @@ const Index = () => {
   ];
   return (
     <div className="min-h-screen bg-background" style={{
-      backgroundImage: `url('/lovable-uploads/a0bed632-fe40-4441-9433-6184f1ef61f2.png')`,
+      backgroundImage: `url('/lovable-uploads/6ef7df90-ae64-4f50-bf7e-c683c3875ce0.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
