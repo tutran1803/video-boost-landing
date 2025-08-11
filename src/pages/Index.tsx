@@ -123,7 +123,12 @@ const Index = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" style={{
+      backgroundImage: `url('/lovable-uploads/a0bed632-fe40-4441-9433-6184f1ef61f2.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
       {/* Banner Section */}
       <section className="relative bg-background py-4 md:py-6">
         <div className="container mx-auto px-4">
