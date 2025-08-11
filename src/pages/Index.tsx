@@ -184,7 +184,7 @@ const Index = () => {
                     <UserCheck className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
-                    Được <span className="font-bold text-primary text-xl md:text-3xl">đánh giá cao</span>
+                    Nhận <span className="font-bold text-primary text-xl md:text-3xl">gợi ý công việc</span>
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Hồ sơ có video được gọi ngay trong vòng 24H</p>
                 </div>
@@ -216,7 +216,7 @@ const Index = () => {
                       <UserCheck className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
-                      Được <span className="font-bold text-primary text-lg">đánh giá cao</span>
+                      Nhận <span className="font-bold text-primary text-lg">gợi ý công việc</span>
                     </div>
                     <p className="text-xs text-muted-foreground">Hồ sơ có video được gọi ngay trong vòng 24H</p>
                   </div>
