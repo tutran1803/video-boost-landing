@@ -484,7 +484,7 @@ const Index = () => {
                 {stepsData.map((step, index) => (
                   <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-3 space-y-2">
-                      <div className="w-full h-40 bg-white rounded-lg overflow-hidden mb-2 border border-gray-200">
+                      <div className="w-full h-48 bg-white rounded-lg overflow-hidden mb-2 border border-gray-200">
                         <img 
                           src={step.imageUrl} 
                           alt={step.title}
@@ -508,7 +508,7 @@ const Index = () => {
                       <div key={index} className="flex-[0_0_85%] min-w-0 pl-4">
                         <Card className="border-0 shadow-md">
                           <CardContent className="p-4 space-y-3">
-                            <div className="w-full h-40 bg-white rounded-lg overflow-hidden mb-3 border border-gray-200">
+                            <div className="w-full h-48 bg-white rounded-lg overflow-hidden mb-3 border border-gray-200">
                               <img 
                                 src={step.imageUrl} 
                                 alt={step.title}
