@@ -188,7 +188,7 @@ const Index = () => {
                 </div>
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in" style={{animationDelay: '0.4s'}}>
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-cover rounded-lg" />
+                    <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-contain rounded-lg" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Nhận <span className="font-bold text-primary text-xl md:text-3xl">gợi ý công việc</span>
@@ -220,7 +220,7 @@ const Index = () => {
                   </div>
                   <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
                     <div className="w-28 h-18 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                      <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-cover rounded-lg" />
+                      <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-contain rounded-lg" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
                       Nhận <span className="font-bold text-primary text-lg">gợi ý công việc</span>
