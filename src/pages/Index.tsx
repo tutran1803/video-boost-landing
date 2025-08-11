@@ -162,8 +162,8 @@ const Index = () => {
               {/* Desktop version */}
               <div className="hidden md:grid grid-cols-3 gap-4 md:gap-6 py-4 max-w-4xl mx-auto">
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30">
-                    <Files className="h-6 w-6 md:h-8 md:w-8 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
+                  <div className="w-20 h-12 md:w-24 md:h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
+                    <img src="/lovable-uploads/10f27253-3a43-4642-8e1b-6fc4eae51bc3.png" alt="Hồ sơ nổi bật" className="w-full h-full object-cover rounded-lg" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Hồ sơ <span className="font-bold text-primary text-xl md:text-3xl">nổi bật</span>
@@ -194,8 +194,8 @@ const Index = () => {
               <div className="md:hidden py-4 max-w-4xl mx-auto">
                 <div className="grid grid-cols-1 gap-3">
                   <div className="text-center space-y-2 p-3 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30">
-                      <Files className="h-5 w-5 text-primary transition-all duration-300 group-hover:scale-110 animate-blink" />
+                    <div className="w-16 h-10 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
+                      <img src="/lovable-uploads/10f27253-3a43-4642-8e1b-6fc4eae51bc3.png" alt="Hồ sơ nổi bật" className="w-full h-full object-cover rounded-lg" />
                     </div>
                     <div className="text-sm font-semibold text-foreground">
                       Hồ sơ <span className="font-bold text-primary text-lg">nổi bật</span>
