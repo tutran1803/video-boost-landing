@@ -168,7 +168,7 @@ const Index = () => {
               
               {/* Desktop version */}
               <div className="hidden md:grid grid-cols-3 gap-4 md:gap-6 py-4 max-w-4xl mx-auto">
-                <div className="text-center space-y-2 md:space-y-4 group animate-fade-in">
+                <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 bg-white/30 rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                     <img src="/lovable-uploads/f19aa8f5-d93d-4ae0-8923-9142eeef1eee.png" alt="Hồ sơ nổi bật" className="w-full h-full object-cover rounded-lg" />
                   </div>
@@ -177,7 +177,7 @@ const Index = () => {
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Gây ấn tượng mạnh và được ưu tiên xem đầu tiên</p>
                 </div>
-                <div className="text-center space-y-2 md:space-y-4 group animate-fade-in" style={{animationDelay: '0.2s'}}>
+                <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 bg-white/30 rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                     <img src="/lovable-uploads/7c7c4076-afc7-4379-9f39-ba4dd6be22ef.png" alt="Được đánh giá cao" className="w-full h-full object-contain rounded-lg" />
                   </div>
@@ -186,7 +186,7 @@ const Index = () => {
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
                 </div>
-                <div className="text-center space-y-2 md:space-y-4 group animate-fade-in" style={{animationDelay: '0.4s'}}>
+                <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 bg-white/30 rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
                     <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-contain rounded-lg" />
                   </div>
