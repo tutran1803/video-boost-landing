@@ -290,7 +290,7 @@ const Index = () => {
           </div>
 
           {/* Desktop version */}
-          <div className="hidden md:grid md:grid-cols-3 gap-4 md:gap-8">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
                {
                 image: null,
@@ -324,7 +324,7 @@ const Index = () => {
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
                   {(playingVideo === index || !template.image) && template.videoUrl ? (
-                    <div className="w-full h-40 rounded-lg bg-gray-100 flex items-center justify-center">
+                    <div className="w-full h-64 rounded-lg bg-gray-100 flex items-center justify-center">
                       <iframe
                         src={template.videoUrl}
                         className="w-full h-full rounded-lg"
