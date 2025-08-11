@@ -244,11 +244,6 @@ const Index = () => {
                     />
                   ))}
                 </div>
-                
-                {/* Swipe indicator */}
-                <div className="flex justify-center items-center mt-2 text-xs text-muted-foreground">
-                  <span>← Vuốt để xem thêm →</span>
-                </div>
               </div>
               </div>
 
