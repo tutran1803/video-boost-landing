@@ -488,11 +488,11 @@ const Index = () => {
             
             <TabsContent value="steps" className="space-y-6">
               {/* Desktop version */}
-              <div className="hidden md:grid grid-cols-3 gap-3 md:gap-4">
+              <div className="hidden md:grid grid-cols-4 gap-2 md:gap-3">
                 {stepsData.map((step, index) => (
                   <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
-                    <CardContent className="p-3 space-y-2 flex-1 flex flex-col">
-                      <div className="w-full h-48 bg-white rounded-lg overflow-hidden mb-2 border border-gray-200">
+                    <CardContent className="p-2 space-y-2 flex-1 flex flex-col">
+                      <div className="w-full h-32 bg-white rounded-lg overflow-hidden mb-1 border border-gray-200">
                         <img 
                           src={step.imageUrl} 
                           alt={step.title}
@@ -500,7 +500,7 @@ const Index = () => {
                         />
                       </div>
                       <div className="text-center flex-1 flex flex-col justify-center">
-                        <h3 className="text-sm font-semibold text-foreground mb-1">{step.title}</h3>
+                        <h3 className="text-xs font-semibold text-foreground mb-1">{step.title}</h3>
                         <p className="text-xs text-muted-foreground">{step.description}</p>
                       </div>
                     </CardContent>
