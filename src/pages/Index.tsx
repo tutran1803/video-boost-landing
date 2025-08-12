@@ -156,7 +156,7 @@ const Index = () => {
         <div className="w-full">
           <div className="text-center space-y-2">
             {/* Hero Content */}
-            <div className="max-w-7xl mx-auto space-y-4 rounded-2xl p-4 md:p-8 bg-white/50">
+            <div className="max-w-7xl mx-auto space-y-4 rounded-2xl p-4 md:p-8" style={{background: 'rgba(255, 186, 0, 0.08)'}}>
               <div className="space-y-4">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground leading-tight">
                   Hồ sơ có video được{" "}
