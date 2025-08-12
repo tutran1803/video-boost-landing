@@ -283,7 +283,7 @@ const Index = () => {
 
 
       {/* Video Templates Section */}
-      <section id="video-templates" className="pt-4 md:pt-6 pb-4 bg-background">{/* Reduced top padding */}
+      <section id="video-templates" className="pt-1 md:pt-2 pb-4 bg-background">{/* Further reduced top padding */}
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
