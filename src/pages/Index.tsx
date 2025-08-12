@@ -190,7 +190,7 @@ const Index = () => {
                 </div>
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
                   <div className="w-36 h-24 md:w-48 md:h-28 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                    <img src="/lovable-uploads/4baa8f27-46e9-43b6-8292-09fca1b23a87.png" alt="Gợi ý công việc" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
+                    <img src="/lovable-uploads/4baa8f27-46e9-43b6-8292-09fca1b23a87.png" alt="Gợi ý công việc" className="w-20 h-20 md:w-24 md:h-24 object-contain" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground whitespace-nowrap">
                     Nhận <span className="font-bold text-primary text-xl md:text-3xl">gợi ý công việc</span>
@@ -223,7 +223,7 @@ const Index = () => {
                     </div>
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
                        <div className="w-40 h-24 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                         <img src="/lovable-uploads/4baa8f27-46e9-43b6-8292-09fca1b23a87.png" alt="Gợi ý công việc" className="w-12 h-12 object-contain" />
+                         <img src="/lovable-uploads/4baa8f27-46e9-43b6-8292-09fca1b23a87.png" alt="Gợi ý công việc" className="w-16 h-16 object-contain" />
                        </div>
                       <div className="text-lg font-semibold text-foreground whitespace-nowrap">
                         Nhận <span className="font-bold text-primary text-2xl">gợi ý công việc</span>
