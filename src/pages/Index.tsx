@@ -172,7 +172,7 @@ const Index = () => {
               <div className="hidden md:grid grid-cols-3 gap-8 py-4 w-full mx-auto px-8">
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 transition-all duration-300 hover:scale-[1.02]">
                   <div className="w-32 h-20 md:w-40 md:h-32 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                    <img src="/lovable-uploads/8fa48d05-5075-4160-90f0-46cde5f3df45.png" alt="Hồ sơ nổi bật" className="w-20 h-20 md:w-32 md:h-32 object-contain" />
+                    <img src="/lovable-uploads/8fa48d05-5075-4160-90f0-46cde5f3df45.png" alt="Hồ sơ nổi bật" className="w-20 h-20 md:w-36 md:h-36 object-contain" />
                   </div>
                   <div className="text-sm md:text-base font-semibold text-foreground">
                     Hồ sơ <span className="font-bold text-primary text-xl md:text-2xl">nổi bật</span>
