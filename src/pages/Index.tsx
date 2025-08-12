@@ -132,9 +132,9 @@ const Index = () => {
       backgroundRepeat: 'no-repeat'
     }}>
       {/* Banner Section */}
-      <section className="relative bg-background py-2 md:py-4">
-        <div className="container mx-auto px-4">
-          <div className="relative max-w-7xl mx-auto">
+      <section className="relative bg-background py-0">
+        <div className="w-full">
+          <div className="relative w-full">{/* Made banner full width */}
             <a 
               href="https://www.vieclamtot.com/tro-ly-viec-lam-tot" 
               target="_blank" 
@@ -152,7 +152,7 @@ const Index = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-2 md:py-4 -mt-2 w-full" style={{background: 'linear-gradient(135deg, rgba(255, 186, 0, 0.06), rgba(255, 186, 0, 0.03))'}}>{/* Made yellow even lighter */}
+      <section className="relative overflow-hidden py-2 md:py-4 -mt-0 w-full" style={{background: 'linear-gradient(135deg, rgba(255, 186, 0, 0.06), rgba(255, 186, 0, 0.03))'}}>{/* Removed negative margin */}
         <div className="w-full">
           <div className="text-center space-y-2">
             {/* Hero Content */}
