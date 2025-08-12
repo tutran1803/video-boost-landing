@@ -157,7 +157,7 @@ const Index = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-1 md:py-2 -mt-0 w-full pb-0 -mb-2" style={{background: 'linear-gradient(135deg, rgba(255, 186, 0, 0.06), rgba(255, 186, 0, 0.03))'}}>{/* Reduced padding and added negative margin */}
+      <section className="relative overflow-hidden py-2 md:py-4 -mt-0 w-full pb-2 md:pb-3" style={{background: 'linear-gradient(135deg, rgba(255, 186, 0, 0.06), rgba(255, 186, 0, 0.03))'}}>{/* Reduced bottom padding */}
         <div className="w-full">
           <div className="text-center space-y-2">
             {/* Hero Content */}
@@ -170,7 +170,7 @@ const Index = () => {
                 <p className="text-lg md:text-xl text-muted-foreground font-semibold">
                   Tăng cơ hội ứng tuyển x2 với video 30s
                 </p>
-                
+                <div className="w-24 h-1 bg-primary mx-auto mt-2"></div>
               </div>
               
               {/* Desktop version */}
@@ -283,7 +283,7 @@ const Index = () => {
 
 
       {/* Video Templates Section */}
-      <section id="video-templates" className="pt-1 md:pt-2 pb-4 bg-background">{/* Further reduced top padding */}
+      <section id="video-templates" className="pt-4 md:pt-6 pb-4 bg-background">{/* Reduced top padding */}
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
@@ -444,7 +444,7 @@ const Index = () => {
                   key={index}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === selectedVideoIndex 
-                      ? 'bg-white w-6' 
+                      ? 'bg-primary w-6' 
                       : 'bg-gray-300'
                   }`}
                   onClick={() => {
