@@ -183,8 +183,8 @@ const Index = () => {
                   <div className="w-36 h-24 md:w-48 md:h-28 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
                     <img src="/lovable-uploads/02279409-a38c-406b-9161-3a4e3511dbbb.png" alt="Được đánh giá cao" className="w-24 h-24 md:w-28 md:h-28 object-contain" />
                   </div>
-                  <div className="text-base md:text-lg font-semibold text-foreground">
-                    Được <span className="font-bold text-primary text-xl md:text-3xl whitespace-nowrap">đánh giá cao</span>
+                  <div className="text-base md:text-lg font-semibold text-foreground whitespace-nowrap">
+                    Được <span className="font-bold text-primary text-xl md:text-3xl">đánh giá cao</span>
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
                 </div>
@@ -192,7 +192,7 @@ const Index = () => {
                   <div className="w-36 h-24 md:w-48 md:h-28 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
                     <img src="/lovable-uploads/4baa8f27-46e9-43b6-8292-09fca1b23a87.png" alt="Gợi ý công việc" className="w-24 h-24 md:w-28 md:h-28 object-contain" />
                   </div>
-                  <div className="text-base md:text-lg font-semibold text-foreground whitespace-nowrap">
+                  <div className="text-base md:text-lg font-semibold text-foreground">
                     Nhận <span className="font-bold text-primary text-xl md:text-3xl">gợi ý công việc</span>
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Dễ dàng tìm các công việc phù hợp</p>
@@ -216,8 +216,8 @@ const Index = () => {
                        <div className="w-40 h-24 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
                          <img src="/lovable-uploads/02279409-a38c-406b-9161-3a4e3511dbbb.png" alt="Được đánh giá cao" className="w-20 h-20 object-contain" />
                        </div>
-                       <div className="text-lg font-semibold text-foreground">
-                         Được <span className="font-bold text-primary text-2xl whitespace-nowrap">đánh giá cao</span>
+                       <div className="text-lg font-semibold text-foreground whitespace-nowrap">
+                         Được <span className="font-bold text-primary text-2xl">đánh giá cao</span>
                        </div>
                       <p className="text-sm text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
                     </div>
@@ -225,9 +225,9 @@ const Index = () => {
                        <div className="w-40 h-24 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
                          <img src="/lovable-uploads/4baa8f27-46e9-43b6-8292-09fca1b23a87.png" alt="Gợi ý công việc" className="w-20 h-20 object-contain" />
                        </div>
-                      <div className="text-lg font-semibold text-foreground whitespace-nowrap">
-                        Nhận <span className="font-bold text-primary text-2xl">gợi ý công việc</span>
-                      </div>
+                       <div className="text-lg font-semibold text-foreground">
+                         Nhận <span className="font-bold text-primary text-2xl">gợi ý công việc</span>
+                       </div>
                       <p className="text-sm text-muted-foreground">Dễ dàng tìm các công việc phù hợp</p>
                   </div>
                 </div>
