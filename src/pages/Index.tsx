@@ -310,7 +310,7 @@ const Index = () => {
               {
                 image: null,
                 title: "Chăm sóc khách hàng",
-                videoUrl: "https://drive.google.com/file/d/17mxKDkHyoLEds0RsdodqF9rqR1WoMWPB/preview",
+                videoUrl: "https://drive.google.com/file/d/1V05xVpZQjnxq2P8AXtiT_KoBdeYi_MLD/preview",
                 stats: [
                   "✅ Nhận lịch phỏng vấn sau 1 ngày",
                   "🎯 Tìm được công việc với mức lương 10 triệu"
@@ -390,7 +390,7 @@ const Index = () => {
                   {
                     image: videoTemplate2,
                     title: "Chăm sóc khách hàng",
-                    videoUrl: "https://drive.google.com/file/d/17mxKDkHyoLEds0RsdodqF9rqR1WoMWPB/preview",
+                    videoUrl: "https://drive.google.com/file/d/1V05xVpZQjnxq2P8AXtiT_KoBdeYi_MLD/preview",
                     stats: [
                       "✅ Nhận lịch phỏng vấn sau 1 ngày",
                       "🎯 Tìm được công việc với mức lương 10 triệu"
