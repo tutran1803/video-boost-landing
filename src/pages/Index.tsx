@@ -152,7 +152,7 @@ const Index = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary py-2 md:py-4 -mt-2">
+      <section className="relative overflow-hidden bg-white py-2 md:py-4 -mt-2 w-full">{/* Changed from gradient to white bg and added w-full */}
         <div className="w-full">
           <div className="text-center space-y-2">
             {/* Hero Content */}
