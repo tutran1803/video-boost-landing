@@ -205,7 +205,7 @@ const Index = () => {
                   <div className="flex gap-4">
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]">
                        <div className="w-40 h-24 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                         <img src="/lovable-uploads/8fa48d05-5075-4160-90f0-46cde5f3df45.png" alt="Hồ sơ nổi bật" className="w-24 h-24 object-contain" />
+                         <img src="/lovable-uploads/8fa48d05-5075-4160-90f0-46cde5f3df45.png" alt="Hồ sơ nổi bật" className="w-28 h-28 object-contain" />
                        </div>
                       <div className="text-lg font-semibold text-foreground">
                         Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span>
@@ -214,7 +214,7 @@ const Index = () => {
                     </div>
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
                        <div className="w-40 h-24 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                         <img src="/lovable-uploads/02279409-a38c-406b-9161-3a4e3511dbbb.png" alt="Được đánh giá cao" className="w-20 h-20 object-contain" />
+                         <img src="/lovable-uploads/02279409-a38c-406b-9161-3a4e3511dbbb.png" alt="Được đánh giá cao" className="w-28 h-28 object-contain" />
                        </div>
                        <div className="text-lg font-semibold text-foreground whitespace-nowrap">
                          Được <span className="font-bold text-primary text-2xl">đánh giá cao</span>
@@ -223,7 +223,7 @@ const Index = () => {
                     </div>
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
                        <div className="w-40 h-24 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                         <img src="/lovable-uploads/4baa8f27-46e9-43b6-8292-09fca1b23a87.png" alt="Gợi ý công việc" className="w-20 h-20 object-contain" />
+                         <img src="/lovable-uploads/4baa8f27-46e9-43b6-8292-09fca1b23a87.png" alt="Gợi ý công việc" className="w-28 h-28 object-contain" />
                        </div>
                        <div className="text-lg font-semibold text-foreground whitespace-nowrap">
                          Nhận <span className="font-bold text-primary text-2xl">gợi ý công việc</span>
