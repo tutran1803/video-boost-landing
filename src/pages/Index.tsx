@@ -79,17 +79,17 @@ const Index = () => {
 
   const stepsData = [
     {
-      title: 'Bước 1: Chọn "Quay video"',
+      title: 'Bước 2: Chọn "Quay video"',
       description: "Chọn vào mục quay video trong form ứng tuyển",
       imageUrl: "/lovable-uploads/1f9a4da4-b75b-48af-8027-f348618e5049.png"
     },
     {
-      title: "Bước 2: Quay video theo hướng dẫn",
+      title: "Bước 3: Quay video theo hướng dẫn",
       description: "Đọc kỹ những chỉ dẫn hỗ trợ từ AI và tự tin thể hiện thông tin về bản thân",
       imageUrl: "/lovable-uploads/92cc15d1-816a-41ad-8404-cf6775f288f5.png"
     },
     {
-      title: "Bước 3: Gửi video ứng tuyển",
+      title: "Bước 4: Gửi video ứng tuyển",
       description: "Gửi video ứng tuyển cho những công việc phù hợp chỉ với vài lần bấm nút",
       imageUrl: "/lovable-uploads/2f9654a5-8657-44ef-a085-c25490d1b55e.png"
     },
