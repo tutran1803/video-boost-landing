@@ -184,7 +184,7 @@ const Index = () => {
                     <img src="/lovable-uploads/02279409-a38c-406b-9161-3a4e3511dbbb.png" alt="Được đánh giá cao" className="w-24 h-24 md:w-28 md:h-28 object-contain" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
-                    Được <span className="font-bold text-primary text-xl md:text-3xl">đánh giá cao</span>
+                    Được <span className="font-bold text-primary text-xl md:text-3xl whitespace-nowrap">đánh giá cao</span>
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
                 </div>
@@ -216,9 +216,9 @@ const Index = () => {
                        <div className="w-40 h-24 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
                          <img src="/lovable-uploads/02279409-a38c-406b-9161-3a4e3511dbbb.png" alt="Được đánh giá cao" className="w-20 h-20 object-contain" />
                        </div>
-                      <div className="text-lg font-semibold text-foreground">
-                        Được <span className="font-bold text-primary text-2xl">đánh giá cao</span>
-                      </div>
+                       <div className="text-lg font-semibold text-foreground">
+                         Được <span className="font-bold text-primary text-2xl whitespace-nowrap">đánh giá cao</span>
+                       </div>
                       <p className="text-sm text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
                     </div>
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
