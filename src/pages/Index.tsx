@@ -471,7 +471,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-              Hướng dẫn quay video CV ứng tuyển
+              Hướng dẫn quay hồ sơ video ứng tuyển
             </h2>
           </div>
 
