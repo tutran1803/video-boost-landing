@@ -214,7 +214,7 @@ const Index = () => {
                     </div>
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
                        <div className="w-40 h-24 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                         <img src="/lovable-uploads/02279409-a38c-406b-9161-3a4e3511dbbb.png" alt="Được đánh giá cao" className="w-32 h-32 object-contain" />
+                         <img src="/lovable-uploads/02279409-a38c-406b-9161-3a4e3511dbbb.png" alt="Được đánh giá cao" className="w-28 h-28 object-contain" />
                        </div>
                        <div className="text-lg font-semibold text-foreground whitespace-nowrap">
                          Được <span className="font-bold text-primary text-2xl">đánh giá cao</span>
