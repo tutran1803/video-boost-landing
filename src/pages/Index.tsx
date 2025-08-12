@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Play, CheckCircle, Upload, Video, Send, Sun, Camera, Zap, Files, TrendingUp, UserCheck } from "lucide-react";
+import { Play, CheckCircle, Upload, Video, Send, Sun, Camera, Zap, Files, TrendingUp, UserCheck, Star, ThumbsUp, Search } from "lucide-react";
 import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import heroImage from "@/assets/hero-image.jpg";
@@ -172,7 +172,7 @@ const Index = () => {
               <div className="hidden md:grid grid-cols-3 gap-8 py-4 w-full mx-auto px-8">
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 transition-all duration-300 hover:scale-[1.02]">
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/0d1b04a7-da8f-478f-9faa-2cecfe2674c2.png" alt="Hồ sơ nổi bật" className="w-full h-full object-contain rounded-lg" />
+                    <Star size={48} style={{color: '#FFBA00'}} />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Hồ sơ <span className="font-bold text-primary text-xl md:text-3xl">nổi bật</span>
@@ -181,7 +181,7 @@ const Index = () => {
                 </div>
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/7c7c4076-afc7-4379-9f39-ba4dd6be22ef.png" alt="Được đánh giá cao" className="w-full h-full object-contain rounded-lg" />
+                    <ThumbsUp size={48} style={{color: '#FFBA00'}} />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Được <span className="font-bold text-primary text-xl md:text-3xl">đánh giá cao</span>
@@ -190,7 +190,7 @@ const Index = () => {
                 </div>
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-contain rounded-lg" />
+                    <Search size={48} style={{color: '#FFBA00'}} />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground whitespace-nowrap">
                     Nhận <span className="font-bold text-primary text-xl md:text-3xl">gợi ý công việc</span>
@@ -205,7 +205,7 @@ const Index = () => {
                   <div className="flex gap-4">
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]">
                        <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                         <img src="/lovable-uploads/0d1b04a7-da8f-478f-9faa-2cecfe2674c2.png" alt="Hồ sơ nổi bật" className="w-full h-full object-contain rounded-lg" />
+                         <Star size={40} style={{color: '#FFBA00'}} />
                        </div>
                       <div className="text-lg font-semibold text-foreground">
                         Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span>
@@ -213,18 +213,18 @@ const Index = () => {
                       <p className="text-sm text-muted-foreground">Gây ấn tượng mạnh và được ưu tiên xem đầu tiên</p>
                     </div>
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
-                      <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                        <img src="/lovable-uploads/7c7c4076-afc7-4379-9f39-ba4dd6be22ef.png" alt="Được đánh giá cao" className="w-full h-full object-contain rounded-lg" />
-                      </div>
+                       <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
+                         <ThumbsUp size={40} style={{color: '#FFBA00'}} />
+                       </div>
                       <div className="text-lg font-semibold text-foreground">
                         Được <span className="font-bold text-primary text-2xl">đánh giá cao</span>
                       </div>
                       <p className="text-sm text-muted-foreground">Nhà tuyển dụng hẹn phỏng vấn ngay trong 24H</p>
                     </div>
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.4s'}}>
-                      <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                        <img src="/lovable-uploads/fb1984b8-21f4-43c9-bec0-efa5badf3a76.png" alt="Gợi ý công việc" className="w-full h-full object-contain rounded-lg" />
-                      </div>
+                       <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
+                         <Search size={40} style={{color: '#FFBA00'}} />
+                       </div>
                       <div className="text-lg font-semibold text-foreground whitespace-nowrap">
                         Nhận <span className="font-bold text-primary text-2xl">gợi ý công việc</span>
                       </div>
