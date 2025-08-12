@@ -170,7 +170,7 @@ const Index = () => {
                 <p className="text-lg md:text-xl text-muted-foreground font-semibold">
                   Tăng cơ hội ứng tuyển x2 với video 30s
                 </p>
-                <div className="w-24 h-1 bg-primary mx-auto mt-2"></div>
+                
               </div>
               
               {/* Desktop version */}
