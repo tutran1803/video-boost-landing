@@ -444,7 +444,7 @@ const Index = () => {
                   key={index}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === selectedVideoIndex 
-                      ? 'bg-primary w-6' 
+                      ? 'bg-white w-6' 
                       : 'bg-gray-300'
                   }`}
                   onClick={() => {
