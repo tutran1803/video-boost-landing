@@ -157,7 +157,7 @@ const Index = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-2 md:py-4 -mt-0 w-full pb-2 md:pb-3" style={{background: 'linear-gradient(135deg, rgba(255, 186, 0, 0.06), rgba(255, 186, 0, 0.03))'}}>{/* Reduced bottom padding */}
+      <section className="relative overflow-hidden py-1 md:py-2 -mt-0 w-full pb-1 md:pb-2" style={{background: 'linear-gradient(135deg, rgba(255, 186, 0, 0.06), rgba(255, 186, 0, 0.03))'}}>{/* Reduced padding further */}
         <div className="w-full">
           <div className="text-center space-y-2">
             {/* Hero Content */}
