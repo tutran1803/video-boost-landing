@@ -172,7 +172,7 @@ const Index = () => {
               <div className="hidden md:grid grid-cols-3 gap-8 py-4 w-full mx-auto px-8">
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 transition-all duration-300 hover:scale-[1.02]">
                   <div className="w-36 h-24 md:w-48 md:h-28 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                    <Star size={64} style={{color: '#FFBA00'}} />
+                    <img src="/lovable-uploads/8fa48d05-5075-4160-90f0-46cde5f3df45.png" alt="Hồ sơ nổi bật" className="w-20 h-20 md:w-24 md:h-24 object-contain" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Hồ sơ <span className="font-bold text-primary text-xl md:text-3xl">nổi bật</span>
@@ -205,7 +205,7 @@ const Index = () => {
                   <div className="flex gap-4">
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]">
                        <div className="w-40 h-24 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                         <Star size={56} style={{color: '#FFBA00'}} />
+                         <img src="/lovable-uploads/8fa48d05-5075-4160-90f0-46cde5f3df45.png" alt="Hồ sơ nổi bật" className="w-16 h-16 object-contain" />
                        </div>
                       <div className="text-lg font-semibold text-foreground">
                         Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span>
