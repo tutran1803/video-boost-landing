@@ -142,7 +142,7 @@ const Index = () => {
               className="block hover:opacity-90 transition-opacity"
             >
               <img 
-                src="/lovable-uploads/1f16fa52-8a68-48f1-bcce-6b6ed6e1ccc5.png" 
+                src="/lovable-uploads/70c57887-dd7d-4076-914a-5d62fc9bf62a.png" 
                 alt="Hồ sơ video nổi bật - Ưu tiên phỏng vấn ngay" 
                 className="w-full h-auto rounded-lg shadow-lg"
               />
