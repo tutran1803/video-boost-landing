@@ -248,7 +248,7 @@ const Index = () => {
               </div>
               </div>
 
-              <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
+              <div className="flex flex-col md:flex-row gap-2 md:gap-3 justify-center items-center mt-4">
               <Button 
                 variant="ctaBlue" 
                 size="lg" 
@@ -268,7 +268,7 @@ const Index = () => {
                 </Button>
               </div>
 
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto italic text-center px-4">
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto italic text-center px-4 mt-3">
                 <span className="font-bold">Video của bạn được bảo mật 100%</span> - Chỉ nhà tuyển dụng được xác minh mới có thể được xem. Không chia sẻ công khai dữ liệu của bạn.
               </p>
             </div>
