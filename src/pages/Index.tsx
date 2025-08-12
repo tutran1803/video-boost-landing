@@ -172,7 +172,7 @@ const Index = () => {
               <div className="hidden md:grid grid-cols-3 gap-8 py-4 w-full mx-auto px-8">
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 bg-white/30 rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
                   <div className="w-36 h-24 md:w-48 md:h-28 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                    <img src="/lovable-uploads/dd4ee458-39b0-476b-997a-5f9dd01f5f01.png" alt="Hồ sơ nổi bật" className="w-full h-full object-contain rounded-lg" />
+                    <img src="/lovable-uploads/0d1b04a7-da8f-478f-9faa-2cecfe2674c2.png" alt="Hồ sơ nổi bật" className="w-full h-full object-contain rounded-lg" />
                   </div>
                   <div className="text-base md:text-lg font-semibold text-foreground">
                     Hồ sơ <span className="font-bold text-primary text-xl md:text-3xl">nổi bật</span>
@@ -204,9 +204,9 @@ const Index = () => {
                 <div className="overflow-hidden" ref={emblaRef}>
                   <div className="flex gap-4">
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 bg-white/30 rounded-lg border border-white/20 group animate-fade-in transition-all duration-300 hover:bg-white/50 hover:scale-[1.02]">
-                      <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
-                        <img src="/lovable-uploads/dd4ee458-39b0-476b-997a-5f9dd01f5f01.png" alt="Hồ sơ nổi bật" className="w-full h-full object-contain rounded-lg" />
-                      </div>
+                       <div className="w-40 h-24 bg-primary/10 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 overflow-hidden">
+                         <img src="/lovable-uploads/0d1b04a7-da8f-478f-9faa-2cecfe2674c2.png" alt="Hồ sơ nổi bật" className="w-full h-full object-contain rounded-lg" />
+                       </div>
                       <div className="text-lg font-semibold text-foreground">
                         Hồ sơ <span className="font-bold text-primary text-2xl">nổi bật</span>
                       </div>
