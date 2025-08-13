@@ -79,9 +79,9 @@ const Index = () => {
 
   const stepsData = [
     {
-      title: 'Bước 1: Chọn mục "Ứng tuyển"',
-      description: "Chọn vào mục ứng tuyển trong tin đăng",
-      imageUrl: "/lovable-uploads/cc95951c-81f2-4f79-8ecb-f641c68d8e7f.png"
+      title: 'Bước 1: Chọn quay video trong tin đăng',
+      description: "Chọn quay video ở trong tin đăng",
+      imageUrl: "/lovable-uploads/e88202d8-8b91-4c6b-a115-1b1a346ffe92.png"
     },
     {
       title: 'Bước 2: Chọn "Quay video"',
