@@ -186,7 +186,7 @@ const Index = () => {
                 </div>
                 <div className="text-center space-y-2 md:space-y-4 group animate-fade-in p-4 transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
                   <div className="w-32 h-20 md:w-40 md:h-32 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                    <img src="/lovable-uploads/ef1c2959-afc4-472a-abd9-60ac11092255.png" alt="Được đánh giá cao" className="w-20 h-20 md:w-32 md:h-32 object-contain" />
+                    <img src="/lovable-uploads/ef1c2959-afc4-472a-abd9-60ac11092255-no-bg.png" alt="Được đánh giá cao" className="w-20 h-20 md:w-32 md:h-32 object-contain" />
                   </div>
                   <div className="text-sm md:text-base font-semibold text-foreground whitespace-nowrap">
                     Được <span className="font-bold text-primary text-xl md:text-2xl">đánh giá cao</span>
@@ -219,7 +219,7 @@ const Index = () => {
                     </div>
                     <div className="flex-[0_0_90%] text-center space-y-3 p-4 group animate-fade-in transition-all duration-300 hover:scale-[1.02]" style={{animationDelay: '0.2s'}}>
                        <div className="w-40 h-32 rounded-lg flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                          <img src="/lovable-uploads/ef1c2959-afc4-472a-abd9-60ac11092255.png" alt="Được đánh giá cao" className="w-28 h-28 object-contain" />
+                          <img src="/lovable-uploads/ef1c2959-afc4-472a-abd9-60ac11092255-no-bg.png" alt="Được đánh giá cao" className="w-28 h-28 object-contain" />
                         </div>
                        <div className="text-lg font-semibold text-foreground whitespace-nowrap">
                          Được <span className="font-bold text-primary text-2xl">đánh giá cao</span>
